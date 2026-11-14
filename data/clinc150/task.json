@@ -1,0 +1,1135 @@
+{
+ "name": "clinc150",
+ "root": "root",
+ "instruction": "You are given structured guidance: a tree of groups and semantic classes. Every class has a description and is bound to exactly one output string. Read the input, decide which semantic class it belongs to, and answer with the output string that the guidance currently binds to that class. Follow the bindings written in the guidance even if they differ from what the class name suggests. The order in which sibling entries are listed does not denote priority. Answer with exactly one of the candidate outputs.",
+ "nodes": [
+  {
+   "identifier": "accept_reservations",
+   "description": "accept reservations",
+   "children": []
+  },
+  {
+   "identifier": "account_blocked",
+   "description": "account blocked",
+   "children": []
+  },
+  {
+   "identifier": "alarm",
+   "description": "alarm",
+   "children": []
+  },
+  {
+   "identifier": "application_status",
+   "description": "application status",
+   "children": []
+  },
+  {
+   "identifier": "apr",
+   "description": "apr",
+   "children": []
+  },
+  {
+   "identifier": "are_you_a_bot",
+   "description": "are you a bot",
+   "children": []
+  },
+  {
+   "identifier": "auto_and_commute",
+   "description": "auto and commute intents",
+   "children": [
+    "current_location",
+    "directions",
+    "distance",
+    "gas",
+    "gas_type",
+    "jump_start",
+    "last_maintenance",
+    "mpg",
+    "oil_change_how",
+    "oil_change_when",
+    "schedule_maintenance",
+    "tire_change",
+    "tire_pressure",
+    "traffic",
+    "uber"
+   ]
+  },
+  {
+   "identifier": "balance",
+   "description": "balance",
+   "children": []
+  },
+  {
+   "identifier": "banking",
+   "description": "banking intents",
+   "children": [
+    "account_blocked",
+    "balance",
+    "bill_balance",
+    "bill_due",
+    "freeze_account",
+    "interest_rate",
+    "min_payment",
+    "order_checks",
+    "pay_bill",
+    "pin_change",
+    "report_fraud",
+    "routing",
+    "spending_history",
+    "transactions",
+    "transfer"
+   ]
+  },
+  {
+   "identifier": "bill_balance",
+   "description": "bill balance",
+   "children": []
+  },
+  {
+   "identifier": "bill_due",
+   "description": "bill due",
+   "children": []
+  },
+  {
+   "identifier": "book_flight",
+   "description": "book flight",
+   "children": []
+  },
+  {
+   "identifier": "book_hotel",
+   "description": "book hotel",
+   "children": []
+  },
+  {
+   "identifier": "calculator",
+   "description": "calculator",
+   "children": []
+  },
+  {
+   "identifier": "calendar",
+   "description": "calendar",
+   "children": []
+  },
+  {
+   "identifier": "calendar_update",
+   "description": "calendar update",
+   "children": []
+  },
+  {
+   "identifier": "calories",
+   "description": "calories",
+   "children": []
+  },
+  {
+   "identifier": "cancel",
+   "description": "cancel",
+   "children": []
+  },
+  {
+   "identifier": "cancel_reservation",
+   "description": "cancel reservation",
+   "children": []
+  },
+  {
+   "identifier": "car_rental",
+   "description": "car rental",
+   "children": []
+  },
+  {
+   "identifier": "card_declined",
+   "description": "card declined",
+   "children": []
+  },
+  {
+   "identifier": "carry_on",
+   "description": "carry on",
+   "children": []
+  },
+  {
+   "identifier": "change_accent",
+   "description": "change accent",
+   "children": []
+  },
+  {
+   "identifier": "change_ai_name",
+   "description": "change ai name",
+   "children": []
+  },
+  {
+   "identifier": "change_language",
+   "description": "change language",
+   "children": []
+  },
+  {
+   "identifier": "change_speed",
+   "description": "change speed",
+   "children": []
+  },
+  {
+   "identifier": "change_user_name",
+   "description": "change user name",
+   "children": []
+  },
+  {
+   "identifier": "change_volume",
+   "description": "change volume",
+   "children": []
+  },
+  {
+   "identifier": "confirm_reservation",
+   "description": "confirm reservation",
+   "children": []
+  },
+  {
+   "identifier": "cook_time",
+   "description": "cook time",
+   "children": []
+  },
+  {
+   "identifier": "credit_cards",
+   "description": "credit cards intents",
+   "children": [
+    "application_status",
+    "apr",
+    "card_declined",
+    "credit_limit",
+    "credit_limit_change",
+    "credit_score",
+    "damaged_card",
+    "expiration_date",
+    "improve_credit_score",
+    "international_fees",
+    "new_card",
+    "redeem_rewards",
+    "replacement_card_duration",
+    "report_lost_card",
+    "rewards_balance"
+   ]
+  },
+  {
+   "identifier": "credit_limit",
+   "description": "credit limit",
+   "children": []
+  },
+  {
+   "identifier": "credit_limit_change",
+   "description": "credit limit change",
+   "children": []
+  },
+  {
+   "identifier": "credit_score",
+   "description": "credit score",
+   "children": []
+  },
+  {
+   "identifier": "current_location",
+   "description": "current location",
+   "children": []
+  },
+  {
+   "identifier": "damaged_card",
+   "description": "damaged card",
+   "children": []
+  },
+  {
+   "identifier": "date",
+   "description": "date",
+   "children": []
+  },
+  {
+   "identifier": "definition",
+   "description": "definition",
+   "children": []
+  },
+  {
+   "identifier": "direct_deposit",
+   "description": "direct deposit",
+   "children": []
+  },
+  {
+   "identifier": "directions",
+   "description": "directions",
+   "children": []
+  },
+  {
+   "identifier": "distance",
+   "description": "distance",
+   "children": []
+  },
+  {
+   "identifier": "do_you_have_pets",
+   "description": "do you have pets",
+   "children": []
+  },
+  {
+   "identifier": "exchange_rate",
+   "description": "exchange rate",
+   "children": []
+  },
+  {
+   "identifier": "expiration_date",
+   "description": "expiration date",
+   "children": []
+  },
+  {
+   "identifier": "find_phone",
+   "description": "find phone",
+   "children": []
+  },
+  {
+   "identifier": "flight_status",
+   "description": "flight status",
+   "children": []
+  },
+  {
+   "identifier": "flip_coin",
+   "description": "flip coin",
+   "children": []
+  },
+  {
+   "identifier": "food_last",
+   "description": "food last",
+   "children": []
+  },
+  {
+   "identifier": "freeze_account",
+   "description": "freeze account",
+   "children": []
+  },
+  {
+   "identifier": "fun_fact",
+   "description": "fun fact",
+   "children": []
+  },
+  {
+   "identifier": "gas",
+   "description": "gas",
+   "children": []
+  },
+  {
+   "identifier": "gas_type",
+   "description": "gas type",
+   "children": []
+  },
+  {
+   "identifier": "goodbye",
+   "description": "goodbye",
+   "children": []
+  },
+  {
+   "identifier": "greeting",
+   "description": "greeting",
+   "children": []
+  },
+  {
+   "identifier": "home",
+   "description": "home intents",
+   "children": [
+    "calendar",
+    "calendar_update",
+    "next_song",
+    "order",
+    "order_status",
+    "play_music",
+    "reminder",
+    "reminder_update",
+    "shopping_list",
+    "shopping_list_update",
+    "smart_home",
+    "todo_list",
+    "todo_list_update",
+    "update_playlist",
+    "what_song"
+   ]
+  },
+  {
+   "identifier": "how_busy",
+   "description": "how busy",
+   "children": []
+  },
+  {
+   "identifier": "how_old_are_you",
+   "description": "how old are you",
+   "children": []
+  },
+  {
+   "identifier": "improve_credit_score",
+   "description": "improve credit score",
+   "children": []
+  },
+  {
+   "identifier": "income",
+   "description": "income",
+   "children": []
+  },
+  {
+   "identifier": "ingredient_substitution",
+   "description": "ingredient substitution",
+   "children": []
+  },
+  {
+   "identifier": "ingredients_list",
+   "description": "ingredients list",
+   "children": []
+  },
+  {
+   "identifier": "insurance",
+   "description": "insurance",
+   "children": []
+  },
+  {
+   "identifier": "insurance_change",
+   "description": "insurance change",
+   "children": []
+  },
+  {
+   "identifier": "interest_rate",
+   "description": "interest rate",
+   "children": []
+  },
+  {
+   "identifier": "international_fees",
+   "description": "international fees",
+   "children": []
+  },
+  {
+   "identifier": "international_visa",
+   "description": "international visa",
+   "children": []
+  },
+  {
+   "identifier": "jump_start",
+   "description": "jump start",
+   "children": []
+  },
+  {
+   "identifier": "kitchen_and_dining",
+   "description": "kitchen and dining intents",
+   "children": [
+    "accept_reservations",
+    "calories",
+    "cancel_reservation",
+    "confirm_reservation",
+    "cook_time",
+    "food_last",
+    "how_busy",
+    "ingredient_substitution",
+    "ingredients_list",
+    "meal_suggestion",
+    "nutrition_info",
+    "recipe",
+    "restaurant_reservation",
+    "restaurant_reviews",
+    "restaurant_suggestion"
+   ]
+  },
+  {
+   "identifier": "last_maintenance",
+   "description": "last maintenance",
+   "children": []
+  },
+  {
+   "identifier": "lost_luggage",
+   "description": "lost luggage",
+   "children": []
+  },
+  {
+   "identifier": "make_call",
+   "description": "make call",
+   "children": []
+  },
+  {
+   "identifier": "maybe",
+   "description": "maybe",
+   "children": []
+  },
+  {
+   "identifier": "meal_suggestion",
+   "description": "meal suggestion",
+   "children": []
+  },
+  {
+   "identifier": "meaning_of_life",
+   "description": "meaning of life",
+   "children": []
+  },
+  {
+   "identifier": "measurement_conversion",
+   "description": "measurement conversion",
+   "children": []
+  },
+  {
+   "identifier": "meeting_schedule",
+   "description": "meeting schedule",
+   "children": []
+  },
+  {
+   "identifier": "meta",
+   "description": "meta intents",
+   "children": [
+    "cancel",
+    "change_accent",
+    "change_ai_name",
+    "change_language",
+    "change_speed",
+    "change_user_name",
+    "change_volume",
+    "maybe",
+    "no",
+    "repeat",
+    "reset_settings",
+    "sync_device",
+    "user_name",
+    "whisper_mode",
+    "yes"
+   ]
+  },
+  {
+   "identifier": "min_payment",
+   "description": "min payment",
+   "children": []
+  },
+  {
+   "identifier": "mpg",
+   "description": "mpg",
+   "children": []
+  },
+  {
+   "identifier": "new_card",
+   "description": "new card",
+   "children": []
+  },
+  {
+   "identifier": "next_holiday",
+   "description": "next holiday",
+   "children": []
+  },
+  {
+   "identifier": "next_song",
+   "description": "next song",
+   "children": []
+  },
+  {
+   "identifier": "no",
+   "description": "no",
+   "children": []
+  },
+  {
+   "identifier": "nutrition_info",
+   "description": "nutrition info",
+   "children": []
+  },
+  {
+   "identifier": "oil_change_how",
+   "description": "oil change how",
+   "children": []
+  },
+  {
+   "identifier": "oil_change_when",
+   "description": "oil change when",
+   "children": []
+  },
+  {
+   "identifier": "order",
+   "description": "order",
+   "children": []
+  },
+  {
+   "identifier": "order_checks",
+   "description": "order checks",
+   "children": []
+  },
+  {
+   "identifier": "order_status",
+   "description": "order status",
+   "children": []
+  },
+  {
+   "identifier": "pay_bill",
+   "description": "pay bill",
+   "children": []
+  },
+  {
+   "identifier": "payday",
+   "description": "payday",
+   "children": []
+  },
+  {
+   "identifier": "pin_change",
+   "description": "pin change",
+   "children": []
+  },
+  {
+   "identifier": "play_music",
+   "description": "play music",
+   "children": []
+  },
+  {
+   "identifier": "plug_type",
+   "description": "plug type",
+   "children": []
+  },
+  {
+   "identifier": "pto_balance",
+   "description": "pto balance",
+   "children": []
+  },
+  {
+   "identifier": "pto_request",
+   "description": "pto request",
+   "children": []
+  },
+  {
+   "identifier": "pto_request_status",
+   "description": "pto request status",
+   "children": []
+  },
+  {
+   "identifier": "pto_used",
+   "description": "pto used",
+   "children": []
+  },
+  {
+   "identifier": "recipe",
+   "description": "recipe",
+   "children": []
+  },
+  {
+   "identifier": "redeem_rewards",
+   "description": "redeem rewards",
+   "children": []
+  },
+  {
+   "identifier": "reminder",
+   "description": "reminder",
+   "children": []
+  },
+  {
+   "identifier": "reminder_update",
+   "description": "reminder update",
+   "children": []
+  },
+  {
+   "identifier": "repeat",
+   "description": "repeat",
+   "children": []
+  },
+  {
+   "identifier": "replacement_card_duration",
+   "description": "replacement card duration",
+   "children": []
+  },
+  {
+   "identifier": "report_fraud",
+   "description": "report fraud",
+   "children": []
+  },
+  {
+   "identifier": "report_lost_card",
+   "description": "report lost card",
+   "children": []
+  },
+  {
+   "identifier": "reset_settings",
+   "description": "reset settings",
+   "children": []
+  },
+  {
+   "identifier": "restaurant_reservation",
+   "description": "restaurant reservation",
+   "children": []
+  },
+  {
+   "identifier": "restaurant_reviews",
+   "description": "restaurant reviews",
+   "children": []
+  },
+  {
+   "identifier": "restaurant_suggestion",
+   "description": "restaurant suggestion",
+   "children": []
+  },
+  {
+   "identifier": "rewards_balance",
+   "description": "rewards balance",
+   "children": []
+  },
+  {
+   "identifier": "roll_dice",
+   "description": "roll dice",
+   "children": []
+  },
+  {
+   "identifier": "rollover_401k",
+   "description": "rollover 401k",
+   "children": []
+  },
+  {
+   "identifier": "root",
+   "description": "All intents of clinc150.",
+   "children": [
+    "auto_and_commute",
+    "banking",
+    "credit_cards",
+    "home",
+    "kitchen_and_dining",
+    "meta",
+    "small_talk",
+    "travel",
+    "utility",
+    "work"
+   ]
+  },
+  {
+   "identifier": "routing",
+   "description": "routing",
+   "children": []
+  },
+  {
+   "identifier": "schedule_maintenance",
+   "description": "schedule maintenance",
+   "children": []
+  },
+  {
+   "identifier": "schedule_meeting",
+   "description": "schedule meeting",
+   "children": []
+  },
+  {
+   "identifier": "share_location",
+   "description": "share location",
+   "children": []
+  },
+  {
+   "identifier": "shopping_list",
+   "description": "shopping list",
+   "children": []
+  },
+  {
+   "identifier": "shopping_list_update",
+   "description": "shopping list update",
+   "children": []
+  },
+  {
+   "identifier": "small_talk",
+   "description": "small talk intents",
+   "children": [
+    "are_you_a_bot",
+    "do_you_have_pets",
+    "fun_fact",
+    "goodbye",
+    "greeting",
+    "how_old_are_you",
+    "meaning_of_life",
+    "tell_joke",
+    "thank_you",
+    "what_are_your_hobbies",
+    "what_can_i_ask_you",
+    "what_is_your_name",
+    "where_are_you_from",
+    "who_do_you_work_for",
+    "who_made_you"
+   ]
+  },
+  {
+   "identifier": "smart_home",
+   "description": "smart home",
+   "children": []
+  },
+  {
+   "identifier": "spelling",
+   "description": "spelling",
+   "children": []
+  },
+  {
+   "identifier": "spending_history",
+   "description": "spending history",
+   "children": []
+  },
+  {
+   "identifier": "sync_device",
+   "description": "sync device",
+   "children": []
+  },
+  {
+   "identifier": "taxes",
+   "description": "taxes",
+   "children": []
+  },
+  {
+   "identifier": "tell_joke",
+   "description": "tell joke",
+   "children": []
+  },
+  {
+   "identifier": "text",
+   "description": "text",
+   "children": []
+  },
+  {
+   "identifier": "thank_you",
+   "description": "thank you",
+   "children": []
+  },
+  {
+   "identifier": "time",
+   "description": "time",
+   "children": []
+  },
+  {
+   "identifier": "timer",
+   "description": "timer",
+   "children": []
+  },
+  {
+   "identifier": "timezone",
+   "description": "timezone",
+   "children": []
+  },
+  {
+   "identifier": "tire_change",
+   "description": "tire change",
+   "children": []
+  },
+  {
+   "identifier": "tire_pressure",
+   "description": "tire pressure",
+   "children": []
+  },
+  {
+   "identifier": "todo_list",
+   "description": "todo list",
+   "children": []
+  },
+  {
+   "identifier": "todo_list_update",
+   "description": "todo list update",
+   "children": []
+  },
+  {
+   "identifier": "traffic",
+   "description": "traffic",
+   "children": []
+  },
+  {
+   "identifier": "transactions",
+   "description": "transactions",
+   "children": []
+  },
+  {
+   "identifier": "transfer",
+   "description": "transfer",
+   "children": []
+  },
+  {
+   "identifier": "translate",
+   "description": "translate",
+   "children": []
+  },
+  {
+   "identifier": "travel",
+   "description": "travel intents",
+   "children": [
+    "book_flight",
+    "book_hotel",
+    "car_rental",
+    "carry_on",
+    "exchange_rate",
+    "flight_status",
+    "international_visa",
+    "lost_luggage",
+    "plug_type",
+    "timezone",
+    "translate",
+    "travel_alert",
+    "travel_notification",
+    "travel_suggestion",
+    "vaccines"
+   ]
+  },
+  {
+   "identifier": "travel_alert",
+   "description": "travel alert",
+   "children": []
+  },
+  {
+   "identifier": "travel_notification",
+   "description": "travel notification",
+   "children": []
+  },
+  {
+   "identifier": "travel_suggestion",
+   "description": "travel suggestion",
+   "children": []
+  },
+  {
+   "identifier": "uber",
+   "description": "uber",
+   "children": []
+  },
+  {
+   "identifier": "update_playlist",
+   "description": "update playlist",
+   "children": []
+  },
+  {
+   "identifier": "user_name",
+   "description": "user name",
+   "children": []
+  },
+  {
+   "identifier": "utility",
+   "description": "utility intents",
+   "children": [
+    "alarm",
+    "calculator",
+    "date",
+    "definition",
+    "find_phone",
+    "flip_coin",
+    "make_call",
+    "measurement_conversion",
+    "roll_dice",
+    "share_location",
+    "spelling",
+    "text",
+    "time",
+    "timer",
+    "weather"
+   ]
+  },
+  {
+   "identifier": "vaccines",
+   "description": "vaccines",
+   "children": []
+  },
+  {
+   "identifier": "w2",
+   "description": "w2",
+   "children": []
+  },
+  {
+   "identifier": "weather",
+   "description": "weather",
+   "children": []
+  },
+  {
+   "identifier": "what_are_your_hobbies",
+   "description": "what are your hobbies",
+   "children": []
+  },
+  {
+   "identifier": "what_can_i_ask_you",
+   "description": "what can i ask you",
+   "children": []
+  },
+  {
+   "identifier": "what_is_your_name",
+   "description": "what is your name",
+   "children": []
+  },
+  {
+   "identifier": "what_song",
+   "description": "what song",
+   "children": []
+  },
+  {
+   "identifier": "where_are_you_from",
+   "description": "where are you from",
+   "children": []
+  },
+  {
+   "identifier": "whisper_mode",
+   "description": "whisper mode",
+   "children": []
+  },
+  {
+   "identifier": "who_do_you_work_for",
+   "description": "who do you work for",
+   "children": []
+  },
+  {
+   "identifier": "who_made_you",
+   "description": "who made you",
+   "children": []
+  },
+  {
+   "identifier": "work",
+   "description": "work intents",
+   "children": [
+    "direct_deposit",
+    "income",
+    "insurance",
+    "insurance_change",
+    "meeting_schedule",
+    "next_holiday",
+    "payday",
+    "pto_balance",
+    "pto_request",
+    "pto_request_status",
+    "pto_used",
+    "rollover_401k",
+    "schedule_meeting",
+    "taxes",
+    "w2"
+   ]
+  },
+  {
+   "identifier": "yes",
+   "description": "yes",
+   "children": []
+  }
+ ],
+ "binding": {
+  "accept_reservations": "accept_reservations",
+  "account_blocked": "account_blocked",
+  "alarm": "alarm",
+  "application_status": "application_status",
+  "apr": "apr",
+  "are_you_a_bot": "are_you_a_bot",
+  "balance": "balance",
+  "bill_balance": "bill_balance",
+  "bill_due": "bill_due",
+  "book_flight": "book_flight",
+  "book_hotel": "book_hotel",
+  "calculator": "calculator",
+  "calendar": "calendar",
+  "calendar_update": "calendar_update",
+  "calories": "calories",
+  "cancel": "cancel",
+  "cancel_reservation": "cancel_reservation",
+  "car_rental": "car_rental",
+  "card_declined": "card_declined",
+  "carry_on": "carry_on",
+  "change_accent": "change_accent",
+  "change_ai_name": "change_ai_name",
+  "change_language": "change_language",
+  "change_speed": "change_speed",
+  "change_user_name": "change_user_name",
+  "change_volume": "change_volume",
+  "confirm_reservation": "confirm_reservation",
+  "cook_time": "cook_time",
+  "credit_limit": "credit_limit",
+  "credit_limit_change": "credit_limit_change",
+  "credit_score": "credit_score",
+  "current_location": "current_location",
+  "damaged_card": "damaged_card",
+  "date": "date",
+  "definition": "definition",
+  "direct_deposit": "direct_deposit",
+  "directions": "directions",
+  "distance": "distance",
+  "do_you_have_pets": "do_you_have_pets",
+  "exchange_rate": "exchange_rate",
+  "expiration_date": "expiration_date",
+  "find_phone": "find_phone",
+  "flight_status": "flight_status",
+  "flip_coin": "flip_coin",
+  "food_last": "food_last",
+  "freeze_account": "freeze_account",
+  "fun_fact": "fun_fact",
+  "gas": "gas",
+  "gas_type": "gas_type",
+  "goodbye": "goodbye",
+  "greeting": "greeting",
+  "how_busy": "how_busy",
+  "how_old_are_you": "how_old_are_you",
+  "improve_credit_score": "improve_credit_score",
+  "income": "income",
+  "ingredient_substitution": "ingredient_substitution",
+  "ingredients_list": "ingredients_list",
+  "insurance": "insurance",
+  "insurance_change": "insurance_change",
+  "interest_rate": "interest_rate",
+  "international_fees": "international_fees",
+  "international_visa": "international_visa",
+  "jump_start": "jump_start",
+  "last_maintenance": "last_maintenance",
+  "lost_luggage": "lost_luggage",
+  "make_call": "make_call",
+  "maybe": "maybe",
+  "meal_suggestion": "meal_suggestion",
+  "meaning_of_life": "meaning_of_life",
+  "measurement_conversion": "measurement_conversion",
+  "meeting_schedule": "meeting_schedule",
+  "min_payment": "min_payment",
+  "mpg": "mpg",
+  "new_card": "new_card",
+  "next_holiday": "next_holiday",
+  "next_song": "next_song",
+  "no": "no",
+  "nutrition_info": "nutrition_info",
+  "oil_change_how": "oil_change_how",
+  "oil_change_when": "oil_change_when",
+  "order": "order",
+  "order_checks": "order_checks",
+  "order_status": "order_status",
+  "pay_bill": "pay_bill",
+  "payday": "payday",
+  "pin_change": "pin_change",
+  "play_music": "play_music",
+  "plug_type": "plug_type",
+  "pto_balance": "pto_balance",
+  "pto_request": "pto_request",
+  "pto_request_status": "pto_request_status",
+  "pto_used": "pto_used",
+  "recipe": "recipe",
+  "redeem_rewards": "redeem_rewards",
+  "reminder": "reminder",
+  "reminder_update": "reminder_update",
+  "repeat": "repeat",
+  "replacement_card_duration": "replacement_card_duration",
+  "report_fraud": "report_fraud",
+  "report_lost_card": "report_lost_card",
+  "reset_settings": "reset_settings",
+  "restaurant_reservation": "restaurant_reservation",
+  "restaurant_reviews": "restaurant_reviews",
+  "restaurant_suggestion": "restaurant_suggestion",
+  "rewards_balance": "rewards_balance",
+  "roll_dice": "roll_dice",
+  "rollover_401k": "rollover_401k",
+  "routing": "routing",
+  "schedule_maintenance": "schedule_maintenance",
+  "schedule_meeting": "schedule_meeting",
+  "share_location": "share_location",
+  "shopping_list": "shopping_list",
+  "shopping_list_update": "shopping_list_update",
+  "smart_home": "smart_home",
+  "spelling": "spelling",
+  "spending_history": "spending_history",
+  "sync_device": "sync_device",
+  "taxes": "taxes",
+  "tell_joke": "tell_joke",
+  "text": "text",
+  "thank_you": "thank_you",
+  "time": "time",
+  "timer": "timer",
+  "timezone": "timezone",
+  "tire_change": "tire_change",
+  "tire_pressure": "tire_pressure",
+  "todo_list": "todo_list",
+  "todo_list_update": "todo_list_update",
+  "traffic": "traffic",
+  "transactions": "transactions",
+  "transfer": "transfer",
+  "translate": "translate",
+  "travel_alert": "travel_alert",
+  "travel_notification": "travel_notification",
+  "travel_suggestion": "travel_suggestion",
+  "uber": "uber",
+  "update_playlist": "update_playlist",
+  "user_name": "user_name",
+  "vaccines": "vaccines",
+  "w2": "w2",
+  "weather": "weather",
+  "what_are_your_hobbies": "what_are_your_hobbies",
+  "what_can_i_ask_you": "what_can_i_ask_you",
+  "what_is_your_name": "what_is_your_name",
+  "what_song": "what_song",
+  "where_are_you_from": "where_are_you_from",
+  "whisper_mode": "whisper_mode",
+  "who_do_you_work_for": "who_do_you_work_for",
+  "who_made_you": "who_made_you",
+  "yes": "yes"
+ }
+}

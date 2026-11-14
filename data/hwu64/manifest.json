@@ -1,0 +1,21 @@
+{
+ "dataset": "hwu64",
+ "source_repository": "https://github.com/jianguoz/Few-Shot-Intent-Detection",
+ "source_revision": "fa9553312b1dba54b1be0aae2d30b13171f898e5",
+ "source_path": "Datasets/HWU64",
+ "upstream_sha256": {
+  "train/seq.in": "6f37991e7920711e3c5024f5f5ac535882b9da1df84e837d889c5a53ef91cd4f",
+  "train/label": "90e21d2f25cba02dd332b6cdb7d09d4fe178680b91a4469adf1790f753f7df2c",
+  "valid/seq.in": "fa939bc5394f708691c3d4d5c03bb59fc8301af4cc72a73e9e32fcedafd4e3c2",
+  "valid/label": "aec9b5c05528709ec48202dddd7ee1789536a5562866d91feef102d5d9476815",
+  "test/seq.in": "c0129df86114872dd58ac48448fd5559ed6679895b1938f469cf360f7c85ba79",
+  "test/label": "aec9b5c05528709ec48202dddd7ee1789536a5562866d91feef102d5d9476815"
+ },
+ "num_labels": 64,
+ "split_sizes": {
+  "train": 8954,
+  "valid": 1076,
+  "test": 1076
+ },
+ "eligible_sibling_groups": 15
+}

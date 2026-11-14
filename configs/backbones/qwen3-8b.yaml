@@ -1,0 +1,5 @@
+description: Additional backbone of Figure 4; the paper uses the non-thinking chat template.
+model:
+  name: Qwen/Qwen3-8B
+  template_kwargs:
+    enable_thinking: false

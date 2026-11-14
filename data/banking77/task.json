@@ -1,0 +1,617 @@
+{
+ "name": "banking77",
+ "root": "root",
+ "instruction": "You are given structured guidance: a tree of groups and semantic classes. Every class has a description and is bound to exactly one output string. Read the input, decide which semantic class it belongs to, and answer with the output string that the guidance currently binds to that class. Follow the bindings written in the guidance even if they differ from what the class name suggests. The order in which sibling entries are listed does not denote priority. Answer with exactly one of the candidate outputs.",
+ "nodes": [
+  {
+   "identifier": "Refund_not_showing_up",
+   "description": "refund not showing up",
+   "children": []
+  },
+  {
+   "identifier": "activate_my_card",
+   "description": "activate my card",
+   "children": []
+  },
+  {
+   "identifier": "age_limit",
+   "description": "age limit",
+   "children": []
+  },
+  {
+   "identifier": "apple_pay_or_google_pay",
+   "description": "apple pay or google pay",
+   "children": []
+  },
+  {
+   "identifier": "atm_support",
+   "description": "atm support",
+   "children": []
+  },
+  {
+   "identifier": "automatic_top_up",
+   "description": "automatic top up",
+   "children": []
+  },
+  {
+   "identifier": "balance_not_updated_after_bank_transfer",
+   "description": "balance not updated after bank transfer",
+   "children": []
+  },
+  {
+   "identifier": "balance_not_updated_after_cheque_or_cash_deposit",
+   "description": "balance not updated after cheque or cash deposit",
+   "children": []
+  },
+  {
+   "identifier": "beneficiary_not_allowed",
+   "description": "beneficiary not allowed",
+   "children": []
+  },
+  {
+   "identifier": "cancel_transfer",
+   "description": "cancel transfer",
+   "children": []
+  },
+  {
+   "identifier": "card_about_to_expire",
+   "description": "card about to expire",
+   "children": []
+  },
+  {
+   "identifier": "card_acceptance",
+   "description": "card acceptance",
+   "children": []
+  },
+  {
+   "identifier": "card_arrival",
+   "description": "card arrival",
+   "children": []
+  },
+  {
+   "identifier": "card_delivery_estimate",
+   "description": "card delivery estimate",
+   "children": []
+  },
+  {
+   "identifier": "card_linking",
+   "description": "card linking",
+   "children": []
+  },
+  {
+   "identifier": "card_not_working",
+   "description": "card not working",
+   "children": []
+  },
+  {
+   "identifier": "card_payment_fee_charged",
+   "description": "card payment fee charged",
+   "children": []
+  },
+  {
+   "identifier": "card_payment_not_recognised",
+   "description": "card payment not recognised",
+   "children": []
+  },
+  {
+   "identifier": "card_payment_wrong_exchange_rate",
+   "description": "card payment wrong exchange rate",
+   "children": []
+  },
+  {
+   "identifier": "card_swallowed",
+   "description": "card swallowed",
+   "children": []
+  },
+  {
+   "identifier": "cash_withdrawal_charge",
+   "description": "cash withdrawal charge",
+   "children": []
+  },
+  {
+   "identifier": "cash_withdrawal_not_recognised",
+   "description": "cash withdrawal not recognised",
+   "children": []
+  },
+  {
+   "identifier": "change_pin",
+   "description": "change pin",
+   "children": []
+  },
+  {
+   "identifier": "compromised_card",
+   "description": "compromised card",
+   "children": []
+  },
+  {
+   "identifier": "contactless_not_working",
+   "description": "contactless not working",
+   "children": []
+  },
+  {
+   "identifier": "country_support",
+   "description": "country support",
+   "children": []
+  },
+  {
+   "identifier": "declined_card_payment",
+   "description": "declined card payment",
+   "children": []
+  },
+  {
+   "identifier": "declined_cash_withdrawal",
+   "description": "declined cash withdrawal",
+   "children": []
+  },
+  {
+   "identifier": "declined_transfer",
+   "description": "declined transfer",
+   "children": []
+  },
+  {
+   "identifier": "direct_debit_payment_not_recognised",
+   "description": "direct debit payment not recognised",
+   "children": []
+  },
+  {
+   "identifier": "disposable_card_limits",
+   "description": "disposable card limits",
+   "children": []
+  },
+  {
+   "identifier": "edit_personal_details",
+   "description": "edit personal details",
+   "children": []
+  },
+  {
+   "identifier": "exchange_charge",
+   "description": "exchange charge",
+   "children": []
+  },
+  {
+   "identifier": "exchange_rate",
+   "description": "exchange rate",
+   "children": []
+  },
+  {
+   "identifier": "exchange_via_app",
+   "description": "exchange via app",
+   "children": []
+  },
+  {
+   "identifier": "extra_charge_on_statement",
+   "description": "extra charge on statement",
+   "children": []
+  },
+  {
+   "identifier": "failed_transfer",
+   "description": "failed transfer",
+   "children": []
+  },
+  {
+   "identifier": "fiat_currency_support",
+   "description": "fiat currency support",
+   "children": []
+  },
+  {
+   "identifier": "get_disposable_virtual_card",
+   "description": "get disposable virtual card",
+   "children": []
+  },
+  {
+   "identifier": "get_physical_card",
+   "description": "get physical card",
+   "children": []
+  },
+  {
+   "identifier": "getting_spare_card",
+   "description": "getting spare card",
+   "children": []
+  },
+  {
+   "identifier": "getting_virtual_card",
+   "description": "getting virtual card",
+   "children": []
+  },
+  {
+   "identifier": "group_1",
+   "description": "Intents: Refund_not_showing_up, automatic_top_up, balance_not_updated_after_bank_transfer, balance_not_updated_after_cheque_or_cash_deposit, cancel_transfer, card_payment_fee_charged, card_payment_not_recognised, card_payment_wrong_exchange_rate, cash_withdrawal_charge, cash_withdrawal_not_recognised, declined_card_payment, declined_cash_withdrawal, declined_transfer, direct_debit_payment_not_recognised, disposable_card_limits, exchange_charge, exchange_rate, extra_charge_on_statement, failed_transfer, pending_card_payment, pending_cash_withdrawal, pending_top_up, pending_transfer, receiving_money, request_refund, reverted_card_payment?, top_up_by_bank_transfer_charge, top_up_by_card_charge, top_up_by_cash_or_cheque, top_up_failed, top_up_limits, top_up_reverted, topping_up_by_card, transaction_charged_twice, transfer_fee_charged, transfer_into_account, transfer_not_received_by_recipient, transfer_timing, verify_source_of_funds, verify_top_up, wrong_amount_of_cash_received, wrong_exchange_rate_for_cash_withdrawal",
+   "children": [
+    "Refund_not_showing_up",
+    "automatic_top_up",
+    "balance_not_updated_after_bank_transfer",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "cancel_transfer",
+    "card_payment_fee_charged",
+    "card_payment_not_recognised",
+    "card_payment_wrong_exchange_rate",
+    "cash_withdrawal_charge",
+    "cash_withdrawal_not_recognised",
+    "declined_card_payment",
+    "declined_cash_withdrawal",
+    "declined_transfer",
+    "direct_debit_payment_not_recognised",
+    "disposable_card_limits",
+    "exchange_charge",
+    "exchange_rate",
+    "extra_charge_on_statement",
+    "failed_transfer",
+    "pending_card_payment",
+    "pending_cash_withdrawal",
+    "pending_top_up",
+    "pending_transfer",
+    "receiving_money",
+    "request_refund",
+    "reverted_card_payment?",
+    "top_up_by_bank_transfer_charge",
+    "top_up_by_card_charge",
+    "top_up_by_cash_or_cheque",
+    "top_up_failed",
+    "top_up_limits",
+    "top_up_reverted",
+    "topping_up_by_card",
+    "transaction_charged_twice",
+    "transfer_fee_charged",
+    "transfer_into_account",
+    "transfer_not_received_by_recipient",
+    "transfer_timing",
+    "verify_source_of_funds",
+    "verify_top_up",
+    "wrong_amount_of_cash_received",
+    "wrong_exchange_rate_for_cash_withdrawal"
+   ]
+  },
+  {
+   "identifier": "group_2",
+   "description": "Intents: activate_my_card, apple_pay_or_google_pay, card_about_to_expire, card_acceptance, card_arrival, card_delivery_estimate, card_linking, card_not_working, card_swallowed, compromised_card, get_disposable_virtual_card, get_physical_card, getting_spare_card, getting_virtual_card, lost_or_stolen_card, order_physical_card, virtual_card_not_working, visa_or_mastercard",
+   "children": [
+    "activate_my_card",
+    "apple_pay_or_google_pay",
+    "card_about_to_expire",
+    "card_acceptance",
+    "card_arrival",
+    "card_delivery_estimate",
+    "card_linking",
+    "card_not_working",
+    "card_swallowed",
+    "compromised_card",
+    "get_disposable_virtual_card",
+    "get_physical_card",
+    "getting_spare_card",
+    "getting_virtual_card",
+    "lost_or_stolen_card",
+    "order_physical_card",
+    "virtual_card_not_working",
+    "visa_or_mastercard"
+   ]
+  },
+  {
+   "identifier": "group_3",
+   "description": "Intents: age_limit",
+   "children": [
+    "age_limit"
+   ]
+  },
+  {
+   "identifier": "group_4",
+   "description": "Intents: atm_support, country_support, fiat_currency_support, supported_cards_and_currencies",
+   "children": [
+    "atm_support",
+    "country_support",
+    "fiat_currency_support",
+    "supported_cards_and_currencies"
+   ]
+  },
+  {
+   "identifier": "group_5",
+   "description": "Intents: beneficiary_not_allowed, terminate_account, unable_to_verify_identity, verify_my_identity, why_verify_identity",
+   "children": [
+    "beneficiary_not_allowed",
+    "terminate_account",
+    "unable_to_verify_identity",
+    "verify_my_identity",
+    "why_verify_identity"
+   ]
+  },
+  {
+   "identifier": "group_6",
+   "description": "Intents: change_pin, edit_personal_details, pin_blocked",
+   "children": [
+    "change_pin",
+    "edit_personal_details",
+    "pin_blocked"
+   ]
+  },
+  {
+   "identifier": "group_7",
+   "description": "Intents: contactless_not_working",
+   "children": [
+    "contactless_not_working"
+   ]
+  },
+  {
+   "identifier": "group_8",
+   "description": "Intents: exchange_via_app",
+   "children": [
+    "exchange_via_app"
+   ]
+  },
+  {
+   "identifier": "group_9",
+   "description": "Intents: lost_or_stolen_phone, passcode_forgotten",
+   "children": [
+    "lost_or_stolen_phone",
+    "passcode_forgotten"
+   ]
+  },
+  {
+   "identifier": "lost_or_stolen_card",
+   "description": "lost or stolen card",
+   "children": []
+  },
+  {
+   "identifier": "lost_or_stolen_phone",
+   "description": "lost or stolen phone",
+   "children": []
+  },
+  {
+   "identifier": "order_physical_card",
+   "description": "order physical card",
+   "children": []
+  },
+  {
+   "identifier": "passcode_forgotten",
+   "description": "passcode forgotten",
+   "children": []
+  },
+  {
+   "identifier": "pending_card_payment",
+   "description": "pending card payment",
+   "children": []
+  },
+  {
+   "identifier": "pending_cash_withdrawal",
+   "description": "pending cash withdrawal",
+   "children": []
+  },
+  {
+   "identifier": "pending_top_up",
+   "description": "pending top up",
+   "children": []
+  },
+  {
+   "identifier": "pending_transfer",
+   "description": "pending transfer",
+   "children": []
+  },
+  {
+   "identifier": "pin_blocked",
+   "description": "pin blocked",
+   "children": []
+  },
+  {
+   "identifier": "receiving_money",
+   "description": "receiving money",
+   "children": []
+  },
+  {
+   "identifier": "request_refund",
+   "description": "request refund",
+   "children": []
+  },
+  {
+   "identifier": "reverted_card_payment?",
+   "description": "reverted card payment?",
+   "children": []
+  },
+  {
+   "identifier": "root",
+   "description": "All intents of banking77.",
+   "children": [
+    "group_1",
+    "group_2",
+    "group_3",
+    "group_4",
+    "group_5",
+    "group_6",
+    "group_7",
+    "group_8",
+    "group_9"
+   ]
+  },
+  {
+   "identifier": "supported_cards_and_currencies",
+   "description": "supported cards and currencies",
+   "children": []
+  },
+  {
+   "identifier": "terminate_account",
+   "description": "terminate account",
+   "children": []
+  },
+  {
+   "identifier": "top_up_by_bank_transfer_charge",
+   "description": "top up by bank transfer charge",
+   "children": []
+  },
+  {
+   "identifier": "top_up_by_card_charge",
+   "description": "top up by card charge",
+   "children": []
+  },
+  {
+   "identifier": "top_up_by_cash_or_cheque",
+   "description": "top up by cash or cheque",
+   "children": []
+  },
+  {
+   "identifier": "top_up_failed",
+   "description": "top up failed",
+   "children": []
+  },
+  {
+   "identifier": "top_up_limits",
+   "description": "top up limits",
+   "children": []
+  },
+  {
+   "identifier": "top_up_reverted",
+   "description": "top up reverted",
+   "children": []
+  },
+  {
+   "identifier": "topping_up_by_card",
+   "description": "topping up by card",
+   "children": []
+  },
+  {
+   "identifier": "transaction_charged_twice",
+   "description": "transaction charged twice",
+   "children": []
+  },
+  {
+   "identifier": "transfer_fee_charged",
+   "description": "transfer fee charged",
+   "children": []
+  },
+  {
+   "identifier": "transfer_into_account",
+   "description": "transfer into account",
+   "children": []
+  },
+  {
+   "identifier": "transfer_not_received_by_recipient",
+   "description": "transfer not received by recipient",
+   "children": []
+  },
+  {
+   "identifier": "transfer_timing",
+   "description": "transfer timing",
+   "children": []
+  },
+  {
+   "identifier": "unable_to_verify_identity",
+   "description": "unable to verify identity",
+   "children": []
+  },
+  {
+   "identifier": "verify_my_identity",
+   "description": "verify my identity",
+   "children": []
+  },
+  {
+   "identifier": "verify_source_of_funds",
+   "description": "verify source of funds",
+   "children": []
+  },
+  {
+   "identifier": "verify_top_up",
+   "description": "verify top up",
+   "children": []
+  },
+  {
+   "identifier": "virtual_card_not_working",
+   "description": "virtual card not working",
+   "children": []
+  },
+  {
+   "identifier": "visa_or_mastercard",
+   "description": "visa or mastercard",
+   "children": []
+  },
+  {
+   "identifier": "why_verify_identity",
+   "description": "why verify identity",
+   "children": []
+  },
+  {
+   "identifier": "wrong_amount_of_cash_received",
+   "description": "wrong amount of cash received",
+   "children": []
+  },
+  {
+   "identifier": "wrong_exchange_rate_for_cash_withdrawal",
+   "description": "wrong exchange rate for cash withdrawal",
+   "children": []
+  }
+ ],
+ "binding": {
+  "Refund_not_showing_up": "Refund_not_showing_up",
+  "activate_my_card": "activate_my_card",
+  "age_limit": "age_limit",
+  "apple_pay_or_google_pay": "apple_pay_or_google_pay",
+  "atm_support": "atm_support",
+  "automatic_top_up": "automatic_top_up",
+  "balance_not_updated_after_bank_transfer": "balance_not_updated_after_bank_transfer",
+  "balance_not_updated_after_cheque_or_cash_deposit": "balance_not_updated_after_cheque_or_cash_deposit",
+  "beneficiary_not_allowed": "beneficiary_not_allowed",
+  "cancel_transfer": "cancel_transfer",
+  "card_about_to_expire": "card_about_to_expire",
+  "card_acceptance": "card_acceptance",
+  "card_arrival": "card_arrival",
+  "card_delivery_estimate": "card_delivery_estimate",
+  "card_linking": "card_linking",
+  "card_not_working": "card_not_working",
+  "card_payment_fee_charged": "card_payment_fee_charged",
+  "card_payment_not_recognised": "card_payment_not_recognised",
+  "card_payment_wrong_exchange_rate": "card_payment_wrong_exchange_rate",
+  "card_swallowed": "card_swallowed",
+  "cash_withdrawal_charge": "cash_withdrawal_charge",
+  "cash_withdrawal_not_recognised": "cash_withdrawal_not_recognised",
+  "change_pin": "change_pin",
+  "compromised_card": "compromised_card",
+  "contactless_not_working": "contactless_not_working",
+  "country_support": "country_support",
+  "declined_card_payment": "declined_card_payment",
+  "declined_cash_withdrawal": "declined_cash_withdrawal",
+  "declined_transfer": "declined_transfer",
+  "direct_debit_payment_not_recognised": "direct_debit_payment_not_recognised",
+  "disposable_card_limits": "disposable_card_limits",
+  "edit_personal_details": "edit_personal_details",
+  "exchange_charge": "exchange_charge",
+  "exchange_rate": "exchange_rate",
+  "exchange_via_app": "exchange_via_app",
+  "extra_charge_on_statement": "extra_charge_on_statement",
+  "failed_transfer": "failed_transfer",
+  "fiat_currency_support": "fiat_currency_support",
+  "get_disposable_virtual_card": "get_disposable_virtual_card",
+  "get_physical_card": "get_physical_card",
+  "getting_spare_card": "getting_spare_card",
+  "getting_virtual_card": "getting_virtual_card",
+  "lost_or_stolen_card": "lost_or_stolen_card",
+  "lost_or_stolen_phone": "lost_or_stolen_phone",
+  "order_physical_card": "order_physical_card",
+  "passcode_forgotten": "passcode_forgotten",
+  "pending_card_payment": "pending_card_payment",
+  "pending_cash_withdrawal": "pending_cash_withdrawal",
+  "pending_top_up": "pending_top_up",
+  "pending_transfer": "pending_transfer",
+  "pin_blocked": "pin_blocked",
+  "receiving_money": "receiving_money",
+  "request_refund": "request_refund",
+  "reverted_card_payment?": "reverted_card_payment?",
+  "supported_cards_and_currencies": "supported_cards_and_currencies",
+  "terminate_account": "terminate_account",
+  "top_up_by_bank_transfer_charge": "top_up_by_bank_transfer_charge",
+  "top_up_by_card_charge": "top_up_by_card_charge",
+  "top_up_by_cash_or_cheque": "top_up_by_cash_or_cheque",
+  "top_up_failed": "top_up_failed",
+  "top_up_limits": "top_up_limits",
+  "top_up_reverted": "top_up_reverted",
+  "topping_up_by_card": "topping_up_by_card",
+  "transaction_charged_twice": "transaction_charged_twice",
+  "transfer_fee_charged": "transfer_fee_charged",
+  "transfer_into_account": "transfer_into_account",
+  "transfer_not_received_by_recipient": "transfer_not_received_by_recipient",
+  "transfer_timing": "transfer_timing",
+  "unable_to_verify_identity": "unable_to_verify_identity",
+  "verify_my_identity": "verify_my_identity",
+  "verify_source_of_funds": "verify_source_of_funds",
+  "verify_top_up": "verify_top_up",
+  "virtual_card_not_working": "virtual_card_not_working",
+  "visa_or_mastercard": "visa_or_mastercard",
+  "why_verify_identity": "why_verify_identity",
+  "wrong_amount_of_cash_received": "wrong_amount_of_cash_received",
+  "wrong_exchange_rate_for_cash_withdrawal": "wrong_exchange_rate_for_cash_withdrawal"
+ }
+}

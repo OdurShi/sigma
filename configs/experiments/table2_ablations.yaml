@@ -1,0 +1,9 @@
+description: >
+  Table 2 (and the token-matched rows of Table 11): guidance-use diagnostics and ablations at
+  10 shots.  Run after table1_main: token-matched SFT reads the measured training-token
+  budget of the SIGMA run with the same dataset and seed.
+defaults: [../base.yaml]
+grid:
+  dataset: [banking77, clinc150, hwu64]
+  method: [sigma, sft_token_matched, paired_sft, transported_kl, sigma_binding_only, sigma_reversal_only, sigma_f]
+  seed: [13, 21, 42, 87, 100]

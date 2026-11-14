@@ -1,0 +1,78 @@
+coefficient: null
+data:
+  directory: data
+  label_subset:
+  - alarm
+  - transport
+  max_dev_instances: 12
+  max_test_instances: 30
+  name: hwu64
+  outputs: original
+  shots: 4
+  synthetic_classes_per_group: 4
+  synthetic_groups: 3
+eval:
+  binding_draws: 2
+  composition_depths:
+  - 2
+  - 4
+  - 8
+  composition_draws: 1
+  save_scores: true
+method: sigma
+model:
+  adaptation: lora
+  device: mps
+  dtype: float32
+  end_of_answer: auto
+  gradient_checkpointing: false
+  lora:
+    alpha: 32.0
+    dropout: 0.0
+    rank: 16
+    target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  name: Qwen/Qwen2.5-0.5B-Instruct
+  template_kwargs: {}
+  tiny_heads: 4
+  tiny_hidden_size: 96
+  tiny_layers: 2
+optim:
+  batch_size: 4
+  betas:
+  - 0.9
+  - 0.95
+  grad_clip: 1.0
+  lr: 0.0001
+  max_steps: 12
+  passes: 10.0
+  token_budget: null
+  warmup_ratio: 0.03
+  weight_decay: 0.01
+output_dir: runs/reduced_scale/sigma
+scoring:
+  candidate_chunk_size: null
+  gradient_mode: two_pass
+  max_context_tokens: 8192
+  strategy: packed
+  view_batch_size: 4
+seed: 13
+selection:
+  coefficient_grid:
+  - 0.0
+  - 0.01
+  - 0.1
+  - 1.0
+  - 10.0
+  lr_grid:
+  - 1.0e-05
+  - 5.0e-05
+  - 0.0001
+  num_checkpoints: 2
+  search: false

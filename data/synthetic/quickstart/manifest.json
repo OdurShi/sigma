@@ -1,0 +1,6 @@
+{
+ "generator": "sigma.data.synthetic.make_synthetic_data",
+ "seed": 13,
+ "num_groups": 2,
+ "classes_per_group": 3
+}

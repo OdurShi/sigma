@@ -1,0 +1,1076 @@
+{"text": "tell me time of alarm you set", "label": "alarm_query"}
+{"text": "list all of my alarms", "label": "alarm_query"}
+{"text": "alarm settings", "label": "alarm_query"}
+{"text": "what alarms are set for today", "label": "alarm_query"}
+{"text": "please see see for me the alarms that you have set sunday morning", "label": "alarm_query"}
+{"text": "tell me when the next alarms are for", "label": "alarm_query"}
+{"text": "please tell me what alarms are on", "label": "alarm_query"}
+{"text": "please list all my alarms", "label": "alarm_query"}
+{"text": "what alarms are set right now", "label": "alarm_query"}
+{"text": "check whether i have set any alarms for tomorrow morning", "label": "alarm_query"}
+{"text": "tell me about my alarms", "label": "alarm_query"}
+{"text": "do i have any alarms set", "label": "alarm_query"}
+{"text": "is there an alarm at four am", "label": "alarm_query"}
+{"text": "show me my alarms", "label": "alarm_query"}
+{"text": "what alarm time had you set", "label": "alarm_query"}
+{"text": "can you tell me what alarms i have set", "label": "alarm_query"}
+{"text": "please let me know the morning alarm time kept for weekends", "label": "alarm_query"}
+{"text": "what time is the alarm set for tomorrow", "label": "alarm_query"}
+{"text": "may i know the about alarm you set", "label": "alarm_query"}
+{"text": "disable the alarm which is set at nine thirty pm", "label": "alarm_remove"}
+{"text": "delete scheduled alarm", "label": "alarm_remove"}
+{"text": "turn off my first alarm", "label": "alarm_remove"}
+{"text": "please cancel all alarms for tomorrow", "label": "alarm_remove"}
+{"text": "please delete the wednesday evening alarm", "label": "alarm_remove"}
+{"text": "please delete my morning alarm", "label": "alarm_remove"}
+{"text": "remove all of my alarms", "label": "alarm_remove"}
+{"text": "cancel alarm", "label": "alarm_remove"}
+{"text": "delete the alarm i just set", "label": "alarm_remove"}
+{"text": "could you please remove the set of alarms between eight and nine", "label": "alarm_remove"}
+{"text": "please turn off the alarm", "label": "alarm_remove"}
+{"text": "set an alarm for nine am", "label": "alarm_set"}
+{"text": "change alarm to start at midnight", "label": "alarm_set"}
+{"text": "alarm ten am", "label": "alarm_set"}
+{"text": "set an alarm for me for tomorrow", "label": "alarm_set"}
+{"text": "set an alarm for twelve", "label": "alarm_set"}
+{"text": "set a timer at five am seven days a week", "label": "alarm_set"}
+{"text": "i need to set an alarm for next friday at noon", "label": "alarm_set"}
+{"text": "please sound an alarm three hours before a scheduled event", "label": "alarm_set"}
+{"text": "can you set an alarm for seven am", "label": "alarm_set"}
+{"text": "alert me at ten am please", "label": "alarm_set"}
+{"text": "set the alarm to seven am for work", "label": "alarm_set"}
+{"text": "wake up time", "label": "alarm_set"}
+{"text": "change my alarms to mountain time", "label": "alarm_set"}
+{"text": "set up each day an alarm at ten time for my meal", "label": "alarm_set"}
+{"text": "please set an alarm clock for my next meeting with the team at three pm next friday", "label": "alarm_set"}
+{"text": "set my alarm for six am", "label": "alarm_set"}
+{"text": "set an alarm for this eight hundred pm this evening", "label": "alarm_set"}
+{"text": "set alarm at six thirty am", "label": "alarm_set"}
+{"text": "make me a wake up alarm for eight forty five am", "label": "alarm_set"}
+{"text": "could you please lower the tone", "label": "audio_volume_down"}
+{"text": "please talk softer", "label": "audio_volume_down"}
+{"text": "lower the speak volume", "label": "audio_volume_down"}
+{"text": "it is too loud decrease the volume", "label": "audio_volume_down"}
+{"text": "turn down volume", "label": "audio_volume_down"}
+{"text": "reduce volume", "label": "audio_volume_down"}
+{"text": "lower the volume to twenty", "label": "audio_volume_down"}
+{"text": "lower volume by fifty percent", "label": "audio_volume_down"}
+{"text": "quiet please", "label": "audio_volume_mute"}
+{"text": "mute sound from speakers", "label": "audio_volume_mute"}
+{"text": "please mute for five minutes", "label": "audio_volume_mute"}
+{"text": "mute my speakers for a minute here i need to make a call", "label": "audio_volume_mute"}
+{"text": "mute speaker", "label": "audio_volume_mute"}
+{"text": "silence volume on speakers", "label": "audio_volume_mute"}
+{"text": "turn off media volume", "label": "audio_volume_mute"}
+{"text": "i need you to be quiet until tomorrow", "label": "audio_volume_mute"}
+{"text": "go to sleep", "label": "audio_volume_mute"}
+{"text": "no notifications for five minutes", "label": "audio_volume_mute"}
+{"text": "turn off the sound", "label": "audio_volume_mute"}
+{"text": "mute the music", "label": "audio_volume_mute"}
+{"text": "pause for ten seconds", "label": "audio_volume_mute"}
+{"text": "set mute for twenty minutes", "label": "audio_volume_mute"}
+{"text": "i need to mute the speaker", "label": "audio_volume_mute"}
+{"text": "could you speak a little more softly", "label": "audio_volume_up"}
+{"text": "turn it up", "label": "audio_volume_up"}
+{"text": "just increase the volume a little", "label": "audio_volume_up"}
+{"text": "olly turn the volume up", "label": "audio_volume_up"}
+{"text": "raise volume to level seven on music player", "label": "audio_volume_up"}
+{"text": "i want the speakers turned up high", "label": "audio_volume_up"}
+{"text": "rise volume", "label": "audio_volume_up"}
+{"text": "please increase the volume of the music hips don't lie", "label": "audio_volume_up"}
+{"text": "raise the volume of my music player by fifty percent", "label": "audio_volume_up"}
+{"text": "speak as loud as you can", "label": "audio_volume_up"}
+{"text": "increase volume please", "label": "audio_volume_up"}
+{"text": "make this a bit louder", "label": "audio_volume_up"}
+{"text": "increase volume to fifty percent", "label": "audio_volume_up"}
+{"text": "when is the school dance junction marked", "label": "calendar_query"}
+{"text": "what is my schedule for tomorrow", "label": "calendar_query"}
+{"text": "am i available at five pm on sunday", "label": "calendar_query"}
+{"text": "do i have any notifications from social media", "label": "calendar_query"}
+{"text": "what do i have scheduled for next week", "label": "calendar_query"}
+{"text": "tell me the meetings i have for the week", "label": "calendar_query"}
+{"text": "do i have any openings on my schedule for tomorrow", "label": "calendar_query"}
+{"text": "do i need to pick up the kids from anything today", "label": "calendar_query"}
+{"text": "is there anything i need to be aware of", "label": "calendar_query"}
+{"text": "do i have any undone tasks", "label": "calendar_query"}
+{"text": "what is left for today", "label": "calendar_query"}
+{"text": "list out my upcoming events", "label": "calendar_query"}
+{"text": "one thousand two hundred and thirty pm already you will have a meeting in ten mins", "label": "calendar_query"}
+{"text": "is the meeting scheduled for tomorrow", "label": "calendar_query"}
+{"text": "when the birthday will be", "label": "calendar_query"}
+{"text": "when is my next appointment and who do i contact to reschedule", "label": "calendar_query"}
+{"text": "what is the plan for tonight", "label": "calendar_query"}
+{"text": "what day of the week is my birthday this year", "label": "calendar_query"}
+{"text": "what is my schedule for june fourteenth two thousand and seventeen", "label": "calendar_query"}
+{"text": "remove the next event on my calendar", "label": "calendar_remove"}
+{"text": "format the calendar", "label": "calendar_remove"}
+{"text": "remove the board meeting and reschedule for next wednesday", "label": "calendar_remove"}
+{"text": "delete event from mine", "label": "calendar_remove"}
+{"text": "cancel the event valentine's day from the calendar", "label": "calendar_remove"}
+{"text": "remove my meeting today at one pm", "label": "calendar_remove"}
+{"text": "i no longer need to see the doctor can that event be removed", "label": "calendar_remove"}
+{"text": "please remove march nineteenth's scheduled event", "label": "calendar_remove"}
+{"text": "make sure there is no events on my calendar", "label": "calendar_remove"}
+{"text": "remove all the events on my calendar", "label": "calendar_remove"}
+{"text": "delete my meeting event for march nineteen at one pm", "label": "calendar_remove"}
+{"text": "remove upcoming task", "label": "calendar_remove"}
+{"text": "remove emma's birthday from events", "label": "calendar_remove"}
+{"text": "in my calendar delete all of my golf events for the current month", "label": "calendar_remove"}
+{"text": "erase calendar events", "label": "calendar_remove"}
+{"text": "take lunch meeting off my calendar", "label": "calendar_remove"}
+{"text": "delete all my events for tomorrow", "label": "calendar_remove"}
+{"text": "delete the party on june first from my calendar", "label": "calendar_remove"}
+{"text": "can to please clear my calendar of all events", "label": "calendar_remove"}
+{"text": "set a reminder for tomorrow evening", "label": "calendar_set"}
+{"text": "notify me when the event is going to take place", "label": "calendar_set"}
+{"text": "add jim and jerry to event", "label": "calendar_set"}
+{"text": "make a repeating reminder for my yoga practice every day at noon", "label": "calendar_set"}
+{"text": "i have a meeting with sean at four pm on wednesday can you remind me", "label": "calendar_set"}
+{"text": "create an event gym day on monday and set it to repeat", "label": "calendar_set"}
+{"text": "blot me all the phone calls planned for the morning of twenty three march", "label": "calendar_set"}
+{"text": "can you remind me about my meeting tomorrow", "label": "calendar_set"}
+{"text": "repeat reminder for my schedule for christmas", "label": "calendar_set"}
+{"text": "remind me to call my grandma this sunday", "label": "calendar_set"}
+{"text": "next week my uncle birthday", "label": "calendar_set"}
+{"text": "add running to my calendar for thursday", "label": "calendar_set"}
+{"text": "i would like to attend church every sunday at eleven am", "label": "calendar_set"}
+{"text": "see if john is available for a meeting on monday", "label": "calendar_set"}
+{"text": "remind me about the meeting", "label": "calendar_set"}
+{"text": "set the alarm in my calendar events before five mins", "label": "calendar_set"}
+{"text": "activate a one week notification before my anniversary please", "label": "calendar_set"}
+{"text": "could you please schedule a meeting with this person", "label": "calendar_set"}
+{"text": "i have a meeting with al on march twenty first at ten", "label": "calendar_set"}
+{"text": "help me make brownies", "label": "cooking_recipe"}
+{"text": "crabmeat recipe", "label": "cooking_recipe"}
+{"text": "it should spices", "label": "cooking_recipe"}
+{"text": "tell how vegetable is cooked", "label": "cooking_recipe"}
+{"text": "learn to cut potatoes correctly", "label": "cooking_recipe"}
+{"text": "how to cook that meal", "label": "cooking_recipe"}
+{"text": "can i get a recipe for tuna", "label": "cooking_recipe"}
+{"text": "please cook me a hamburger", "label": "cooking_recipe"}
+{"text": "how to cook yellow rice", "label": "cooking_recipe"}
+{"text": "i need to know how to make stuffed peppers", "label": "cooking_recipe"}
+{"text": "how can i cook pasta", "label": "cooking_recipe"}
+{"text": "look for different recipes", "label": "cooking_recipe"}
+{"text": "what ingredient can be used instead of saffron", "label": "cooking_recipe"}
+{"text": "find apple pie recipe", "label": "cooking_recipe"}
+{"text": "do i have enough ingredients in my refrigerator", "label": "cooking_recipe"}
+{"text": "search for your favorite meal", "label": "cooking_recipe"}
+{"text": "tell me the preparation method for chicken sixty five", "label": "cooking_recipe"}
+{"text": "i would like it to be able to find recipes i have", "label": "cooking_recipe"}
+{"text": "why do people use avocado seeds", "label": "cooking_recipe"}
+{"text": "if it's eight pm on the east coast what time is it in sacramento california", "label": "datetime_convert"}
+{"text": "if it is four pm in missouri what time is it in london", "label": "datetime_convert"}
+{"text": "can you please change the time zone to us", "label": "datetime_convert"}
+{"text": "which time zone are we in please change to current", "label": "datetime_convert"}
+{"text": "please change time zone to canada", "label": "datetime_convert"}
+{"text": "what time will it be locally at nine am bangalore india time", "label": "datetime_convert"}
+{"text": "it is ten am in eastern standard time what time it is now it pacific standard time", "label": "datetime_convert"}
+{"text": "change mountain standard to pacific", "label": "datetime_convert"}
+{"text": "please tell me the date", "label": "datetime_query"}
+{"text": "date today", "label": "datetime_query"}
+{"text": "what is today", "label": "datetime_query"}
+{"text": "what is the time in geneva", "label": "datetime_query"}
+{"text": "let me know the time", "label": "datetime_query"}
+{"text": "new york time please", "label": "datetime_query"}
+{"text": "what is the time difference between here and dakar", "label": "datetime_query"}
+{"text": "let me know the time in india", "label": "datetime_query"}
+{"text": "tell me the time in this time zone", "label": "datetime_query"}
+{"text": "which date is on next monday", "label": "datetime_query"}
+{"text": "tell me what time it is in dallas texas", "label": "datetime_query"}
+{"text": "what time is it in the other time zones", "label": "datetime_query"}
+{"text": "hey what's the current time in austin", "label": "datetime_query"}
+{"text": "hey what is the time", "label": "datetime_query"}
+{"text": "could you tell me what time it is", "label": "datetime_query"}
+{"text": "what day of the week does the next holiday fall on", "label": "datetime_query"}
+{"text": "august fifteenth is what day of the week", "label": "datetime_query"}
+{"text": "can you tell me the date today", "label": "datetime_query"}
+{"text": "hey what's today's date", "label": "datetime_query"}
+{"text": "add dan's email", "label": "email_addcontact"}
+{"text": "add contacts n mail", "label": "email_addcontact"}
+{"text": "enter atdfd@yahoo dot com into my contact list", "label": "email_addcontact"}
+{"text": "get apahelp@yahoo dot com in my contacts", "label": "email_addcontact"}
+{"text": "save the email to my contact", "label": "email_addcontact"}
+{"text": "please add johndoe@yahoocom to my contact list", "label": "email_addcontact"}
+{"text": "add this new email", "label": "email_addcontact"}
+{"text": "add work email address", "label": "email_addcontact"}
+{"text": "are there any new emails from name", "label": "email_query"}
+{"text": "give me recent emails", "label": "email_query"}
+{"text": "refresh email", "label": "email_query"}
+{"text": "i need to know all of the emails from contact pertaining to subject", "label": "email_query"}
+{"text": "open email", "label": "email_query"}
+{"text": "who has sent me an email in the past week", "label": "email_query"}
+{"text": "check emails for unread emails from mom", "label": "email_query"}
+{"text": "did any emails come for me in the last five hours", "label": "email_query"}
+{"text": "report what is new in my email inbox please", "label": "email_query"}
+{"text": "what is the subject and who is the sender of my last email", "label": "email_query"}
+{"text": "what did i tell susan in my last email", "label": "email_query"}
+{"text": "show me all the emails received recently", "label": "email_query"}
+{"text": "do i have any emails from jessica", "label": "email_query"}
+{"text": "are there any recent unread emails", "label": "email_query"}
+{"text": "do i have any new email from ryan", "label": "email_query"}
+{"text": "carlos linux upgrade email", "label": "email_query"}
+{"text": "my mail", "label": "email_query"}
+{"text": "have i gotten any mail recently", "label": "email_query"}
+{"text": "check emails", "label": "email_query"}
+{"text": "what is sarah's number", "label": "email_querycontact"}
+{"text": "can you give me details on john", "label": "email_querycontact"}
+{"text": "have you responded my phone calls", "label": "email_querycontact"}
+{"text": "what is jeff's number", "label": "email_querycontact"}
+{"text": "how many contacts are there named john", "label": "email_querycontact"}
+{"text": "tell me the contact details of my brother", "label": "email_querycontact"}
+{"text": "show mobile number of john", "label": "email_querycontact"}
+{"text": "does contact mona has an email as well", "label": "email_querycontact"}
+{"text": "show number and contact email of rehan", "label": "email_querycontact"}
+{"text": "look up for the residential address of my team leader", "label": "email_querycontact"}
+{"text": "what is my wife's email", "label": "email_querycontact"}
+{"text": "select the contact", "label": "email_querycontact"}
+{"text": "is this my sisters cellphone number", "label": "email_querycontact"}
+{"text": "how old is mary s.", "label": "email_querycontact"}
+{"text": "did mom text me", "label": "email_querycontact"}
+{"text": "please let me know where david is travelling", "label": "email_querycontact"}
+{"text": "is hayden still living on turnpike lane", "label": "email_querycontact"}
+{"text": "add rebecca green to my list of favorite contacts", "label": "email_querycontact"}
+{"text": "what is jill's home phone number", "label": "email_querycontact"}
+{"text": "send a mail to whom to talk", "label": "email_sendemail"}
+{"text": "pull up kate's email and write that i will let her know", "label": "email_sendemail"}
+{"text": "please reply to my boss most recent email and say that the ppt will be ready in one hour maximum", "label": "email_sendemail"}
+{"text": "reply the email of charles with just thank you right now", "label": "email_sendemail"}
+{"text": "send new email to jana dot litt at gmail dot com", "label": "email_sendemail"}
+{"text": "hey please reply to last pawel's email", "label": "email_sendemail"}
+{"text": "send email to new email address", "label": "email_sendemail"}
+{"text": "send an email to my friend say birthday wishes", "label": "email_sendemail"}
+{"text": "send email to mom starting with the subject vacation", "label": "email_sendemail"}
+{"text": "jj.nzt@yahoo dot com", "label": "email_sendemail"}
+{"text": "email happy new year to john", "label": "email_sendemail"}
+{"text": "tell to joe's email that come to my house in this moment i am alone", "label": "email_sendemail"}
+{"text": "go to email and send message to", "label": "email_sendemail"}
+{"text": "email john smith", "label": "email_sendemail"}
+{"text": "start a new email to george brown", "label": "email_sendemail"}
+{"text": "send a replay email", "label": "email_sendemail"}
+{"text": "send reply to joe", "label": "email_sendemail"}
+{"text": "email tom the date and time of tomorrow's meeting", "label": "email_sendemail"}
+{"text": "add mail id subject content", "label": "email_sendemail"}
+{"text": "fantastic response.", "label": "general_affirm"}
+{"text": "yeap you've gotten my instructions perfectly.", "label": "general_affirm"}
+{"text": "yeah wonderful response.", "label": "general_affirm"}
+{"text": "yeah exact response to the command.", "label": "general_affirm"}
+{"text": "yeah perfect response to command.", "label": "general_affirm"}
+{"text": "yeah excellent.", "label": "general_affirm"}
+{"text": "yeah exactly.", "label": "general_affirm"}
+{"text": "perfect response to command.", "label": "general_affirm"}
+{"text": "yes you have got my instructions perfectly.", "label": "general_affirm"}
+{"text": "yeah you understood command correcly.", "label": "general_affirm"}
+{"text": "yeah wonderful response to command.", "label": "general_affirm"}
+{"text": "strongly agree.", "label": "general_affirm"}
+{"text": "yeap it is confirmed.", "label": "general_affirm"}
+{"text": "you got the command right.", "label": "general_affirm"}
+{"text": "yeah strongly agree.", "label": "general_affirm"}
+{"text": "yeah fantastic.", "label": "general_affirm"}
+{"text": "yes you've understood my instructions exactly.", "label": "general_affirm"}
+{"text": "yeap your understanding was confirmed.", "label": "general_affirm"}
+{"text": "yeah that is correct.", "label": "general_affirm"}
+{"text": "i would like you just stop it.", "label": "general_commandstop"}
+{"text": "will you please shut down.", "label": "general_commandstop"}
+{"text": "olly that's enough, just stop it.", "label": "general_commandstop"}
+{"text": "olly can you stop it.", "label": "general_commandstop"}
+{"text": "olly please would you stop.", "label": "general_commandstop"}
+{"text": "please shut up.", "label": "general_commandstop"}
+{"text": "i like you cancel.", "label": "general_commandstop"}
+{"text": "will you just stop it please.", "label": "general_commandstop"}
+{"text": "would you cancel it please.", "label": "general_commandstop"}
+{"text": "olly can you shut down.", "label": "general_commandstop"}
+{"text": "olly that is enough, just stop it.", "label": "general_commandstop"}
+{"text": "olly will you cancel please.", "label": "general_commandstop"}
+{"text": "will you stop.", "label": "general_commandstop"}
+{"text": "that's all, cancel it.", "label": "general_commandstop"}
+{"text": "olly shut down please.", "label": "general_commandstop"}
+{"text": "olly can you just stop.", "label": "general_commandstop"}
+{"text": "will you cancel it.", "label": "general_commandstop"}
+{"text": "olly please can you shut up.", "label": "general_commandstop"}
+{"text": "olly i want you cancel.", "label": "general_commandstop"}
+{"text": "would you confirm the question.", "label": "general_confirm"}
+{"text": "could you check my last question.", "label": "general_confirm"}
+{"text": "will you check and confirm command please.", "label": "general_confirm"}
+{"text": "please will you check it.", "label": "general_confirm"}
+{"text": "could you check and confirm what i last said please.", "label": "general_confirm"}
+{"text": "will you please check it.", "label": "general_confirm"}
+{"text": "please can you confirm the question.", "label": "general_confirm"}
+{"text": "check the details please.", "label": "general_confirm"}
+{"text": "can you confirm it.", "label": "general_confirm"}
+{"text": "please can you confirm it.", "label": "general_confirm"}
+{"text": "can you check and confirm the question please.", "label": "general_confirm"}
+{"text": "i like you check question please.", "label": "general_confirm"}
+{"text": "did you get what just said correctly?", "label": "general_confirm"}
+{"text": "did you get what said correctly?", "label": "general_confirm"}
+{"text": "i like you to check and confirm what i said please.", "label": "general_confirm"}
+{"text": "would you please confirm the instruction.", "label": "general_confirm"}
+{"text": "check and confirm my last question please.", "label": "general_confirm"}
+{"text": "will you check and confirm the instruction please.", "label": "general_confirm"}
+{"text": "can you check last thing said please.", "label": "general_confirm"}
+{"text": "i would not mind, olly.", "label": "general_dontcare"}
+{"text": "wouldn't mind for any one.", "label": "general_dontcare"}
+{"text": "does not matter for me, olly.", "label": "general_dontcare"}
+{"text": "don't really bother, olly.", "label": "general_dontcare"}
+{"text": "wouldn't really know, olly.", "label": "general_dontcare"}
+{"text": "i have no idea about what to do, olly.", "label": "general_dontcare"}
+{"text": "i do not mind for whatever.", "label": "general_dontcare"}
+{"text": "any one is good, olly.", "label": "general_dontcare"}
+{"text": "it does not matter to me, olly.", "label": "general_dontcare"}
+{"text": "i would not mind to select any one.", "label": "general_dontcare"}
+{"text": "i do not really mind for whatever.", "label": "general_dontcare"}
+{"text": "this is unimportant for me.", "label": "general_dontcare"}
+{"text": "i would not mind to select any one, olly.", "label": "general_dontcare"}
+{"text": "does not matter for me.", "label": "general_dontcare"}
+{"text": "any one is good to me.", "label": "general_dontcare"}
+{"text": "this is unimportant, olly.", "label": "general_dontcare"}
+{"text": "wouldn't really mind for whatever.", "label": "general_dontcare"}
+{"text": "have no idea regarding to what to select, olly.", "label": "general_dontcare"}
+{"text": "does not matter, olly.", "label": "general_dontcare"}
+{"text": "would you clarify me on your answer further please.", "label": "general_explain"}
+{"text": "s2, i can not understand that.", "label": "general_explain"}
+{"text": "your words is not so clear.", "label": "general_explain"}
+{"text": "s1, explain further please.", "label": "general_explain"}
+{"text": "s2, i am unclear about what you have just said.", "label": "general_explain"}
+{"text": "please will you clarify me more on that.", "label": "general_explain"}
+{"text": "will you rephrase me about your response once again please.", "label": "general_explain"}
+{"text": "again clarify me on your answers.", "label": "general_explain"}
+{"text": "again elaborate.", "label": "general_explain"}
+{"text": "couldn't understand what you just said now.", "label": "general_explain"}
+{"text": "can you again clarify what you've said please.", "label": "general_explain"}
+{"text": "i didn't get your response.", "label": "general_explain"}
+{"text": "s1, could you please again rephrase me about what you said now.", "label": "general_explain"}
+{"text": "what you said now was not clear.", "label": "general_explain"}
+{"text": "can you explain once again.", "label": "general_explain"}
+{"text": "do not get this.", "label": "general_explain"}
+{"text": "s1, explain me on your answer further please.", "label": "general_explain"}
+{"text": "s2, i do not catch up with you.", "label": "general_explain"}
+{"text": "didn't understand what you said now.", "label": "general_explain"}
+{"text": "tell me random joke", "label": "general_joke"}
+{"text": "find me a joke related to baseball", "label": "general_joke"}
+{"text": "i need to be cheered up right now can you tell me a good joke", "label": "general_joke"}
+{"text": "today's jokes", "label": "general_joke"}
+{"text": "do you have a joke", "label": "general_joke"}
+{"text": "what's your favorite joke", "label": "general_joke"}
+{"text": "look for a joke", "label": "general_joke"}
+{"text": "do you know what a joke is", "label": "general_joke"}
+{"text": "i want a nerd joke", "label": "general_joke"}
+{"text": "what about this joke", "label": "general_joke"}
+{"text": "have any jokes", "label": "general_joke"}
+{"text": "joke please", "label": "general_joke"}
+{"text": "thanks but i think you don't understand this correctly.", "label": "general_negate"}
+{"text": "sorry but i think you've got that not right.", "label": "general_negate"}
+{"text": "i didn't say it.", "label": "general_negate"}
+{"text": "shit, not right.", "label": "general_negate"}
+{"text": "i think it is not correct response.", "label": "general_negate"}
+{"text": "thanks but you have understood this wrongly.", "label": "general_negate"}
+{"text": "wait, i think that's not the right answer.", "label": "general_negate"}
+{"text": "that wasn't right.", "label": "general_negate"}
+{"text": "oops, you're not correct.", "label": "general_negate"}
+{"text": "wait, you did not interpret command right.", "label": "general_negate"}
+{"text": "you have done a wrong thing.", "label": "general_negate"}
+{"text": "wait, this is not the correct answer.", "label": "general_negate"}
+{"text": "thanks but i think you do not get me.", "label": "general_negate"}
+{"text": "no, this is not what i am looking for.", "label": "general_negate"}
+{"text": "uhh no, incorrect command.", "label": "general_negate"}
+{"text": "i think you don't get answer right.", "label": "general_negate"}
+{"text": "i think you did a task all wrong.", "label": "general_negate"}
+{"text": "uh no, you did not understand what i am searching for.", "label": "general_negate"}
+{"text": "i am sorry but i think it was not the correct answer.", "label": "general_negate"}
+{"text": "you are my hero, thank you very much, olly.", "label": "general_praise"}
+{"text": "you have done it correctly thanks, olly.", "label": "general_praise"}
+{"text": "ah that's nice one.", "label": "general_praise"}
+{"text": "you rock, thank you very much, olly.", "label": "general_praise"}
+{"text": "fantastic job, you did well.", "label": "general_praise"}
+{"text": "that's good, thanks.", "label": "general_praise"}
+{"text": "appreciate your answers, olly.", "label": "general_praise"}
+{"text": "you are my star, thank you so much, olly.", "label": "general_praise"}
+{"text": "that was cool, i appreciate it.", "label": "general_praise"}
+{"text": "fantastic job, you've done well, olly.", "label": "general_praise"}
+{"text": "great work, you did well, olly.", "label": "general_praise"}
+{"text": "that is cool, thanks, olly.", "label": "general_praise"}
+{"text": "thank you for the response, olly.", "label": "general_praise"}
+{"text": "you've done it right.", "label": "general_praise"}
+{"text": "well done, appreciated.", "label": "general_praise"}
+{"text": "excellent work, you have done well.", "label": "general_praise"}
+{"text": "awesome job, you did well.", "label": "general_praise"}
+{"text": "it's great one, thank you very much.", "label": "general_praise"}
+{"text": "it's helpful, appreciated.", "label": "general_praise"}
+{"text": "today i had a lunch with my longtime sweetheart play me a nice song to the mood", "label": "general_quirky"}
+{"text": "what's on tv", "label": "general_quirky"}
+{"text": "is the data prefers any problems in objects", "label": "general_quirky"}
+{"text": "your salary", "label": "general_quirky"}
+{"text": "overall day", "label": "general_quirky"}
+{"text": "anything i need to know", "label": "general_quirky"}
+{"text": "is mile marker sixty five where the hanging tree is located", "label": "general_quirky"}
+{"text": "tell me what happens when we die", "label": "general_quirky"}
+{"text": "what is your country", "label": "general_quirky"}
+{"text": "do i need to spare washing my car today", "label": "general_quirky"}
+{"text": "this brings some problems to us", "label": "general_quirky"}
+{"text": "can you explain me the problems when the syria becomes more stronger than america", "label": "general_quirky"}
+{"text": "you are chatbot", "label": "general_quirky"}
+{"text": "how high is the quality of this stone", "label": "general_quirky"}
+{"text": "can you please tell me who are you", "label": "general_quirky"}
+{"text": "where did he was yesterday", "label": "general_quirky"}
+{"text": "have you come across any new recipes", "label": "general_quirky"}
+{"text": "how did your day go", "label": "general_quirky"}
+{"text": "give me the product review from gamespot about the nintendo switch", "label": "general_quirky"}
+{"text": "let's start over please.", "label": "general_repeat"}
+{"text": "please say one more time again.", "label": "general_repeat"}
+{"text": "i would like to hear that information spoken again.", "label": "general_repeat"}
+{"text": "i would like to hear the last one spoken again.", "label": "general_repeat"}
+{"text": "i'd like to hear the last spoke again.", "label": "general_repeat"}
+{"text": "i need to hear what you've said again.", "label": "general_repeat"}
+{"text": "retry please.", "label": "general_repeat"}
+{"text": "will you try what i have just said one more time please.", "label": "general_repeat"}
+{"text": "would you tell me one more again please.", "label": "general_repeat"}
+{"text": "would you tell me once again.", "label": "general_repeat"}
+{"text": "could you tell me the last one you just said again please.", "label": "general_repeat"}
+{"text": "i want to hear that again.", "label": "general_repeat"}
+{"text": "i want to hear it again.", "label": "general_repeat"}
+{"text": "please could you tell me once more.", "label": "general_repeat"}
+{"text": "can you try again please.", "label": "general_repeat"}
+{"text": "say one more time again please.", "label": "general_repeat"}
+{"text": "will you speak once again please.", "label": "general_repeat"}
+{"text": "please say it once again.", "label": "general_repeat"}
+{"text": "please tell me it once more.", "label": "general_repeat"}
+{"text": "please activate my vacuum to clean the living room", "label": "iot_cleaning"}
+{"text": "can you wake the roomba for the kitchen", "label": "iot_cleaning"}
+{"text": "please have vacuum go for one hour", "label": "iot_cleaning"}
+{"text": "activate the vacuum", "label": "iot_cleaning"}
+{"text": "clean the sofa with the vacuum cleaner", "label": "iot_cleaning"}
+{"text": "have the vacuum cleaner clean the room", "label": "iot_cleaning"}
+{"text": "hurriedly activates my robot vacuum cleaner", "label": "iot_cleaning"}
+{"text": "begin vacuum", "label": "iot_cleaning"}
+{"text": "remove dust with vacuum cleaner", "label": "iot_cleaning"}
+{"text": "start vacuum bot", "label": "iot_cleaning"}
+{"text": "start my robot vacuum cleaner by ten to eleven am daily", "label": "iot_cleaning"}
+{"text": "activate vacuum cleaner", "label": "iot_cleaning"}
+{"text": "turn on the roomba", "label": "iot_cleaning"}
+{"text": "begin vacuum cleaning", "label": "iot_cleaning"}
+{"text": "please turn on my vacuum cleaner", "label": "iot_cleaning"}
+{"text": "how do you activate the robot vacuum cleaner", "label": "iot_cleaning"}
+{"text": "i would like some coffee now", "label": "iot_coffee"}
+{"text": "please make coffee at seven am", "label": "iot_coffee"}
+{"text": "make a cup of coffee", "label": "iot_coffee"}
+{"text": "start coffee at six am", "label": "iot_coffee"}
+{"text": "i want some coffee now", "label": "iot_coffee"}
+{"text": "get me some latte please", "label": "iot_coffee"}
+{"text": "prepare my morning coffee", "label": "iot_coffee"}
+{"text": "prepare some cups of coffee for us", "label": "iot_coffee"}
+{"text": "can you see to it that the coffee maker is ready with my filter coffee in approximately ten minutes from now", "label": "iot_coffee"}
+{"text": "i'd like a coffee now", "label": "iot_coffee"}
+{"text": "can you please turn on the coffee pot to make me coffee", "label": "iot_coffee"}
+{"text": "prepare coffee now", "label": "iot_coffee"}
+{"text": "can you get me a cup of coffee", "label": "iot_coffee"}
+{"text": "make a cup of coffee for me", "label": "iot_coffee"}
+{"text": "get a cup of coffee ready now", "label": "iot_coffee"}
+{"text": "coffee please", "label": "iot_coffee"}
+{"text": "make me a capuccino", "label": "iot_coffee"}
+{"text": "make me coffee at eight am", "label": "iot_coffee"}
+{"text": "put on a pot of coffee", "label": "iot_coffee"}
+{"text": "please make the lights natural", "label": "iot_hue_lightchange"}
+{"text": "lights to fifty percent", "label": "iot_hue_lightchange"}
+{"text": "can you change the light colors in the house", "label": "iot_hue_lightchange"}
+{"text": "turn the lights on party mode", "label": "iot_hue_lightchange"}
+{"text": "set the mood please", "label": "iot_hue_lightchange"}
+{"text": "change the light colors", "label": "iot_hue_lightchange"}
+{"text": "could you change the lights colour to green please", "label": "iot_hue_lightchange"}
+{"text": "make curser adjustable position", "label": "iot_hue_lightchange"}
+{"text": "change light color", "label": "iot_hue_lightchange"}
+{"text": "change the light color to blue", "label": "iot_hue_lightchange"}
+{"text": "alter the color of the lights at home", "label": "iot_hue_lightchange"}
+{"text": "change lights to blue", "label": "iot_hue_lightchange"}
+{"text": "can you change the living room lights to a softer color", "label": "iot_hue_lightchange"}
+{"text": "can you set the living room lights to pink", "label": "iot_hue_lightchange"}
+{"text": "change the color of the lights to blue", "label": "iot_hue_lightchange"}
+{"text": "let's have a warm glow in the front room", "label": "iot_hue_lightchange"}
+{"text": "switch lights to red tone", "label": "iot_hue_lightchange"}
+{"text": "change my light color to blue and please turn off the kitchen light", "label": "iot_hue_lightchange"}
+{"text": "all lights colour to blue please", "label": "iot_hue_lightchange"}
+{"text": "dim the lights at the living room", "label": "iot_hue_lightdim"}
+{"text": "lower the light intensity", "label": "iot_hue_lightdim"}
+{"text": "hi can you please turn lower the lights", "label": "iot_hue_lightdim"}
+{"text": "dim the lights please", "label": "iot_hue_lightdim"}
+{"text": "please turn down the lights", "label": "iot_hue_lightdim"}
+{"text": "lower the lights", "label": "iot_hue_lightdim"}
+{"text": "lower the lights in bedroom two", "label": "iot_hue_lightdim"}
+{"text": "i want the room to be less bright", "label": "iot_hue_lightdim"}
+{"text": "hey olly make the lights a little dimmer", "label": "iot_hue_lightdim"}
+{"text": "light is too much", "label": "iot_hue_lightdim"}
+{"text": "reduce brightness", "label": "iot_hue_lightdim"}
+{"text": "dim the overhead lights a tad", "label": "iot_hue_lightdim"}
+{"text": "switch off main light", "label": "iot_hue_lightoff"}
+{"text": "off all the lights on the right side", "label": "iot_hue_lightoff"}
+{"text": "turn off lights in bathroom", "label": "iot_hue_lightoff"}
+{"text": "bedroom lights off now", "label": "iot_hue_lightoff"}
+{"text": "turn off the lights in the bathroom", "label": "iot_hue_lightoff"}
+{"text": "please turn off the lights in the kitchen", "label": "iot_hue_lightoff"}
+{"text": "turn off the room light", "label": "iot_hue_lightoff"}
+{"text": "power off the current", "label": "iot_hue_lightoff"}
+{"text": "turn off lights of kitchen", "label": "iot_hue_lightoff"}
+{"text": "by main power off", "label": "iot_hue_lightoff"}
+{"text": "turn off the upstairs bathroom light", "label": "iot_hue_lightoff"}
+{"text": "please turn off my patio lights", "label": "iot_hue_lightoff"}
+{"text": "turn the lights off please", "label": "iot_hue_lightoff"}
+{"text": "can you make sure the kitchen light is off", "label": "iot_hue_lightoff"}
+{"text": "could you turn the light off", "label": "iot_hue_lightoff"}
+{"text": "turn the living room's light off", "label": "iot_hue_lightoff"}
+{"text": "switch off the lights", "label": "iot_hue_lightoff"}
+{"text": "can you turn off my desk lamp", "label": "iot_hue_lightoff"}
+{"text": "turn the left light off", "label": "iot_hue_lightoff"}
+{"text": "please turn on all lights", "label": "iot_hue_lighton"}
+{"text": "please turn on the lights", "label": "iot_hue_lighton"}
+{"text": "it's dark in the living room", "label": "iot_hue_lighton"}
+{"text": "light up", "label": "iot_hue_lightup"}
+{"text": "lighten the light", "label": "iot_hue_lightup"}
+{"text": "i need the lights in here to be turned up to seven", "label": "iot_hue_lightup"}
+{"text": "increase brightness by twenty percent", "label": "iot_hue_lightup"}
+{"text": "increase the light in the room", "label": "iot_hue_lightup"}
+{"text": "can you turn up the lights", "label": "iot_hue_lightup"}
+{"text": "i would like all the lights on when i enter", "label": "iot_hue_lightup"}
+{"text": "please arrange to make all lights to show brighter", "label": "iot_hue_lightup"}
+{"text": "brighten living room lights", "label": "iot_hue_lightup"}
+{"text": "raise all the lights on", "label": "iot_hue_lightup"}
+{"text": "raise the lights", "label": "iot_hue_lightup"}
+{"text": "brighten the light at seventy percent", "label": "iot_hue_lightup"}
+{"text": "increase", "label": "iot_hue_lightup"}
+{"text": "brighten the lights", "label": "iot_hue_lightup"}
+{"text": "deactive the socket", "label": "iot_wemo_off"}
+{"text": "turn off the rice cooker socket", "label": "iot_wemo_off"}
+{"text": "power off wemo plug socket", "label": "iot_wemo_off"}
+{"text": "please switch off on the wemo plug socket", "label": "iot_wemo_off"}
+{"text": "shut the smart socket down", "label": "iot_wemo_off"}
+{"text": "i do not want to use the socket anymore", "label": "iot_wemo_off"}
+{"text": "turn off my smart plug in thirty minutes", "label": "iot_wemo_off"}
+{"text": "turn off wifi when you leave home to save power", "label": "iot_wemo_off"}
+{"text": "please turn off my smart plug socket", "label": "iot_wemo_off"}
+{"text": "turn on the wemo plug socket to connect my charger to it", "label": "iot_wemo_on"}
+{"text": "turn on the plug", "label": "iot_wemo_on"}
+{"text": "on all the button on dashboard", "label": "iot_wemo_on"}
+{"text": "toggle wemo plug socket on", "label": "iot_wemo_on"}
+{"text": "wemo on", "label": "iot_wemo_on"}
+{"text": "start new smart socket", "label": "iot_wemo_on"}
+{"text": "make the wemo go on", "label": "iot_wemo_on"}
+{"text": "create a list of monthly groceries to be bought", "label": "lists_createoradd"}
+{"text": "create a list of books to be ordered", "label": "lists_createoradd"}
+{"text": "create a blank list", "label": "lists_createoradd"}
+{"text": "add to list", "label": "lists_createoradd"}
+{"text": "add these documents to the things i need to travel with", "label": "lists_createoradd"}
+{"text": "start a new list", "label": "lists_createoradd"}
+{"text": "create a new to do list", "label": "lists_createoradd"}
+{"text": "search the item", "label": "lists_createoradd"}
+{"text": "create a new shopping list", "label": "lists_createoradd"}
+{"text": "start new list", "label": "lists_createoradd"}
+{"text": "i need to set up a new list", "label": "lists_createoradd"}
+{"text": "remind me to buy jeans on my shopping list", "label": "lists_createoradd"}
+{"text": "add cereal to my shopping list", "label": "lists_createoradd"}
+{"text": "i need to make a list", "label": "lists_createoradd"}
+{"text": "please add item to list", "label": "lists_createoradd"}
+{"text": "make a new list of dog breeds", "label": "lists_createoradd"}
+{"text": "add item", "label": "lists_createoradd"}
+{"text": "make a catalogue", "label": "lists_createoradd"}
+{"text": "put this on my list", "label": "lists_createoradd"}
+{"text": "open google keep", "label": "lists_query"}
+{"text": "what is the list type", "label": "lists_query"}
+{"text": "what list did i make today", "label": "lists_query"}
+{"text": "did i put toothpaste on my pick up list", "label": "lists_query"}
+{"text": "please show me lists", "label": "lists_query"}
+{"text": "groceries list", "label": "lists_query"}
+{"text": "tell me my lists", "label": "lists_query"}
+{"text": "how many items are on my list", "label": "lists_query"}
+{"text": "tell me the names on the list", "label": "lists_query"}
+{"text": "show the list that are available with numbers", "label": "lists_query"}
+{"text": "please tell me what lists i have made", "label": "lists_query"}
+{"text": "most viewed list", "label": "lists_query"}
+{"text": "what did i put down already on the walmart list", "label": "lists_query"}
+{"text": "can i see my lists for today", "label": "lists_query"}
+{"text": "is there anything on my list today", "label": "lists_query"}
+{"text": "what open lists do i have", "label": "lists_query"}
+{"text": "what is on my playlist", "label": "lists_query"}
+{"text": "what's on the list", "label": "lists_query"}
+{"text": "whats the schedule for today", "label": "lists_query"}
+{"text": "can you remove this item from the list", "label": "lists_remove"}
+{"text": "delete last entry", "label": "lists_remove"}
+{"text": "remove books from list", "label": "lists_remove"}
+{"text": "please remove my list of favorite albums", "label": "lists_remove"}
+{"text": "please delete what i just typed", "label": "lists_remove"}
+{"text": "take bread out from the shopping list", "label": "lists_remove"}
+{"text": "change that off the list", "label": "lists_remove"}
+{"text": "remove the list of apps which started with letter a", "label": "lists_remove"}
+{"text": "remove this from the list", "label": "lists_remove"}
+{"text": "get rid of peas", "label": "lists_remove"}
+{"text": "remove item three from the list", "label": "lists_remove"}
+{"text": "take grocery buying off of the list", "label": "lists_remove"}
+{"text": "i don't have enough money to buy the nintendo switch right now can you please remove it on my amazon wishlist", "label": "lists_remove"}
+{"text": "i want to remove apples from list", "label": "lists_remove"}
+{"text": "please remove this item from the list", "label": "lists_remove"}
+{"text": "delete item", "label": "lists_remove"}
+{"text": "remove item four", "label": "lists_remove"}
+{"text": "get rid of mike stein from contacts list", "label": "lists_remove"}
+{"text": "delete my grocery list in my notes", "label": "lists_remove"}
+{"text": "save this song in my favorites", "label": "music_likeness"}
+{"text": "please rate this song five stars please", "label": "music_likeness"}
+{"text": "i like alt rock music", "label": "music_likeness"}
+{"text": "add song to running list", "label": "music_likeness"}
+{"text": "i like to be it", "label": "music_likeness"}
+{"text": "add this channel to pandora", "label": "music_likeness"}
+{"text": "this song should be on my playlist", "label": "music_likeness"}
+{"text": "i like it", "label": "music_likeness"}
+{"text": "add this song to favorites playlist", "label": "music_likeness"}
+{"text": "i favorite singer is arijit singh find his voice on radio", "label": "music_likeness"}
+{"text": "i really enjoy this song", "label": "music_likeness"}
+{"text": "i'd like you to remember that i like this song", "label": "music_likeness"}
+{"text": "what is in my favorites music folder", "label": "music_likeness"}
+{"text": "please save the current song to favorites", "label": "music_likeness"}
+{"text": "all i ever want to hear is rap", "label": "music_likeness"}
+{"text": "the song you are playing is amazing", "label": "music_likeness"}
+{"text": "please thumbs up this song", "label": "music_likeness"}
+{"text": "remember that this song is good but too slow to exercise to", "label": "music_likeness"}
+{"text": "who is the song writer", "label": "music_query"}
+{"text": "please give me detail of o zaalima song", "label": "music_query"}
+{"text": "give me the details on elton john", "label": "music_query"}
+{"text": "what movie is this song from", "label": "music_query"}
+{"text": "when did pop it like it's hot come out", "label": "music_query"}
+{"text": "what is the name of the singer", "label": "music_query"}
+{"text": "who is singing this song", "label": "music_query"}
+{"text": "i want to know what song has the phrase stairway to heaven in it", "label": "music_query"}
+{"text": "where can i find this song", "label": "music_query"}
+{"text": "song info", "label": "music_query"}
+{"text": "what list is available for my favorite music from ed sheeran", "label": "music_query"}
+{"text": "who is this", "label": "music_query"}
+{"text": "list of playback of ar rahman collections", "label": "music_query"}
+{"text": "what music is this", "label": "music_query"}
+{"text": "what music service has some soul music i can listen to", "label": "music_query"}
+{"text": "which songs do i listen to most", "label": "music_query"}
+{"text": "can you locate some gospel music for me", "label": "music_query"}
+{"text": "tell me the name of this music", "label": "music_query"}
+{"text": "music traking", "label": "music_query"}
+{"text": "shuffle this playlist", "label": "music_settings"}
+{"text": "repeat this song when it ends", "label": "music_settings"}
+{"text": "cut the songs in this musics", "label": "music_settings"}
+{"text": "repeat previous song", "label": "music_settings"}
+{"text": "please repeat that music again of akon", "label": "music_settings"}
+{"text": "repeat this song", "label": "music_settings"}
+{"text": "repeat same song for ten times", "label": "music_settings"}
+{"text": "add newscast time to daily schedule", "label": "news_query"}
+{"text": "what were the cities affected by the earthquake", "label": "news_query"}
+{"text": "head lines today from news", "label": "news_query"}
+{"text": "what is the seattle city council doing about homelessness", "label": "news_query"}
+{"text": "find me any news from so clean the last six hours", "label": "news_query"}
+{"text": "what is the latest headline news from this newsource", "label": "news_query"}
+{"text": "could you please find me the latest news from a source that i do not usually go to", "label": "news_query"}
+{"text": "please keep tabs on how the presidential debates are going", "label": "news_query"}
+{"text": "what's happening around the world", "label": "news_query"}
+{"text": "i want to know everything that breaks about the dam breaking in california", "label": "news_query"}
+{"text": "what is the latest news about obamacare", "label": "news_query"}
+{"text": "show news of migration", "label": "news_query"}
+{"text": "find new trump articles but not from fox news", "label": "news_query"}
+{"text": "what's the latest news from xinhua", "label": "news_query"}
+{"text": "find me info on cars", "label": "news_query"}
+{"text": "show me news from cnn", "label": "news_query"}
+{"text": "what is the current state of brexit negotiations", "label": "news_query"}
+{"text": "fast me the news of academy awards", "label": "news_query"}
+{"text": "i want the news about academy awards", "label": "news_query"}
+{"text": "i want to hear more audiobook", "label": "play_audiobook"}
+{"text": "pause resume", "label": "play_audiobook"}
+{"text": "resume my audio book from karl pilkington", "label": "play_audiobook"}
+{"text": "book please", "label": "play_audiobook"}
+{"text": "start playing american gods where i last stopped", "label": "play_audiobook"}
+{"text": "play from my last session of joes book", "label": "play_audiobook"}
+{"text": "open audio book history of rome", "label": "play_audiobook"}
+{"text": "start audiobook the time traveller", "label": "play_audiobook"}
+{"text": "resume animal farm", "label": "play_audiobook"}
+{"text": "can you play file", "label": "play_audiobook"}
+{"text": "audio", "label": "play_audiobook"}
+{"text": "start from my last session of joes book", "label": "play_audiobook"}
+{"text": "play from this point from this audiobook", "label": "play_audiobook"}
+{"text": "resume my audiobook where we paused last", "label": "play_audiobook"}
+{"text": "resume the last kingdom for me", "label": "play_audiobook"}
+{"text": "end pause on audio book history of rome", "label": "play_audiobook"}
+{"text": "i want to finish listening to the book one thousand nine hundred and eighty four from where i left off", "label": "play_audiobook"}
+{"text": "keep reading", "label": "play_audiobook"}
+{"text": "can you play my favorite audio book of tarzan", "label": "play_audiobook"}
+{"text": "play for me the game temple run", "label": "play_game"}
+{"text": "i want to play solitare with you", "label": "play_game"}
+{"text": "can we play twenty questions", "label": "play_game"}
+{"text": "give me a company for playing football", "label": "play_game"}
+{"text": "my games to play in my phones", "label": "play_game"}
+{"text": "let's play", "label": "play_game"}
+{"text": "play tennis for me", "label": "play_game"}
+{"text": "lets play poker", "label": "play_game"}
+{"text": "anyone for tennis", "label": "play_game"}
+{"text": "play pong against me", "label": "play_game"}
+{"text": "play solitaire", "label": "play_game"}
+{"text": "we should play nfs at high speed", "label": "play_game"}
+{"text": "can we play a game of hangman", "label": "play_game"}
+{"text": "do you want to play monopoly with me", "label": "play_game"}
+{"text": "bring up papa pear saga", "label": "play_game"}
+{"text": "play checkers with me", "label": "play_game"}
+{"text": "fight me in street fighter", "label": "play_game"}
+{"text": "paper scissors or stone", "label": "play_game"}
+{"text": "start poker game with me", "label": "play_game"}
+{"text": "play music i have liked", "label": "play_music"}
+{"text": "i would like to hear the theme song to this is us", "label": "play_music"}
+{"text": "play the list from my favorites", "label": "play_music"}
+{"text": "put poker face by lady gaga next in the play queue", "label": "play_music"}
+{"text": "turn on the tunes", "label": "play_music"}
+{"text": "rock", "label": "play_music"}
+{"text": "play jumper by third eye blind", "label": "play_music"}
+{"text": "play music playlist", "label": "play_music"}
+{"text": "please turn on my music", "label": "play_music"}
+{"text": "play my rap playlist", "label": "play_music"}
+{"text": "after this song play atmosphere", "label": "play_music"}
+{"text": "play true love next", "label": "play_music"}
+{"text": "play hip hop songs", "label": "play_music"}
+{"text": "hey play crazy by britney spears", "label": "play_music"}
+{"text": "play marvin gaye i want you", "label": "play_music"}
+{"text": "play tonic", "label": "play_music"}
+{"text": "play jingle bells next", "label": "play_music"}
+{"text": "open jazz", "label": "play_music"}
+{"text": "play all third day", "label": "play_music"}
+{"text": "play fishing podcasts that are favorited", "label": "play_podcasts"}
+{"text": "play podcast for the philadelphia eagles content", "label": "play_podcasts"}
+{"text": "play me the new podcast from npr", "label": "play_podcasts"}
+{"text": "keep playing the episodes in order", "label": "play_podcasts"}
+{"text": "play next episode", "label": "play_podcasts"}
+{"text": "play my play list", "label": "play_podcasts"}
+{"text": "play favorites listed in podcasts starting with first one", "label": "play_podcasts"}
+{"text": "play previous episode", "label": "play_podcasts"}
+{"text": "play my favourite podcasts", "label": "play_podcasts"}
+{"text": "get the next episode", "label": "play_podcasts"}
+{"text": "please start the next podcast episode", "label": "play_podcasts"}
+{"text": "please play next episode of podcast", "label": "play_podcasts"}
+{"text": "show me podcasts", "label": "play_podcasts"}
+{"text": "can you play back to december", "label": "play_podcasts"}
+{"text": "can you please download my podcast file available in internet and play it once", "label": "play_podcasts"}
+{"text": "skip this episode", "label": "play_podcasts"}
+{"text": "skip this one", "label": "play_podcasts"}
+{"text": "what are my top played podcasts", "label": "play_podcasts"}
+{"text": "go back to previous episode of podcast", "label": "play_podcasts"}
+{"text": "play radia", "label": "play_radio"}
+{"text": "play nine hundred and seventy one", "label": "play_radio"}
+{"text": "play the radio", "label": "play_radio"}
+{"text": "turn on the local radio", "label": "play_radio"}
+{"text": "please turn on the sean hannity show on am", "label": "play_radio"}
+{"text": "play national public radio", "label": "play_radio"}
+{"text": "play one thousand and thirty seven fm", "label": "play_radio"}
+{"text": "show me upcoming programmes on one hundred and five point one", "label": "play_radio"}
+{"text": "load sirius and play a rock and roll show", "label": "play_radio"}
+{"text": "tune into the nearest english fm station", "label": "play_radio"}
+{"text": "please play some songs for kids", "label": "play_radio"}
+{"text": "find joel osteen's broadcast on sirius", "label": "play_radio"}
+{"text": "please go to the local sports talk show on the radio", "label": "play_radio"}
+{"text": "play alex jones in radio", "label": "play_radio"}
+{"text": "play radio javan", "label": "play_radio"}
+{"text": "press play on the radio", "label": "play_radio"}
+{"text": "play my rock station on pandora", "label": "play_radio"}
+{"text": "play music radio for me", "label": "play_radio"}
+{"text": "play me a radio channel for trance music", "label": "play_radio"}
+{"text": "what is the most current exchange rate in china", "label": "qa_currency"}
+{"text": "if i have five dollars how many rupies is that", "label": "qa_currency"}
+{"text": "how much is dollars american worth in yen", "label": "qa_currency"}
+{"text": "convert euros to dollars", "label": "qa_currency"}
+{"text": "how much is ten dollars in euros", "label": "qa_currency"}
+{"text": "how much is b. p. in u. s. d.", "label": "qa_currency"}
+{"text": "what's the value of the euro relative to nzd", "label": "qa_currency"}
+{"text": "exchange rate of euro with dollar", "label": "qa_currency"}
+{"text": "how much money in us would i need to have a thousand pesos", "label": "qa_currency"}
+{"text": "u. s. d. to g. b. p.", "label": "qa_currency"}
+{"text": "i have ten us dollars how many canadian dollars do i have", "label": "qa_currency"}
+{"text": "how much is the us dollar worth in canada", "label": "qa_currency"}
+{"text": "what is the exchange rate between the us and canada", "label": "qa_currency"}
+{"text": "how much indian rupees per u. s. d. today", "label": "qa_currency"}
+{"text": "how many g. b. p. can i get for one dollar", "label": "qa_currency"}
+{"text": "give me the exchange rate for dollar in euros", "label": "qa_currency"}
+{"text": "how much australian dollars one can buy for one pound sterling", "label": "qa_currency"}
+{"text": "and the pound is doing how badly against the euro", "label": "qa_currency"}
+{"text": "what is the exchange rate between money i'm the united states and switzerland", "label": "qa_currency"}
+{"text": "please define forensic", "label": "qa_definition"}
+{"text": "tell about the origin of the word evolution", "label": "qa_definition"}
+{"text": "what's the definition of diverse", "label": "qa_definition"}
+{"text": "what is love", "label": "qa_definition"}
+{"text": "what is a trebuchet", "label": "qa_definition"}
+{"text": "what do you know about the statue of liberty", "label": "qa_definition"}
+{"text": "google definition for me", "label": "qa_definition"}
+{"text": "define economics", "label": "qa_definition"}
+{"text": "what does h2o stand for", "label": "qa_definition"}
+{"text": "meaning of word", "label": "qa_definition"}
+{"text": "please tell me the definition of home", "label": "qa_definition"}
+{"text": "how would you define a car", "label": "qa_definition"}
+{"text": "look up animal and give me the definition", "label": "qa_definition"}
+{"text": "describe a rotor", "label": "qa_definition"}
+{"text": "define the moon for me", "label": "qa_definition"}
+{"text": "define flabbergasted", "label": "qa_definition"}
+{"text": "find the meaning of promise", "label": "qa_definition"}
+{"text": "define rumplestiltskin", "label": "qa_definition"}
+{"text": "what does a grapefruit look like", "label": "qa_definition"}
+{"text": "what year what the eiffel tower built", "label": "qa_factoid"}
+{"text": "when does the super bowl officially start", "label": "qa_factoid"}
+{"text": "how many months in a year", "label": "qa_factoid"}
+{"text": "how many pages long is harry potter", "label": "qa_factoid"}
+{"text": "where do cows come from", "label": "qa_factoid"}
+{"text": "where is italy", "label": "qa_factoid"}
+{"text": "give me the birth date of mahatma gandhi", "label": "qa_factoid"}
+{"text": "which continent has highest growth of cotton and what is average production", "label": "qa_factoid"}
+{"text": "when is shakira's birthday", "label": "qa_factoid"}
+{"text": "please tell me about the historic facts about india", "label": "qa_factoid"}
+{"text": "how old is emma watson newest boyfriend", "label": "qa_factoid"}
+{"text": "who assassinated lincoln", "label": "qa_factoid"}
+{"text": "tell me when will indians economy touch that of americas", "label": "qa_factoid"}
+{"text": "info on lisa ann please", "label": "qa_factoid"}
+{"text": "calculate distance from boston to new york", "label": "qa_factoid"}
+{"text": "what year did george clooney start acting", "label": "qa_factoid"}
+{"text": "tell me who will win the next presidential election", "label": "qa_factoid"}
+{"text": "what is the capital of new hampshire", "label": "qa_factoid"}
+{"text": "name the capital of nigeria", "label": "qa_factoid"}
+{"text": "two by two is", "label": "qa_maths"}
+{"text": "fifteen plus twenty", "label": "qa_maths"}
+{"text": "divide two hundred by four", "label": "qa_maths"}
+{"text": "what is one plus one", "label": "qa_maths"}
+{"text": "is one divisible by three", "label": "qa_maths"}
+{"text": "convert ten inches to centimeters", "label": "qa_maths"}
+{"text": "what is the answer to this math question", "label": "qa_maths"}
+{"text": "three times two equals six", "label": "qa_maths"}
+{"text": "how many inches make one feet", "label": "qa_maths"}
+{"text": "what is the square root of four", "label": "qa_maths"}
+{"text": "can you add up thirteen plus five plus nine for me", "label": "qa_maths"}
+{"text": "what is twenty percent of one hundred and twenty", "label": "qa_maths"}
+{"text": "what is five divided by one", "label": "qa_maths"}
+{"text": "what is the sum of 9 and 12", "label": "qa_maths"}
+{"text": "what are the stock prices of target", "label": "qa_stock"}
+{"text": "fill me in on stock symbol", "label": "qa_stock"}
+{"text": "what is the price of stock for gm", "label": "qa_stock"}
+{"text": "google i. b. m. stock prices", "label": "qa_stock"}
+{"text": "how is shell s stock doing today", "label": "qa_stock"}
+{"text": "stock price for gss energy", "label": "qa_stock"}
+{"text": "list me the stock of apple right now", "label": "qa_stock"}
+{"text": "stock price for sprint", "label": "qa_stock"}
+{"text": "what is the value of apple", "label": "qa_stock"}
+{"text": "compare the stock prices for nintendo and sony and tell me which ones are better", "label": "qa_stock"}
+{"text": "how much did facebook stock increase last night", "label": "qa_stock"}
+{"text": "what is the stock information of walmart", "label": "qa_stock"}
+{"text": "what is now stock price of tata", "label": "qa_stock"}
+{"text": "what is the current price of jindel stock", "label": "qa_stock"}
+{"text": "how is coca cola stock doing today", "label": "qa_stock"}
+{"text": "for how much is hp selling for", "label": "qa_stock"}
+{"text": "what price are google stocks trading for", "label": "qa_stock"}
+{"text": "is starbucks stock up or down from last quarter", "label": "qa_stock"}
+{"text": "how much to buy stock in i. b. m.", "label": "qa_stock"}
+{"text": "what events are coming up", "label": "recommendation_events"}
+{"text": "let me see cultural events for this weekend in palermo neighborhood", "label": "recommendation_events"}
+{"text": "what are the concerts happening nearby", "label": "recommendation_events"}
+{"text": "is there any type of festival going on in town this weekend", "label": "recommendation_events"}
+{"text": "show me painting exhibition in bay area", "label": "recommendation_events"}
+{"text": "are there any fun things to do in seattle this weekend", "label": "recommendation_events"}
+{"text": "what's going on", "label": "recommendation_events"}
+{"text": "recommend an event happening in my area", "label": "recommendation_events"}
+{"text": "what events are happening this weekend in my area", "label": "recommendation_events"}
+{"text": "what's happening at the library this month", "label": "recommendation_events"}
+{"text": "what is playing at the local theater right now", "label": "recommendation_events"}
+{"text": "what do they have going on for festivals downtown", "label": "recommendation_events"}
+{"text": "could you list out the information on book fairs in washington dc for next week", "label": "recommendation_events"}
+{"text": "are there any events going on downtown tonight", "label": "recommendation_events"}
+{"text": "when is the yearly cultural event coming up", "label": "recommendation_events"}
+{"text": "what's happening around town", "label": "recommendation_events"}
+{"text": "what event do you suggest for me tonight", "label": "recommendation_events"}
+{"text": "what's happening in town tonight", "label": "recommendation_events"}
+{"text": "give me the list of circus shows going on in the city right now", "label": "recommendation_events"}
+{"text": "please tell me a shop where i can find books to buy", "label": "recommendation_locations"}
+{"text": "where is the closest restaurant", "label": "recommendation_locations"}
+{"text": "is there a sports bar near kansas city plaza area", "label": "recommendation_locations"}
+{"text": "where should i go eat tonight", "label": "recommendation_locations"}
+{"text": "i'm looking for a casual restaurant for a dinner date", "label": "recommendation_locations"}
+{"text": "where is the shopping mall for shirts", "label": "recommendation_locations"}
+{"text": "what shops are near me", "label": "recommendation_locations"}
+{"text": "when does the closest bar close", "label": "recommendation_locations"}
+{"text": "where can i find the nearest irish pub in my area", "label": "recommendation_locations"}
+{"text": "give me some cafes near downtown fort lauderdale", "label": "recommendation_locations"}
+{"text": "where is the best place to buy party supplies in town", "label": "recommendation_locations"}
+{"text": "where can i got to grab some drinks in west chester", "label": "recommendation_locations"}
+{"text": "where is the closer starbucks", "label": "recommendation_locations"}
+{"text": "what is the best hardware store near me", "label": "recommendation_locations"}
+{"text": "where is mcdo", "label": "recommendation_locations"}
+{"text": "can you recommend any pub in mg road", "label": "recommendation_locations"}
+{"text": "find grocery store with an organic section near me", "label": "recommendation_locations"}
+{"text": "is there any chinese places in benton ar", "label": "recommendation_locations"}
+{"text": "tell me where the local shopping district is", "label": "recommendation_locations"}
+{"text": "play a movie i'll like", "label": "recommendation_movies"}
+{"text": "what time will a movie be shown tomorrow", "label": "recommendation_movies"}
+{"text": "what new movies available today", "label": "recommendation_movies"}
+{"text": "suggest a good genre movie that came out recently", "label": "recommendation_movies"}
+{"text": "please recommend a movie", "label": "recommendation_movies"}
+{"text": "what is the highest rated movie this week", "label": "recommendation_movies"}
+{"text": "recommend a movie for me", "label": "recommendation_movies"}
+{"text": "do you recommend any movies that are currently playing in me area", "label": "recommendation_movies"}
+{"text": "what is the highest rated movie now out", "label": "recommendation_movies"}
+{"text": "what is the best movie to watch this weekend", "label": "recommendation_movies"}
+{"text": "send a complaint to sony about this tv that quit working", "label": "social_post"}
+{"text": "write complaint to wallmart", "label": "social_post"}
+{"text": "please tweet about the problem i m facing with the product of company", "label": "social_post"}
+{"text": "open gallery post video name", "label": "social_post"}
+{"text": "complain to amazon customer service for me", "label": "social_post"}
+{"text": "tell comcast i am still on hold", "label": "social_post"}
+{"text": "tweet that there was an insect in the chocolate packet", "label": "social_post"}
+{"text": "post new status", "label": "social_post"}
+{"text": "lets send a tweet", "label": "social_post"}
+{"text": "i want to tweet a complaint on apples phone issues", "label": "social_post"}
+{"text": "tweet to ikea costumer service the following i'm not happy with this new klm product", "label": "social_post"}
+{"text": "tweet at quote unquote", "label": "social_post"}
+{"text": "tweet customer service not good for lpg service in my twitter account", "label": "social_post"}
+{"text": "comcast sucks put that on their twitter account", "label": "social_post"}
+{"text": "tweet my complaint to @nsa", "label": "social_post"}
+{"text": "tweet terrible service", "label": "social_post"}
+{"text": "hashtag loving this weather post to twitter", "label": "social_post"}
+{"text": "send a tweet to apple that their batteries drain too fast", "label": "social_post"}
+{"text": "complain to mcdonalds twitter about my burger", "label": "social_post"}
+{"text": "who is doing facebook live right now", "label": "social_query"}
+{"text": "tell me what's going on snap chat", "label": "social_query"}
+{"text": "what's the most popular story on my facebook newsfeed", "label": "social_query"}
+{"text": "how many notifications do i have on facebook", "label": "social_query"}
+{"text": "please check the trending topics on twitter", "label": "social_query"}
+{"text": "read me new post on my feed", "label": "social_query"}
+{"text": "get me updates from kenny's facebook from the weekend", "label": "social_query"}
+{"text": "did anyone get engaged or give birth among my online friends", "label": "social_query"}
+{"text": "did anyone like my photo i just posted", "label": "social_query"}
+{"text": "show me the posts of my friends in the last hour", "label": "social_query"}
+{"text": "may i know what is trending in social media", "label": "social_query"}
+{"text": "find updates from vicki's facebook from mardi gras day", "label": "social_query"}
+{"text": "open social media account", "label": "social_query"}
+{"text": "hi what is happening in twitter today", "label": "social_query"}
+{"text": "did anyone message me on facebook", "label": "social_query"}
+{"text": "take me to the most popular post", "label": "social_query"}
+{"text": "are there any interesting stuff happened today in my twitter", "label": "social_query"}
+{"text": "what the highest likes on facebook", "label": "social_query"}
+{"text": "please call china wok and order number seven", "label": "takeaway_order"}
+{"text": "place order to pizza takeout for seven pm", "label": "takeaway_order"}
+{"text": "can i order out", "label": "takeaway_order"}
+{"text": "order two large pizzas and pieces of hot wings from dominoes", "label": "takeaway_order"}
+{"text": "order me a bowl from chipotle takeout", "label": "takeaway_order"}
+{"text": "order a pizza for me", "label": "takeaway_order"}
+{"text": "place order for a chicken manchow soup from wangs kitchen restaurant", "label": "takeaway_order"}
+{"text": "hey order a pizza pie with extra cheese", "label": "takeaway_order"}
+{"text": "i want to order food", "label": "takeaway_order"}
+{"text": "call for takeout", "label": "takeaway_order"}
+{"text": "is there any good chinese takeout that's open late", "label": "takeaway_order"}
+{"text": "i would like to pickup a veggie sub with a cookie from subway", "label": "takeaway_order"}
+{"text": "pull up the menu for the closest mexican restaurant", "label": "takeaway_order"}
+{"text": "what takeout places are near me", "label": "takeaway_order"}
+{"text": "place order of one pizza", "label": "takeaway_order"}
+{"text": "find me the nearest chinese for delivery", "label": "takeaway_order"}
+{"text": "order a pizza from pizza express", "label": "takeaway_order"}
+{"text": "get me a turkey jimmy johns sub and set it to be delivered at five pm tonight", "label": "takeaway_order"}
+{"text": "order a smoked meat platter from beanos", "label": "takeaway_order"}
+{"text": "where can i order pizza for delivery", "label": "takeaway_query"}
+{"text": "does pings do takeaway", "label": "takeaway_query"}
+{"text": "i need to know if mr pizza delivers", "label": "takeaway_query"}
+{"text": "what's the exact time we get food delivered once we place an order for food", "label": "takeaway_query"}
+{"text": "how long until i receive my food", "label": "takeaway_query"}
+{"text": "check delivery options for the restaurant", "label": "takeaway_query"}
+{"text": "does louie's do take out", "label": "takeaway_query"}
+{"text": "where are my takeaway order", "label": "takeaway_query"}
+{"text": "is my order at domino's ready", "label": "takeaway_query"}
+{"text": "hi there do you offer home delivery for orders", "label": "takeaway_query"}
+{"text": "can they provide takeaway", "label": "takeaway_query"}
+{"text": "restaurant order status", "label": "takeaway_query"}
+{"text": "when is my takeaway arriving", "label": "takeaway_query"}
+{"text": "find out if kfc delivers please", "label": "takeaway_query"}
+{"text": "do they deliver home", "label": "takeaway_query"}
+{"text": "please see if chili's has delivery", "label": "takeaway_query"}
+{"text": "what is the status of my order no", "label": "takeaway_query"}
+{"text": "please see if the restaurant chili's has delivery as an option", "label": "takeaway_query"}
+{"text": "can they do delivery", "label": "takeaway_query"}
+{"text": "where can i book a train ticket to oregon", "label": "transport_query"}
+{"text": "navigation search", "label": "transport_query"}
+{"text": "what time does the train leave philadelphia", "label": "transport_query"}
+{"text": "please let me know the time of train northern rail", "label": "transport_query"}
+{"text": "directions please", "label": "transport_query"}
+{"text": "how far away is the nearest rest stop", "label": "transport_query"}
+{"text": "what are the train times for today", "label": "transport_query"}
+{"text": "how much long until northern rail arrives at kings cross station", "label": "transport_query"}
+{"text": "show me the train schedules to the metropolitan opera house", "label": "transport_query"}
+{"text": "get route for los angles from here", "label": "transport_query"}
+{"text": "direction to local train station", "label": "transport_query"}
+{"text": "what is the train schedule to denver", "label": "transport_query"}
+{"text": "how long does it take to get from here to chicago by train", "label": "transport_query"}
+{"text": "when i should leave to office", "label": "transport_query"}
+{"text": "when is the train coming", "label": "transport_query"}
+{"text": "how much time is a train to there", "label": "transport_query"}
+{"text": "find nearest train station", "label": "transport_query"}
+{"text": "train leaving", "label": "transport_query"}
+{"text": "get me to the nearest train station", "label": "transport_query"}
+{"text": "request a driver for uber in five minutes", "label": "transport_taxi"}
+{"text": "order me an uber ride please", "label": "transport_taxi"}
+{"text": "call yellow cab", "label": "transport_taxi"}
+{"text": "find an uber that can get me to the airport now", "label": "transport_taxi"}
+{"text": "book me a taxi from castle street to airport", "label": "transport_taxi"}
+{"text": "call a taxi", "label": "transport_taxi"}
+{"text": "book a taxi", "label": "transport_taxi"}
+{"text": "book an uber to pick me up outside of long island bar right now", "label": "transport_taxi"}
+{"text": "call a taxi to pick me up at work", "label": "transport_taxi"}
+{"text": "find an uber driver available for tonight after ten pm", "label": "transport_taxi"}
+{"text": "book me an uber", "label": "transport_taxi"}
+{"text": "schedule an uber in twenty minutes to tesco on fifth street", "label": "transport_taxi"}
+{"text": "get me a taxi to the airport right now", "label": "transport_taxi"}
+{"text": "have a taxi pick me up", "label": "transport_taxi"}
+{"text": "book me a uber for tomorrow night at six pm", "label": "transport_taxi"}
+{"text": "book for me an uber taxi to carmen drive", "label": "transport_taxi"}
+{"text": "uber", "label": "transport_taxi"}
+{"text": "book a taxi to start from here", "label": "transport_taxi"}
+{"text": "book me a train ticket to chicago for tomorrow morning before ten", "label": "transport_ticket"}
+{"text": "find out the the train arrival time and book me", "label": "transport_ticket"}
+{"text": "google train tickets to washington dc", "label": "transport_ticket"}
+{"text": "book ticket for paris by train", "label": "transport_ticket"}
+{"text": "book me a train ticket", "label": "transport_ticket"}
+{"text": "book a train ticket to canada this evening", "label": "transport_ticket"}
+{"text": "book me on a train leaving penn station tomorrow travelling to any city more than two hundred miles away", "label": "transport_ticket"}
+{"text": "get me two train tickets from where i am now to dallas arriving before dark", "label": "transport_ticket"}
+{"text": "book and pay for a train ticket to denver for saturday", "label": "transport_ticket"}
+{"text": "please book a train ticket from london to manchester", "label": "transport_ticket"}
+{"text": "google i need one train ticket to new york can you book that for me", "label": "transport_ticket"}
+{"text": "i need to buy a train ticket", "label": "transport_ticket"}
+{"text": "book a ticket in irctc website from sbc to mdu on may two for stored passenger list", "label": "transport_ticket"}
+{"text": "google search booking train ticket", "label": "transport_ticket"}
+{"text": "please purchase a amtrak ticket from las vegas nevada to lakeland florida leaving on the first of april", "label": "transport_ticket"}
+{"text": "book the the next train ticket to chennai", "label": "transport_ticket"}
+{"text": "find me a train ticket to boston", "label": "transport_ticket"}
+{"text": "get me a ride on the commuter train from nj to ny", "label": "transport_ticket"}
+{"text": "open irctc application and go to book ticket", "label": "transport_ticket"}
+{"text": "is it possible to drive now in ohio", "label": "transport_traffic"}
+{"text": "how is traffic in city", "label": "transport_traffic"}
+{"text": "what is the current traffic", "label": "transport_traffic"}
+{"text": "is there any traffic", "label": "transport_traffic"}
+{"text": "are there are any delays on my commute", "label": "transport_traffic"}
+{"text": "what the traffic condition outside my office", "label": "transport_traffic"}
+{"text": "in jodhpur traffic level is very low", "label": "transport_traffic"}
+{"text": "outside traffic status please", "label": "transport_traffic"}
+{"text": "show me the current traffic nearby me", "label": "transport_traffic"}
+{"text": "give information about the traffic near my location please", "label": "transport_traffic"}
+{"text": "just how bad is traffic on my commute", "label": "transport_traffic"}
+{"text": "how much traffic does atlanta georgia usually have", "label": "transport_traffic"}
+{"text": "what is the traffic like right now on telegraph", "label": "transport_traffic"}
+{"text": "what's the traffic this morning", "label": "transport_traffic"}
+{"text": "accident or normal traffic", "label": "transport_traffic"}
+{"text": "how long will it take me to get to park avenue considering current traffic", "label": "transport_traffic"}
+{"text": "what are the traffic conditions on the one hundred and one", "label": "transport_traffic"}
+{"text": "how's the traffic downtown", "label": "transport_traffic"}
+{"text": "how is traffic on the highway", "label": "transport_traffic"}
+{"text": "do i have to bring umbrella for tonight party", "label": "weather_query"}
+{"text": "should i wear gloves tonight", "label": "weather_query"}
+{"text": "will it rain in the noon", "label": "weather_query"}
+{"text": "how will be the weather at night", "label": "weather_query"}
+{"text": "will the temperature be higher than forty tomorrow", "label": "weather_query"}
+{"text": "ask for the weather today morning", "label": "weather_query"}
+{"text": "is summer going on", "label": "weather_query"}
+{"text": "do you think i can wear sandals or should i wear sneakers tonight at seven pm", "label": "weather_query"}
+{"text": "show me the weather forecast for the next three three days", "label": "weather_query"}
+{"text": "are you sure its going to rain tomorrow", "label": "weather_query"}
+{"text": "will i need my snow boots this afternoon", "label": "weather_query"}
+{"text": "do i need to wear sunscreen today", "label": "weather_query"}
+{"text": "what is the temperature today", "label": "weather_query"}
+{"text": "what is the weather next week", "label": "weather_query"}
+{"text": "what is the climate here today", "label": "weather_query"}
+{"text": "let me know when the next cold front is expected", "label": "weather_query"}
+{"text": "i am gonna need an umbrella today after sunset", "label": "weather_query"}
+{"text": "google what is the temperature outside", "label": "weather_query"}
+{"text": "are there any tornado warnings today", "label": "weather_query"}

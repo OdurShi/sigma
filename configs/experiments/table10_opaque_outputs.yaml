@@ -1,0 +1,10 @@
+description: >
+  Table 10: opaque-output control.  Output strings are replaced by fixed opaque identifiers;
+  the five methods are retrained with that inventory.
+defaults: [../base.yaml]
+data:
+  outputs: opaque
+grid:
+  dataset: [banking77, clinc150, hwu64]
+  method: [sft, paired_sft, transported_kl, sigma_f, sigma]
+  seed: [13, 21, 42, 87, 100]

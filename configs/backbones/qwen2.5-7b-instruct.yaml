@@ -1,0 +1,3 @@
+description: Primary backbone (Appendix C.5).
+model:
+  name: Qwen/Qwen2.5-7B-Instruct

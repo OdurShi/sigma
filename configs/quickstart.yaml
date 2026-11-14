@@ -1,0 +1,31 @@
+# CPU quick start: synthetic routing task and a tiny randomly initialised Qwen2-style model
+# built in code.  `sigma demo` uses exactly these values (sigma/demo.py).
+description: Quick start on a laptop CPU (synthetic task, tiny model).
+
+method: sigma
+seed: 13
+output_dir: runs/quickstart/sigma
+
+data:
+  name: synthetic
+  shots: 16
+  synthetic_groups: 2
+  synthetic_classes_per_group: 3
+
+model:
+  name: tiny-random
+  adaptation: full          # a random model has no pretrained weights to adapt with LoRA
+  gradient_checkpointing: false
+
+optim:
+  lr: 1.0e-3
+  max_steps: 1600
+
+scoring:
+  gradient_mode: direct
+  view_batch_size: 64
+  max_context_tokens: null
+
+eval:
+  binding_draws: 4
+  composition_draws: 3

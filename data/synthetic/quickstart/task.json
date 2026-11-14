@@ -1,0 +1,71 @@
+{
+ "name": "synthetic-routing",
+ "root": "root",
+ "instruction": "Answer with the output that the guidance binds to the class of the input. Sibling order does not denote priority.",
+ "nodes": [
+  {
+   "identifier": "account",
+   "description": "account requests",
+   "children": [
+    "login",
+    "password",
+    "profile"
+   ]
+  },
+  {
+   "identifier": "billing",
+   "description": "billing requests",
+   "children": [
+    "charge",
+    "invoice",
+    "refund"
+   ]
+  },
+  {
+   "identifier": "charge",
+   "description": "charge twice double debit unknown",
+   "children": []
+  },
+  {
+   "identifier": "invoice",
+   "description": "invoice receipt bill statement copy",
+   "children": []
+  },
+  {
+   "identifier": "login",
+   "description": "login sign access locked enter",
+   "children": []
+  },
+  {
+   "identifier": "password",
+   "description": "password reset forgot code secret",
+   "children": []
+  },
+  {
+   "identifier": "profile",
+   "description": "profile name photo birthday edit",
+   "children": []
+  },
+  {
+   "identifier": "refund",
+   "description": "refund money back reimburse repay",
+   "children": []
+  },
+  {
+   "identifier": "root",
+   "description": "support requests",
+   "children": [
+    "account",
+    "billing"
+   ]
+  }
+ ],
+ "binding": {
+  "charge": "cedar",
+  "invoice": "birch",
+  "login": "delta",
+  "password": "ember",
+  "profile": "fjord",
+  "refund": "amber"
+ }
+}

@@ -1,0 +1,15 @@
+description: >
+  Section 3 / Figure 2 / Table 9: single-view SFT at 1, 2, 4, 8 and 16 labels per intent with
+  the preliminary-study seeds, evaluated on 1,500 inputs over 150 candidates.  The paper does
+  not name the dataset; CLINC150 is the benchmark with 150 candidates.  Analyse the finished
+  runs with scripts/preliminary_study.py.
+defaults: [../base.yaml]
+data:
+  max_test_instances: 1500
+selection:
+  search: false
+grid:
+  dataset: [clinc150]
+  method: [sft]
+  data.shots: [1, 2, 4, 8, 16]
+  seed: [13, 37, 73, 101, 137]

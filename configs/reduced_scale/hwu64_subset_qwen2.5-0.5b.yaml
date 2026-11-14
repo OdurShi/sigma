@@ -1,0 +1,37 @@
+description: >
+  Reduced-scale configuration for a laptop (Apple-silicon GPU or CPU): Qwen2.5-0.5B-Instruct
+  with LoRA, a 7-intent subset of HWU64 (two scenario groups), 4 shots, 12 optimiser steps of
+  4 instances, 2 checkpoints, 12 development and 30 test instances, 2 binding draws and
+  1 composition draw per depth, nominal coefficient without development search.
+defaults: [../base.yaml]
+
+data:
+  name: hwu64
+  shots: 4
+  label_subset: [alarm, transport]
+  max_test_instances: 30
+  max_dev_instances: 12
+
+model:
+  name: Qwen/Qwen2.5-0.5B-Instruct
+  dtype: float32
+  device: mps
+  gradient_checkpointing: false
+
+optim:
+  lr: 1.0e-4               # largest value of the paper's learning-rate grid
+  batch_size: 4
+  max_steps: 12
+
+scoring:
+  view_batch_size: 4
+  gradient_mode: two_pass
+
+selection:
+  search: false            # nominal coefficient (lambda = 1), no grid search
+  num_checkpoints: 2
+
+eval:
+  binding_draws: 2
+  composition_draws: 1
+  save_scores: true

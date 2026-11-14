@@ -1,0 +1,21 @@
+{
+ "dataset": "banking77",
+ "source_repository": "https://github.com/jianguoz/Few-Shot-Intent-Detection",
+ "source_revision": "fa9553312b1dba54b1be0aae2d30b13171f898e5",
+ "source_path": "Datasets/BANKING77",
+ "upstream_sha256": {
+  "train/seq.in": "89a1efb29a2a306e9bb7bcfd0d1ce6b52fa68cb8fdd3ba55cf47d9313f234bda",
+  "train/label": "24a57f715e0e895a5d31aee19975a999ad767b8a0006123df7d36e48c9620fec",
+  "valid/seq.in": "ab2f65c221ee3cb55fd6e49473e443cef7f1305b8076fe2f2e00ad73c4b661c4",
+  "valid/label": "4ae5df44bcf58ba16b6069fb0e60cfc84c908a8c2f4b7613e07169f4d8986893",
+  "test/seq.in": "0fee79ac6587b8842e7c6a2aeef90f336e91a1b4556524b6a43e4fcfdd9d49d4",
+  "test/label": "70ae5f494bf8ad54d9315333bf8bc69ebb52fd8604bb7a3c0cbd0487d8695c18"
+ },
+ "num_labels": 77,
+ "split_sizes": {
+  "train": 8622,
+  "valid": 1540,
+  "test": 3080
+ },
+ "eligible_sibling_groups": 6
+}

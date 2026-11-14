@@ -1,0 +1,24 @@
+description: >
+  CPU smoke test of the experiment machinery (grid runner, tables, figures, diagnostics) on
+  the synthetic task with the tiny random model and a few optimiser steps.
+defaults: [../quickstart.yaml]
+model:
+  adaptation: lora
+  tiny_hidden_size: 48
+data:
+  synthetic_groups: 2
+  synthetic_classes_per_group: 3
+optim:
+  max_steps: 8
+  batch_size: 4
+scoring:
+  gradient_mode: two_pass
+eval:
+  binding_draws: 2
+  composition_depths: [2, 4]
+  composition_draws: 2
+  save_scores: true
+grid:
+  method: [sft, paired_sft, sigma, sigma_f]
+  data.shots: [2, 4]
+  seed: [13, 21]

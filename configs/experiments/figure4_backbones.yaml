@@ -1,0 +1,9 @@
+description: >
+  Figure 4: LoRA-SFT, paired SFT and SIGMA at 5 and 10 shots on three backbones.
+defaults: [../base.yaml]
+grid:
+  backbone: [qwen2.5-7b-instruct, llama-3-8b-instruct, qwen3-8b]
+  dataset: [banking77, clinc150, hwu64]
+  method: [sft, paired_sft, sigma]
+  data.shots: [5, 10]
+  seed: [13, 21, 42, 87, 100]

@@ -1,0 +1,9 @@
+description: >
+  Table 1 (also Tables 4, 7, 11-14): generalisation to unseen guidance compositions at
+  10 shots per intent with Qwen2.5-7B-Instruct, five seeds.  Only the rows that are variants
+  of this pipeline are listed; external systems are hooks (sigma/methods.py).
+defaults: [../base.yaml]
+grid:
+  dataset: [banking77, clinc150, hwu64]
+  method: [frozen, sft, paired_sft, transported_kl, sigma, sigma_f]
+  seed: [13, 21, 42, 87, 100]

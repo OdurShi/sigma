@@ -1,0 +1,589 @@
+{
+ "name": "hwu64",
+ "root": "root",
+ "instruction": "You are given structured guidance: a tree of groups and semantic classes. Every class has a description and is bound to exactly one output string. Read the input, decide which semantic class it belongs to, and answer with the output string that the guidance currently binds to that class. Follow the bindings written in the guidance even if they differ from what the class name suggests. The order in which sibling entries are listed does not denote priority. Answer with exactly one of the candidate outputs.",
+ "nodes": [
+  {
+   "identifier": "alarm",
+   "description": "alarm intents",
+   "children": [
+    "alarm_query",
+    "alarm_remove",
+    "alarm_set"
+   ]
+  },
+  {
+   "identifier": "alarm_query",
+   "description": "alarm query",
+   "children": []
+  },
+  {
+   "identifier": "alarm_remove",
+   "description": "alarm remove",
+   "children": []
+  },
+  {
+   "identifier": "alarm_set",
+   "description": "alarm set",
+   "children": []
+  },
+  {
+   "identifier": "audio",
+   "description": "audio intents",
+   "children": [
+    "audio_volume_down",
+    "audio_volume_mute",
+    "audio_volume_up"
+   ]
+  },
+  {
+   "identifier": "audio_volume_down",
+   "description": "audio volume down",
+   "children": []
+  },
+  {
+   "identifier": "audio_volume_mute",
+   "description": "audio volume mute",
+   "children": []
+  },
+  {
+   "identifier": "audio_volume_up",
+   "description": "audio volume up",
+   "children": []
+  },
+  {
+   "identifier": "calendar",
+   "description": "calendar intents",
+   "children": [
+    "calendar_query",
+    "calendar_remove",
+    "calendar_set"
+   ]
+  },
+  {
+   "identifier": "calendar_query",
+   "description": "calendar query",
+   "children": []
+  },
+  {
+   "identifier": "calendar_remove",
+   "description": "calendar remove",
+   "children": []
+  },
+  {
+   "identifier": "calendar_set",
+   "description": "calendar set",
+   "children": []
+  },
+  {
+   "identifier": "cooking",
+   "description": "cooking intents",
+   "children": [
+    "cooking_recipe"
+   ]
+  },
+  {
+   "identifier": "cooking_recipe",
+   "description": "cooking recipe",
+   "children": []
+  },
+  {
+   "identifier": "datetime",
+   "description": "datetime intents",
+   "children": [
+    "datetime_convert",
+    "datetime_query"
+   ]
+  },
+  {
+   "identifier": "datetime_convert",
+   "description": "datetime convert",
+   "children": []
+  },
+  {
+   "identifier": "datetime_query",
+   "description": "datetime query",
+   "children": []
+  },
+  {
+   "identifier": "email",
+   "description": "email intents",
+   "children": [
+    "email_addcontact",
+    "email_query",
+    "email_querycontact",
+    "email_sendemail"
+   ]
+  },
+  {
+   "identifier": "email_addcontact",
+   "description": "email addcontact",
+   "children": []
+  },
+  {
+   "identifier": "email_query",
+   "description": "email query",
+   "children": []
+  },
+  {
+   "identifier": "email_querycontact",
+   "description": "email querycontact",
+   "children": []
+  },
+  {
+   "identifier": "email_sendemail",
+   "description": "email sendemail",
+   "children": []
+  },
+  {
+   "identifier": "general",
+   "description": "general intents",
+   "children": [
+    "general_affirm",
+    "general_commandstop",
+    "general_confirm",
+    "general_dontcare",
+    "general_explain",
+    "general_joke",
+    "general_negate",
+    "general_praise",
+    "general_quirky",
+    "general_repeat"
+   ]
+  },
+  {
+   "identifier": "general_affirm",
+   "description": "general affirm",
+   "children": []
+  },
+  {
+   "identifier": "general_commandstop",
+   "description": "general commandstop",
+   "children": []
+  },
+  {
+   "identifier": "general_confirm",
+   "description": "general confirm",
+   "children": []
+  },
+  {
+   "identifier": "general_dontcare",
+   "description": "general dontcare",
+   "children": []
+  },
+  {
+   "identifier": "general_explain",
+   "description": "general explain",
+   "children": []
+  },
+  {
+   "identifier": "general_joke",
+   "description": "general joke",
+   "children": []
+  },
+  {
+   "identifier": "general_negate",
+   "description": "general negate",
+   "children": []
+  },
+  {
+   "identifier": "general_praise",
+   "description": "general praise",
+   "children": []
+  },
+  {
+   "identifier": "general_quirky",
+   "description": "general quirky",
+   "children": []
+  },
+  {
+   "identifier": "general_repeat",
+   "description": "general repeat",
+   "children": []
+  },
+  {
+   "identifier": "iot",
+   "description": "iot intents",
+   "children": [
+    "iot_cleaning",
+    "iot_coffee",
+    "iot_hue_lightchange",
+    "iot_hue_lightdim",
+    "iot_hue_lightoff",
+    "iot_hue_lighton",
+    "iot_hue_lightup",
+    "iot_wemo_off",
+    "iot_wemo_on"
+   ]
+  },
+  {
+   "identifier": "iot_cleaning",
+   "description": "iot cleaning",
+   "children": []
+  },
+  {
+   "identifier": "iot_coffee",
+   "description": "iot coffee",
+   "children": []
+  },
+  {
+   "identifier": "iot_hue_lightchange",
+   "description": "iot hue lightchange",
+   "children": []
+  },
+  {
+   "identifier": "iot_hue_lightdim",
+   "description": "iot hue lightdim",
+   "children": []
+  },
+  {
+   "identifier": "iot_hue_lightoff",
+   "description": "iot hue lightoff",
+   "children": []
+  },
+  {
+   "identifier": "iot_hue_lighton",
+   "description": "iot hue lighton",
+   "children": []
+  },
+  {
+   "identifier": "iot_hue_lightup",
+   "description": "iot hue lightup",
+   "children": []
+  },
+  {
+   "identifier": "iot_wemo_off",
+   "description": "iot wemo off",
+   "children": []
+  },
+  {
+   "identifier": "iot_wemo_on",
+   "description": "iot wemo on",
+   "children": []
+  },
+  {
+   "identifier": "lists",
+   "description": "lists intents",
+   "children": [
+    "lists_createoradd",
+    "lists_query",
+    "lists_remove"
+   ]
+  },
+  {
+   "identifier": "lists_createoradd",
+   "description": "lists createoradd",
+   "children": []
+  },
+  {
+   "identifier": "lists_query",
+   "description": "lists query",
+   "children": []
+  },
+  {
+   "identifier": "lists_remove",
+   "description": "lists remove",
+   "children": []
+  },
+  {
+   "identifier": "music",
+   "description": "music intents",
+   "children": [
+    "music_likeness",
+    "music_query",
+    "music_settings"
+   ]
+  },
+  {
+   "identifier": "music_likeness",
+   "description": "music likeness",
+   "children": []
+  },
+  {
+   "identifier": "music_query",
+   "description": "music query",
+   "children": []
+  },
+  {
+   "identifier": "music_settings",
+   "description": "music settings",
+   "children": []
+  },
+  {
+   "identifier": "news",
+   "description": "news intents",
+   "children": [
+    "news_query"
+   ]
+  },
+  {
+   "identifier": "news_query",
+   "description": "news query",
+   "children": []
+  },
+  {
+   "identifier": "play",
+   "description": "play intents",
+   "children": [
+    "play_audiobook",
+    "play_game",
+    "play_music",
+    "play_podcasts",
+    "play_radio"
+   ]
+  },
+  {
+   "identifier": "play_audiobook",
+   "description": "play audiobook",
+   "children": []
+  },
+  {
+   "identifier": "play_game",
+   "description": "play game",
+   "children": []
+  },
+  {
+   "identifier": "play_music",
+   "description": "play music",
+   "children": []
+  },
+  {
+   "identifier": "play_podcasts",
+   "description": "play podcasts",
+   "children": []
+  },
+  {
+   "identifier": "play_radio",
+   "description": "play radio",
+   "children": []
+  },
+  {
+   "identifier": "qa",
+   "description": "qa intents",
+   "children": [
+    "qa_currency",
+    "qa_definition",
+    "qa_factoid",
+    "qa_maths",
+    "qa_stock"
+   ]
+  },
+  {
+   "identifier": "qa_currency",
+   "description": "qa currency",
+   "children": []
+  },
+  {
+   "identifier": "qa_definition",
+   "description": "qa definition",
+   "children": []
+  },
+  {
+   "identifier": "qa_factoid",
+   "description": "qa factoid",
+   "children": []
+  },
+  {
+   "identifier": "qa_maths",
+   "description": "qa maths",
+   "children": []
+  },
+  {
+   "identifier": "qa_stock",
+   "description": "qa stock",
+   "children": []
+  },
+  {
+   "identifier": "recommendation",
+   "description": "recommendation intents",
+   "children": [
+    "recommendation_events",
+    "recommendation_locations",
+    "recommendation_movies"
+   ]
+  },
+  {
+   "identifier": "recommendation_events",
+   "description": "recommendation events",
+   "children": []
+  },
+  {
+   "identifier": "recommendation_locations",
+   "description": "recommendation locations",
+   "children": []
+  },
+  {
+   "identifier": "recommendation_movies",
+   "description": "recommendation movies",
+   "children": []
+  },
+  {
+   "identifier": "root",
+   "description": "All intents of hwu64.",
+   "children": [
+    "alarm",
+    "audio",
+    "calendar",
+    "cooking",
+    "datetime",
+    "email",
+    "general",
+    "iot",
+    "lists",
+    "music",
+    "news",
+    "play",
+    "qa",
+    "recommendation",
+    "social",
+    "takeaway",
+    "transport",
+    "weather"
+   ]
+  },
+  {
+   "identifier": "social",
+   "description": "social intents",
+   "children": [
+    "social_post",
+    "social_query"
+   ]
+  },
+  {
+   "identifier": "social_post",
+   "description": "social post",
+   "children": []
+  },
+  {
+   "identifier": "social_query",
+   "description": "social query",
+   "children": []
+  },
+  {
+   "identifier": "takeaway",
+   "description": "takeaway intents",
+   "children": [
+    "takeaway_order",
+    "takeaway_query"
+   ]
+  },
+  {
+   "identifier": "takeaway_order",
+   "description": "takeaway order",
+   "children": []
+  },
+  {
+   "identifier": "takeaway_query",
+   "description": "takeaway query",
+   "children": []
+  },
+  {
+   "identifier": "transport",
+   "description": "transport intents",
+   "children": [
+    "transport_query",
+    "transport_taxi",
+    "transport_ticket",
+    "transport_traffic"
+   ]
+  },
+  {
+   "identifier": "transport_query",
+   "description": "transport query",
+   "children": []
+  },
+  {
+   "identifier": "transport_taxi",
+   "description": "transport taxi",
+   "children": []
+  },
+  {
+   "identifier": "transport_ticket",
+   "description": "transport ticket",
+   "children": []
+  },
+  {
+   "identifier": "transport_traffic",
+   "description": "transport traffic",
+   "children": []
+  },
+  {
+   "identifier": "weather",
+   "description": "weather intents",
+   "children": [
+    "weather_query"
+   ]
+  },
+  {
+   "identifier": "weather_query",
+   "description": "weather query",
+   "children": []
+  }
+ ],
+ "binding": {
+  "alarm_query": "alarm_query",
+  "alarm_remove": "alarm_remove",
+  "alarm_set": "alarm_set",
+  "audio_volume_down": "audio_volume_down",
+  "audio_volume_mute": "audio_volume_mute",
+  "audio_volume_up": "audio_volume_up",
+  "calendar_query": "calendar_query",
+  "calendar_remove": "calendar_remove",
+  "calendar_set": "calendar_set",
+  "cooking_recipe": "cooking_recipe",
+  "datetime_convert": "datetime_convert",
+  "datetime_query": "datetime_query",
+  "email_addcontact": "email_addcontact",
+  "email_query": "email_query",
+  "email_querycontact": "email_querycontact",
+  "email_sendemail": "email_sendemail",
+  "general_affirm": "general_affirm",
+  "general_commandstop": "general_commandstop",
+  "general_confirm": "general_confirm",
+  "general_dontcare": "general_dontcare",
+  "general_explain": "general_explain",
+  "general_joke": "general_joke",
+  "general_negate": "general_negate",
+  "general_praise": "general_praise",
+  "general_quirky": "general_quirky",
+  "general_repeat": "general_repeat",
+  "iot_cleaning": "iot_cleaning",
+  "iot_coffee": "iot_coffee",
+  "iot_hue_lightchange": "iot_hue_lightchange",
+  "iot_hue_lightdim": "iot_hue_lightdim",
+  "iot_hue_lightoff": "iot_hue_lightoff",
+  "iot_hue_lighton": "iot_hue_lighton",
+  "iot_hue_lightup": "iot_hue_lightup",
+  "iot_wemo_off": "iot_wemo_off",
+  "iot_wemo_on": "iot_wemo_on",
+  "lists_createoradd": "lists_createoradd",
+  "lists_query": "lists_query",
+  "lists_remove": "lists_remove",
+  "music_likeness": "music_likeness",
+  "music_query": "music_query",
+  "music_settings": "music_settings",
+  "news_query": "news_query",
+  "play_audiobook": "play_audiobook",
+  "play_game": "play_game",
+  "play_music": "play_music",
+  "play_podcasts": "play_podcasts",
+  "play_radio": "play_radio",
+  "qa_currency": "qa_currency",
+  "qa_definition": "qa_definition",
+  "qa_factoid": "qa_factoid",
+  "qa_maths": "qa_maths",
+  "qa_stock": "qa_stock",
+  "recommendation_events": "recommendation_events",
+  "recommendation_locations": "recommendation_locations",
+  "recommendation_movies": "recommendation_movies",
+  "social_post": "social_post",
+  "social_query": "social_query",
+  "takeaway_order": "takeaway_order",
+  "takeaway_query": "takeaway_query",
+  "transport_query": "transport_query",
+  "transport_taxi": "transport_taxi",
+  "transport_ticket": "transport_ticket",
+  "transport_traffic": "transport_traffic",
+  "weather_query": "weather_query"
+ }
+}

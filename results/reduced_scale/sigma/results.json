@@ -1,0 +1,184 @@
+{
+  "method": "sigma",
+  "seed": 13,
+  "dataset": "hwu64",
+  "shots": 4,
+  "backbone": "Qwen/Qwen2.5-0.5B-Instruct",
+  "num_training_labels": 28,
+  "trainable_parameters": 8798208,
+  "selection": {
+    "selected": {
+      "lr": 0.0001,
+      "coefficient": 1.0,
+      "total_steps": 12,
+      "best_step": 12,
+      "best_dev_accuracy": 0.5833333333333334,
+      "dev_curve": [
+        [
+          6,
+          0.5
+        ],
+        [
+          12,
+          0.5833333333333334
+        ]
+      ],
+      "training_tokens": 63648,
+      "intervention_counts": {
+        "attempted": 48,
+        "changed": 10,
+        "binding_attempted": 24,
+        "binding_changed": 10,
+        "identity_pairs": 0,
+        "identity_replacements": 0
+      }
+    },
+    "trials": [
+      {
+        "lr": 0.0001,
+        "coefficient": 1.0,
+        "total_steps": 12,
+        "best_step": 12,
+        "best_dev_accuracy": 0.5833333333333334,
+        "dev_curve": [
+          [
+            6,
+            0.5
+          ],
+          [
+            12,
+            0.5833333333333334
+          ]
+        ],
+        "training_tokens": 63648,
+        "intervention_counts": {
+          "attempted": 48,
+          "changed": 10,
+          "binding_attempted": 24,
+          "binding_changed": 10,
+          "identity_pairs": 0,
+          "identity_replacements": 0
+        }
+      }
+    ]
+  },
+  "metrics": {
+    "num_instances": 30,
+    "num_candidates": 7,
+    "base": {
+      "accuracy": 66.66666666666666,
+      "macro_f1": 65.15567765567766
+    },
+    "reversal": {
+      "accuracy": 80.0,
+      "invariance": 83.33333333333334,
+      "macro_f1": 76.63170163170163,
+      "tv": 0.09319303414023374
+    },
+    "binding": {
+      "accuracy": 58.333333333333336,
+      "changed_accuracy": 16.666666666666664,
+      "pair_accuracy": 53.333333333333336,
+      "equiv_accuracy": 70.0,
+      "tv": 0.19006200104053111,
+      "macro_f1": 56.89292676134781,
+      "num_changed": 12,
+      "num_pairs": 60
+    },
+    "composition": {
+      "accuracy": 35.10536398467433,
+      "by_condition": {
+        "k2": 31.03448275862069,
+        "k2+R": 37.93103448275862,
+        "k4": 32.142857142857146,
+        "k4+R": 42.857142857142854,
+        "k8": 36.666666666666664,
+        "k8+R": 30.0
+      },
+      "matched_base_accuracy": 65.48987411056376,
+      "paired_drop": 30.384510125889435,
+      "pooled_accuracy": 35.05747126436782,
+      "changed_accuracy": 11.458333333333332,
+      "pair_accuracy": 25.287356321839084,
+      "equiv_accuracy": 34.48275862068966,
+      "tv": 0.39344355619555493,
+      "changed": {
+        "accuracy": 11.458333333333332,
+        "pair_accuracy": 1.0416666666666665,
+        "count": 96
+      },
+      "unchanged": {
+        "accuracy": 64.1025641025641,
+        "pair_accuracy": 55.12820512820513,
+        "count": 78
+      },
+      "macro_f1": 32.54764040692842,
+      "hit@4": 98.29501915708812,
+      "hit@8": 100.0,
+      "mrr": 0.5887593504834884
+    },
+    "acceptance": {
+      "k2": {
+        "accepted": 29,
+        "attempted": 30,
+        "rate": 96.66666666666667,
+        "instance_coverage": 96.66666666666667,
+        "changed": 14,
+        "unchanged": 15,
+        "labels_changed": 7,
+        "labels_supported": 7
+      },
+      "k2+R": {
+        "accepted": 29,
+        "attempted": 30,
+        "rate": 96.66666666666667,
+        "instance_coverage": 96.66666666666667,
+        "changed": 14,
+        "unchanged": 15,
+        "labels_changed": 7,
+        "labels_supported": 7
+      },
+      "k4": {
+        "accepted": 28,
+        "attempted": 30,
+        "rate": 93.33333333333333,
+        "instance_coverage": 93.33333333333333,
+        "changed": 16,
+        "unchanged": 12,
+        "labels_changed": 7,
+        "labels_supported": 7
+      },
+      "k4+R": {
+        "accepted": 28,
+        "attempted": 30,
+        "rate": 93.33333333333333,
+        "instance_coverage": 93.33333333333333,
+        "changed": 16,
+        "unchanged": 12,
+        "labels_changed": 7,
+        "labels_supported": 7
+      },
+      "k8": {
+        "accepted": 30,
+        "attempted": 30,
+        "rate": 100.0,
+        "instance_coverage": 100.0,
+        "changed": 18,
+        "unchanged": 12,
+        "labels_changed": 5,
+        "labels_supported": 7
+      },
+      "k8+R": {
+        "accepted": 30,
+        "attempted": 30,
+        "rate": 100.0,
+        "instance_coverage": 100.0,
+        "changed": 18,
+        "unchanged": 12,
+        "labels_changed": 5,
+        "labels_supported": 7
+      }
+    }
+  },
+  "evaluation_tokens": 96098
+}

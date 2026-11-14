@@ -1,0 +1,21 @@
+{
+ "dataset": "clinc150",
+ "source_repository": "https://github.com/jianguoz/Few-Shot-Intent-Detection",
+ "source_revision": "fa9553312b1dba54b1be0aae2d30b13171f898e5",
+ "source_path": "Datasets/CLINC150",
+ "upstream_sha256": {
+  "train/seq.in": "637f470c113c1260399ae220937798b56039ec7193c695ef1599fc351493dc9c",
+  "train/label": "6a6dce260a6d1e9fe9381da99c832698478777acf8e3b76175957d2cbbcb30dd",
+  "valid/seq.in": "9ee7c2988de8d3415bfd272f3c0857c615162b5e2f8cdee0c13127003418d47c",
+  "valid/label": "9fe73d0ea52a8697da08e8f6a62cecfd54ede4e1114f591d3f66e9518fcb7ccd",
+  "test/seq.in": "aa1ce72b5dd7e3ac7b60d35dc0e59ce481f80c1714733ba4d792c54d0b2d88d1",
+  "test/label": "23305bdd8312f289c70290db66ae8c51d19b6b8d2cc4130a744c4cc97cda06a6"
+ },
+ "num_labels": 150,
+ "split_sizes": {
+  "train": 15000,
+  "valid": 3000,
+  "test": 4500
+ },
+ "eligible_sibling_groups": 10
+}

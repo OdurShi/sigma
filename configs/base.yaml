@@ -1,0 +1,54 @@
+# Paper defaults (Appendix A.2 and C.5): Qwen2.5-7B-Instruct, LoRA rank 16, 10 shots.
+# Every experiment file under configs/experiments inherits from this file.
+description: Default configuration of all controlled methods in the paper.
+
+method: sigma            # see sigma/methods.py for the available presets
+coefficient: null        # null = nominal value of the method (lambda = 1 for SIGMA)
+seed: 13                 # paper seeds: 13, 21, 42, 87, 100
+
+data:
+  name: banking77        # banking77 | clinc150 | hwu64 (prepared with `sigma prepare-data`)
+  directory: data
+  shots: 10              # labeled examples per intent; n = shots * m
+  outputs: original      # original intent strings; "opaque" for the verbalizer control
+
+model:
+  name: Qwen/Qwen2.5-7B-Instruct
+  dtype: bfloat16
+  device: cuda
+  gradient_checkpointing: true
+  adaptation: lora
+  lora:
+    rank: 16
+    alpha: 32
+    dropout: 0.0
+    target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+  end_of_answer: auto    # the chat template's end-of-turn token
+
+optim:
+  lr: 5.0e-5             # nominal default; grid {1e-5, 5e-5, 1e-4}
+  betas: [0.9, 0.95]
+  weight_decay: 0.01
+  grad_clip: 1.0
+  warmup_ratio: 0.03
+  batch_size: 16         # B original instances per optimiser step
+  passes: 10             # T = 2 * ceil(10 n / (2 B)) optimiser steps
+
+scoring:
+  strategy: packed
+  view_batch_size: 1
+  candidate_chunk_size: null
+  max_context_tokens: 8192
+  gradient_mode: two_pass   # score-gradient recomputation of Appendix C.5
+
+selection:
+  num_checkpoints: 5
+  search: true              # learning-rate x coefficient grid, at most 15 trials
+  lr_grid: [1.0e-5, 5.0e-5, 1.0e-4]
+  coefficient_grid: [0.0, 0.01, 0.1, 1.0, 10.0]
+
+eval:
+  binding_draws: 10
+  composition_depths: [2, 4, 8]
+  composition_draws: 10
+  save_scores: true
