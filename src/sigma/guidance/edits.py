@@ -12,6 +12,10 @@ Two families of edits are used for training:
 Evaluation composes several swaps, optionally followed by the reversal, and keeps only final
 documents outside the single-edit training support ``G_train`` (Appendix A.2, C.2).
 
+Three further edits are used by the supplementary experiments: :class:`CrossGroupSwap` and
+:class:`RandomOrder` are evaluation-only edits outside the training families (E01), and
+:class:`GlobalRebinding` is the label-independent global binding augmentation of E08.
+
 Permutation convention
 ----------------------
 A permutation ``pi`` of the candidate set is stored as a tuple ``perm`` of candidate indices
@@ -100,7 +104,62 @@ class Reversal:
         return edited, identity_permutation(guidance.task.num_candidates)
 
 
-Edit = IdentityEdit | BindingSwap | Reversal
+@dataclass(frozen=True)
+class CrossGroupSwap:
+    """Exchange the outputs of two leaves that belong to *different* parents.
+
+    Training only swaps siblings; this edit is used at test time to probe transfer to
+    bindings that cross group boundaries (supplementary experiment E01).
+    """
+
+    leaf_a: str
+    leaf_b: str
+
+    def apply(self, guidance: Guidance) -> tuple[Guidance, Permutation]:
+        return BindingSwap("", self.leaf_a, self.leaf_b).apply(guidance)
+
+
+@dataclass(frozen=True)
+class RandomOrder:
+    """Representation edit: shuffle the child list of every internal node (``pi_e = id``).
+
+    ``seed`` fixes the shuffle, so the edit is a deterministic function of the document.
+    """
+
+    seed: int
+
+    def apply(self, guidance: Guidance) -> tuple[Guidance, Permutation]:
+        rng = np.random.default_rng(self.seed)
+        order = {
+            v: tuple(guidance.child_order[v][i] for i in rng.permutation(len(kids)))
+            for v, kids in sorted(guidance.child_order.items())
+        }
+        edited = Guidance(task=guidance.task, child_order=order, binding=guidance.binding)
+        return edited, identity_permutation(guidance.task.num_candidates)
+
+
+@dataclass(frozen=True)
+class GlobalRebinding:
+    """Rebind every label to a random output: ``a_{g'} = pi o a_g`` for a uniform ``pi``.
+
+    ``seed`` fixes the permutation.  The draw never looks at an instance label (E08).
+    """
+
+    seed: int
+
+    def apply(self, guidance: Guidance) -> tuple[Guidance, Permutation]:
+        task = guidance.task
+        perm = tuple(
+            int(c) for c in np.random.default_rng(self.seed).permutation(task.num_candidates)
+        )
+        binding = {
+            label: task.candidates[perm[task.candidate_index[output]]]
+            for label, output in guidance.binding.items()
+        }
+        return Guidance(task=task, child_order=guidance.child_order, binding=binding), perm
+
+
+Edit = IdentityEdit | BindingSwap | Reversal | CrossGroupSwap | RandomOrder | GlobalRebinding
 
 
 @dataclass(frozen=True)
@@ -133,9 +192,16 @@ class AppliedEdit:
 
 def _well_formed(edit: Edit, guidance: Guidance) -> bool:
     """Structural preconditions of an edit (swaps act on leaf siblings of a non-root parent)."""
+    task = guidance.task
+    if isinstance(edit, CrossGroupSwap):
+        leaves = set(task.labels)
+        return (
+            edit.leaf_a in leaves
+            and edit.leaf_b in leaves
+            and task.parent_of(edit.leaf_a) != task.parent_of(edit.leaf_b)
+        )
     if not isinstance(edit, BindingSwap):
         return True
-    task = guidance.task
     if edit.parent not in task.nodes or edit.parent == task.root or edit.leaf_a == edit.leaf_b:
         return False
     leaves = task.leaf_children(edit.parent)
@@ -170,12 +236,18 @@ def validate_edit(
     for node, kids in edited.child_order.items():
         if parsed.child_order.get(node) != tuple(kids):
             return False
-    selected = {edit.leaf_a, edit.leaf_b} if isinstance(edit, BindingSwap) else set()
+    if isinstance(edit, BindingSwap | CrossGroupSwap):
+        selected = {edit.leaf_a, edit.leaf_b}
+    elif isinstance(edit, GlobalRebinding):
+        selected = set(task.labels)
+    else:
+        selected = set()
     for label in task.labels:
         if label not in selected and parsed.binding[label] != original.binding[label]:
             return False
     # A binding edit leaves the serialisation order untouched.
-    return not (isinstance(edit, BindingSwap) and parsed.child_order != dict(original.child_order))
+    binding_edit = isinstance(edit, BindingSwap | CrossGroupSwap | GlobalRebinding)
+    return not (binding_edit and parsed.child_order != dict(original.child_order))
 
 
 def apply_edit(guidance: Guidance, edit: Edit, renderer=render_guidance) -> AppliedEdit:
@@ -242,6 +314,7 @@ def scheduled_edit(task: TaskRecord, step: int, rng: np.random.Generator, schedu
     ``schedule="alternate"`` is the paper's schedule: a sampled binding edit on odd steps and
     the representation edit on even steps.  ``"binding"`` and ``"reversal"`` are the
     binding-only and reversal-only ablations of Table 2, which keep the two-view budget.
+    ``"global"`` rebinds all outputs at random on every step (supplementary experiment E08).
     """
     if schedule == "alternate":
         return sample_binding_edit(task, rng) if step % 2 == 1 else Reversal()
@@ -249,6 +322,8 @@ def scheduled_edit(task: TaskRecord, step: int, rng: np.random.Generator, schedu
         return sample_binding_edit(task, rng)
     if schedule == "reversal":
         return Reversal()
+    if schedule == "global":
+        return GlobalRebinding(int(rng.integers(2**31)))
     raise ValueError(f"unknown edit schedule {schedule!r}")
 
 
@@ -315,3 +390,17 @@ def sample_composition(
     if with_reversal:
         edits.append(Reversal())
     return tuple(edits)
+
+
+def sample_cross_group_swap(task: TaskRecord, rng: np.random.Generator) -> Edit:
+    """Draw two leaves with different parents uniformly; identity if the tree has one group."""
+    labels = task.labels
+    pairs = [
+        (a, b)
+        for i, a in enumerate(labels)
+        for b in labels[i + 1 :]
+        if task.parent_of(a) != task.parent_of(b)
+    ]
+    if not pairs:
+        return IdentityEdit()
+    return CrossGroupSwap(*pairs[int(rng.integers(len(pairs)))])

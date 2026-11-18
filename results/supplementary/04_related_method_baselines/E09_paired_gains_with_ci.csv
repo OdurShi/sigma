@@ -1,0 +1,4 @@
+dataset,gain_vs_paired_sft,gain_vs_paired_sft_ci_low,gain_vs_paired_sft_ci_high,gain_vs_transported_kl,gain_vs_transported_kl_ci_low,gain_vs_transported_kl_ci_high,gain_vs_kl_changed_pp
+BANKING77,+3.19,2.63,3.76,+1.73,1.19,2.25,8.80
+CLINC150,+1.95,1.48,2.43,+1.20,0.79,1.64,6.15
+HWU64,+2.97,2.38,3.59,+2.14,1.57,2.72,9.65

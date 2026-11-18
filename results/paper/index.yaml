@@ -1,0 +1,98 @@
+# Tables of the paper, transcribed as CSV (one file per table). Same format as
+# results/supplementary/index.yaml; `label` is the table's number in the paper.
+
+conventions: >-
+  Results reported in the paper. Qwen2.5-7B-Instruct with LoRA (rank 16), five seeds; accuracy
+  in percent. Base uses the original guidance; Comp. averages six held-out composition
+  conditions.
+
+experiments:
+  - id: T01
+    file: table01_composition_generalization.csv
+    label: Table 1
+    title: Generalisation to unseen guidance compositions (10 shots per intent, five-seed mean accuracy)
+    columns:
+      - {header: Method, col: method, align: left}
+      - {header: BANKING77 Base, col: banking77_base, best: max}
+      - {header: BANKING77 Comp., col: banking77_comp, best: max}
+      - {header: CLINC150 Base, col: clinc150_base, best: max}
+      - {header: CLINC150 Comp., col: clinc150_comp, best: max}
+      - {header: HWU64 Base, col: hwu64_base, best: max}
+      - {header: HWU64 Comp., col: hwu64_comp, best: max}
+
+  - id: T02
+    file: table02_guidance_use_diagnostics.csv
+    label: Table 2
+    title: Guidance-use diagnostics and ablations (10 shots; equal-weight means over the three datasets; TV_eq in [0, 1], lower is better)
+    columns:
+      - {header: Variant, col: variant, align: left}
+      - {header: "Binding swaps: Chg. Acc.", col: binding_changed_acc, best: max}
+      - {header: "Binding swaps: PairAcc", col: binding_pair_acc, best: max}
+      - {header: "Compositions: Chg. Acc.", col: comp_changed_acc, best: max}
+      - {header: "Compositions: PairAcc", col: comp_pair_acc, best: max}
+      - {header: EquivAcc, col: equiv_acc, best: max}
+      - {header: TV_eq, col: tv_eq, best: min}
+
+  - id: T05
+    file: table05_label_efficiency.csv
+    label: Table 5
+    title: Label efficiency across nested annotation budgets (mean ± SD over five seeds; AULC on the normalised log-budget scale)
+    columns:
+      - {header: Dataset, col: dataset, align: left}
+      - {header: Method, col: method, align: left}
+      - {header: View, col: view, align: left}
+      - {header: b = 1, mean: shots_1_mean, sd: shots_1_sd}
+      - {header: b = 2, mean: shots_2_mean, sd: shots_2_sd}
+      - {header: b = 4, mean: shots_4_mean, sd: shots_4_sd}
+      - {header: b = 8, mean: shots_8_mean, sd: shots_8_sd}
+      - {header: b = 16, mean: shots_16_mean, sd: shots_16_sd}
+      - {header: AULC, mean: aulc_mean, sd: aulc_sd}
+
+  - id: T08
+    file: table08_cost_and_latency.csv
+    label: Table 8
+    title: Computational cost and inference latency (BANKING77, 10 shots)
+    columns:
+      - {header: Method, col: method, align: left}
+      - {header: Trainable params (M), col: trainable_params_m}
+      - {header: GPU-h, col: gpu_hours}
+      - {header: Peak GiB, col: peak_gib}
+      - {header: Processed tokens (M), col: processed_tokens_m}
+      - {header: Auxiliary tokens (M), col: auxiliary_tokens_m}
+      - {header: Latency p50 / p95 (ms), pair: [latency_p50_ms, latency_p95_ms]}
+
+  - id: T11
+    file: table11_matched_support.csv
+    label: Table 11
+    title: Accuracy with matched evaluation support (10 shots; mean ± SD)
+    columns:
+      - {header: Dataset, col: dataset, align: left}
+      - {header: Method, col: method, align: left}
+      - {header: Matched Base, mean: matched_base_mean, sd: matched_base_sd}
+      - {header: Comp., mean: comp_mean, sd: comp_sd}
+      - {header: Paired drop, mean: paired_drop_mean, sd: paired_drop_sd}
+
+  - id: T12
+    file: table12_guidance_edits.csv
+    label: Table 12
+    title: Correct responses to guidance edits (10 shots; mean ± SD)
+    columns:
+      - {header: Dataset, col: dataset, align: left}
+      - {header: Method, col: method, align: left}
+      - {header: "Changed: Acc.", mean: changed_acc_mean, sd: changed_acc_sd}
+      - {header: "Changed: PairAcc", mean: changed_pair_acc_mean, sd: changed_pair_acc_sd}
+      - {header: "Unchanged: Acc.", mean: unchanged_acc_mean, sd: unchanged_acc_sd}
+      - {header: "Unchanged: PairAcc", mean: unchanged_pair_acc_mean, sd: unchanged_pair_acc_sd}
+      - {header: "Reversal: Acc.", mean: reversal_acc_mean, sd: reversal_acc_sd}
+      - {header: "Reversal: Inv.", mean: reversal_inv_mean, sd: reversal_inv_sd}
+
+  - id: T13
+    file: table13_paired_differences.csv
+    label: Table 13
+    title: Paired differences, SIGMA minus comparator (pp), with paired pointwise 95% bootstrap intervals
+    columns:
+      - {header: Comparator, col: comparator, align: left}
+      - {header: Quantity / shots, col: quantity, align: left}
+      - {header: BANKING77, value: banking77_diff, low: banking77_ci_low, high: banking77_ci_high}
+      - {header: CLINC150, value: clinc150_diff, low: clinc150_ci_low, high: clinc150_ci_high}
+      - {header: HWU64, value: hwu64_diff, low: hwu64_ci_low, high: hwu64_ci_high}

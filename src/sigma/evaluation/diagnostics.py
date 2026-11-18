@@ -134,6 +134,25 @@ def summarize_trajectories(diagnostics: Sequence[TrajectoryDiagnostic]) -> dict[
     }
 
 
+def path_residual_summary(diagnostics: Sequence[TrajectoryDiagnostic]) -> dict[int, dict]:
+    """Per depth: median path-average local residual and all-path final accuracy (E02).
+
+    The path average of a trajectory is ``E_local / k``; accuracy counts every path, including
+    those whose initial prediction is wrong.
+    """
+    by_depth: dict[int, list[TrajectoryDiagnostic]] = {}
+    for diagnostic in diagnostics:
+        by_depth.setdefault(len(diagnostic.residuals), []).append(diagnostic)
+    return {
+        depth: {
+            "count": len(group),
+            "median_residual": float(np.median([d.local_error / depth for d in group])),
+            "accuracy": 100.0 * float(np.mean([d.final_correct for d in group])),
+        }
+        for depth, group in sorted(by_depth.items())
+    }
+
+
 # --------------------------------------------------------------------------- Appendix D.8
 def sibling_index_groups(task: TaskRecord) -> list[list[int]]:
     """Candidate indices of the outputs bound (under ``g0``) to each eligible sibling group."""

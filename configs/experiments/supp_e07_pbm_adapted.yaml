@@ -1,0 +1,9 @@
+description: >
+  Supplementary experiment E07: a PBM-LoRA-style permutation-consistency control (dispersion
+  and entropy terms on aligned candidate probabilities, plus paired cross-entropy) against
+  transported KL and SIGMA at 10 shots; at most 15 search trials per run.
+defaults: [../base.yaml]
+grid:
+  dataset: [banking77, clinc150, hwu64]
+  method: [transported_kl, pbm_adapted, sigma]
+  seed: [13, 21, 42, 87, 100]

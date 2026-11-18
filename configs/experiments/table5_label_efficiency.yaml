@@ -1,9 +1,9 @@
 description: >
   Table 5 and Figure 5: label efficiency over nested budgets b in {1, 2, 4, 8, 16} for
-  LoRA-SFT, paired SFT, transported KL and SIGMA.
+  LoRA-SFT, paired SFT, transported KL and SIGMA, and for SIGMA-F (supplementary experiment E05).
 defaults: [../base.yaml]
 grid:
   dataset: [banking77, clinc150, hwu64]
-  method: [sft, paired_sft, transported_kl, sigma]
+  method: [sft, paired_sft, transported_kl, sigma, sigma_f]
   data.shots: [1, 2, 4, 8, 16]
   seed: [13, 21, 42, 87, 100]

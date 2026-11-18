@@ -1,0 +1,230 @@
+# Registry of the supplementary experiments (E01-E09).
+#
+# Each entry names the CSV file that holds the numbers and describes how its columns are
+# displayed. The numbers live only in the CSV files: edit a CSV, then run
+#   python scripts/render_supplementary.py
+# to refresh docs/supplementary_results.md and the README tables, and
+#   pytest tests/test_supplementary_results.py
+# to re-check that the tables agree with each other and with the tables of the paper.
+#
+# Column kinds:
+#   col                 one CSV column, shown as written
+#   mean + sd           "mean ± sd"
+#   value + low + high  "value [low, high]"  (95% confidence interval)
+#   pair: [a, b]        "a / b"
+# Options: `align: left`, `prefix: [..]` (text put before each part, e.g. "≈"),
+# `best: max|min` (bold the best entry of the column).
+
+conventions: >-
+  Unless stated otherwise: backbone Qwen2.5-7B-Instruct with LoRA (rank 16), 10 labeled
+  examples per intent, five seeds (13, 21, 42, 87, 100), frozen parameters at test time.
+  Accuracy is in percent and differences are in percentage points (pp). Comp. is the mean
+  accuracy over the held-out guidance-composition conditions (composition depths 2/4/8, with
+  and without the reversal). Changed is the accuracy on test instances whose required output
+  changes under the edited guidance. GPU-hours cover training only.
+
+groups:
+  - dir: 01_transfer_and_composition
+    title: Transfer to broader guidance edits and deeper compositions
+    summary: Paraphrased descriptions, random serialisation, cross-group binding swaps, and binding paths of depth 8 and 16.
+  - dir: 02_annotation_efficiency_and_cost
+    title: Annotation efficiency and training cost
+    summary: SIGMA with 4 shots against LoRA-SFT with 16 shots, and equal training-time caps.
+  - dir: 03_sigma_vs_sigma_f
+    title: SIGMA and the factorised variant SIGMA-F
+    summary: Label sweep over 1/2/4/8/16 shots and the 4-shot training cost.
+  - dir: 04_related_method_baselines
+    title: Related-method controls
+    summary: A PBM-LoRA-style control, Symbol-Tuning-style binding augmentation, and paired gains with 95% intervals.
+
+experiments:
+  - id: E01
+    file: 01_transfer_and_composition/E01_broader_guidance_edits.csv
+    title: Frozen transfer to paraphrased descriptions, random serialisation and cross-group binding swaps
+    extends: Tables 1 and 12
+    question: Do models trained on sibling swaps and one reversal transfer to broader edits of the guidance?
+    setup:
+      - Frozen 10-shot models; no further training on the new conditions.
+      - "Paraphrased descriptions: equivalent paraphrases of the class descriptions, verified
+        independently of test outcomes, combined with held-out compositions."
+      - "Random serialisation: randomised child orders (beyond the single reversal used in
+        training), combined with compositions."
+      - "Cross-group binding: binding swaps across sibling groups, beyond the sibling swaps used
+        in training, combined with compositions."
+      - SIGMA-F receives the same updated descriptions and binding map.
+      - "Scope: transfer within a fixed semantic task and candidate inventory."
+      - "Each cell: Comp. / changed-target accuracy (%)."
+    columns:
+      - {header: Dataset, col: dataset, align: left}
+      - {header: Frozen test condition, col: condition, align: left}
+      - {header: Paired SFT, pair: [paired_sft_comp, paired_sft_changed]}
+      - {header: Transported KL, pair: [transported_kl_comp, transported_kl_changed]}
+      - {header: SIGMA, pair: [sigma_comp, sigma_changed]}
+      - {header: SIGMA-F, pair: [sigma_f_comp, sigma_f_changed]}
+    findings:
+      - SIGMA exceeds both direct-scoring controls (paired SFT, transported KL) in every condition.
+      - On cross-group swaps SIGMA reaches 58.50 / 70.00 / 57.00% changed-target accuracy,
+        +10.5 / +10.0 / +9.5 pp over transported KL.
+      - SIGMA-F (exact lookup) is highest in every condition.
+
+  - id: E02
+    file: 01_transfer_and_composition/E02_composition_depth_residuals.csv
+    title: Local residuals and accuracy along unseen binding paths of depth 8 and 16
+    extends: Figure 6, Eq. (7)
+    question: How large are the local residuals of the composition bound on entirely unseen, longer binding paths?
+    setup:
+      - Frozen models evaluated on held-out binding paths using all 77 / 150 / 64 candidates.
+      - "The bound of Eq. (7) and the certificate of Corollary B.4 are stated for any valid path;
+        the residuals eps_j = ||u_j - P_j u_{j-1}||_2 are measured on the unseen paths themselves."
+      - Reported at the two largest depths; depth 16 is the final stress test.
+      - "Each cell: median path-average local residual / all-path Comp. accuracy (%). Accuracy
+        covers all sampled paths, including initially incorrect predictions."
+    columns:
+      - {header: Dataset, col: dataset, align: left}
+      - {header: Depth, col: depth}
+      - {header: Paired SFT, pair: [paired_sft_median_residual, paired_sft_comp]}
+      - {header: Transported KL, pair: [transported_kl_median_residual, transported_kl_comp]}
+      - {header: SIGMA, pair: [sigma_median_residual, sigma_comp]}
+    findings:
+      - SIGMA has the lowest residuals and the highest accuracy at both depths on every dataset.
+      - The certificate stays conditional on each path's residuals and initial margin.
+
+  - id: E03
+    file: 02_annotation_efficiency_and_cost/E03_sigma4_vs_sft16_labels_and_gpu.csv
+    title: "SIGMA-4 vs. SFT-16: training labels, development labels and training GPU-hours"
+    extends: Tables 5 and 8
+    question: Does the annotation saving survive when development labels and training time are counted?
+    setup:
+      - Combines the Table 5 accuracies with measured training time under the same hardware
+        and accounting settings.
+      - At 10 shots, SIGMA costs 75.1% more than single-view SFT and 4.2% more than paired SFT
+        using the same views (Table 8).
+      - GPU-hours are approximate and cover training only.
+    columns:
+      - {header: Dataset, col: dataset, align: left}
+      - {header: "Training labels: 4 / 16 shots", pair: [training_labels_4shot, training_labels_16shot]}
+      - {header: "Train + dev labels: 4 / 16 shots", pair: [train_dev_labels_4shot, train_dev_labels_16shot]}
+      - {header: "SIGMA-4: Comp. (%) / GPU-h", pair: [sigma_4_comp, sigma_4_gpu_hours_approx], prefix: ["", "≈"]}
+      - {header: "SFT-16: Comp. (%) / GPU-h", pair: [sft_16_comp, sft_16_gpu_hours_approx], prefix: ["", "≈"]}
+    findings:
+      - SIGMA-4 beats SFT-16 on Comp. with 75% fewer training labels and about 56% less training time.
+      - Counting development labels too, the savings are 33.3% / 33.3% / 36.6%.
+
+  - id: E04
+    file: 02_annotation_efficiency_and_cost/E04_equal_training_time_caps.csv
+    title: Equal training-time caps on BANKING77 (10 shots)
+    extends: Tables 8 and 11
+    question: Does SIGMA keep its advantage when every method gets the same training-time budget?
+    setup:
+      - BANKING77, 10 shots, five seeds; each run stops when training finishes or the cap is reached.
+      - "Two caps: 7.84 GPU-h and 13.73 GPU-h."
+      - The LoRA-SFT row at the 13.73 GPU-h cap is the token-matched control of Table 11.
+    columns:
+      - {header: Method, col: method, align: left}
+      - {header: "7.84 GPU-h cap: Comp. (%)", col: cap_7p84_comp}
+      - {header: "13.73 GPU-h cap: actual GPU-h / Comp. (%)", pair: [cap_13p73_actual_gpu_hours, cap_13p73_comp]}
+    findings:
+      - SIGMA retains its advantage over the direct-scoring baselines under the lower cap.
+      - SIGMA-F finishes in 8.11 GPU-h and is the most accurate at both caps.
+
+  - id: E05
+    file: 03_sigma_vs_sigma_f/E05_sigma_vs_sigma_f_label_sweep.csv
+    title: SIGMA vs. SIGMA-F over the 1/2/4/8/16-shot label budgets
+    extends: Table 5
+    question: How does the factorised alternative SIGMA-F compare across label budgets?
+    setup:
+      - SIGMA-F predicts the semantic class, then applies an exact binding lookup
+        (Appendix A.3); both methods receive the same descriptions and map.
+      - Matched LoRA capacity, five seeds; nested training subsets, shared development sets,
+        evaluation samples and weights.
+      - "SIGMA values are those of Table 5. Entries: Comp. accuracy, mean ± SD (%)."
+      - Because of exact lookup, SIGMA-F's Base and Comp. accuracies are identical on matched
+        samples and weights.
+    columns:
+      - {header: Dataset, col: dataset, align: left}
+      - {header: Method, col: method, align: left}
+      - {header: 1 shot, mean: shots_1_mean, sd: shots_1_sd}
+      - {header: 2 shots, mean: shots_2_mean, sd: shots_2_sd}
+      - {header: 4 shots, mean: shots_4_mean, sd: shots_4_sd}
+      - {header: 8 shots, mean: shots_8_mean, sd: shots_8_sd}
+      - {header: 16 shots, mean: shots_16_mean, sd: shots_16_sd}
+    findings:
+      - SIGMA-F has the higher Comp. mean at every budget on all three datasets.
+      - When the semantic-class interface and the binding map are available at inference,
+        exact lookup is the stronger choice; SIGMA improves the model's own use of the guidance
+        text (+3.19 / +1.95 / +2.97 pp Comp. over paired SFT, Table 13).
+      - The 75% training-label saving refers to SIGMA-4 vs. SFT-16 (E03).
+
+  - id: E06
+    file: 03_sigma_vs_sigma_f/E06_sigma_vs_sigma_f_4shot_cost.csv
+    title: "SIGMA-4 vs. SIGMA-F-4: composition accuracy and training GPU-hours"
+    extends: Tables 5 and 8
+    question: What does each method cost at 4 shots?
+    setup:
+      - Measured GPU-hours for 4-shot training only (approximate).
+    columns:
+      - {header: Dataset, col: dataset, align: left}
+      - {header: "SIGMA-4: Comp. (%) / GPU-h", pair: [sigma_4_comp, sigma_4_gpu_hours_approx], prefix: ["", "≈"]}
+      - {header: "SIGMA-F-4: Comp. (%) / GPU-h", pair: [sigma_f_4_comp, sigma_f_4_gpu_hours_approx], prefix: ["", "≈"]}
+    findings:
+      - SIGMA-F is both more accurate and about 41% cheaper to train at 4 shots on every dataset.
+
+  - id: E07
+    file: 04_related_method_baselines/E07_pbm_lora_adapted.csv
+    title: PBM-LoRA adapted to paired supervision vs. transported KL and SIGMA
+    extends: Tables 1 and 12
+    question: How does SIGMA compare with permutation-consistency training in the style of PBM-LoRA?
+    setup:
+      - PBM-adapted + paired CE keeps PBM-LoRA's log-probability dispersion and entropy terms.
+      - Its multi-permutation protocol is adapted to two guidance views, full-sequence (aligned)
+        candidate probabilities and matched LoRA capacity, with at most 15 search trials.
+      - SIGMA's centred loss removes the common score offset and penalises discrepancies in
+        all transported pairwise log-odds exactly (Appendix B.1).
+      - "10-shot accuracies (%). Changed = changed targets."
+    columns:
+      - {header: Dataset, col: dataset, align: left}
+      - {header: KL Comp., col: kl_comp}
+      - {header: PBM-adapted Comp., col: pbm_comp}
+      - {header: SIGMA Comp., col: sigma_comp, best: max}
+      - {header: PBM-adapted Changed, col: pbm_changed}
+      - {header: SIGMA Changed, col: sigma_changed}
+    findings:
+      - SIGMA exceeds the PBM-adapted control on Comp. (+1.01 / +0.67 / +1.53 pp) and on
+        changed targets (+6.18 / +4.42 / +7.23 pp).
+
+  - id: E08
+    file: 04_related_method_baselines/E08_symbol_tuning_style_augmentation.csv
+    title: Symbol-Tuning-style global binding augmentation, with and without SIGMA alignment
+    extends: Table 10
+    question: Does alignment still help on top of Symbol-Tuning-style mapping augmentation?
+    setup:
+      - Opaque output IDs and global random bindings sampled independently of the gold label;
+        the schema supplies the mapping that in-context examples supply in Symbol Tuning.
+      - Both variants use the same augmentation and paired supervision, so the difference
+        isolates the alignment term.
+      - "Entries: Comp. accuracy (%)."
+    columns:
+      - {header: Dataset, col: dataset, align: left}
+      - {header: Global binding augmentation + paired CE, col: aug_paired_ce}
+      - {header: Same augmentation + SIGMA alignment, col: aug_sigma}
+      - {header: Gain (pp), col: gain_pp}
+    findings:
+      - Alignment adds 1.00-1.70 pp on top of global binding augmentation.
+
+  - id: E09
+    file: 04_related_method_baselines/E09_paired_gains_with_ci.csv
+    title: SIGMA's composition gains over paired SFT and transported KL with 95% intervals
+    extends: Tables 12 and 13
+    question: Are the gains over paired SFT and transported KL distinguishable from zero?
+    setup:
+      - "Table 13: Comp. gains with paired pointwise 95% intervals."
+      - "Table 12: gains on test examples whose required answer changes."
+    columns:
+      - {header: Dataset, col: dataset, align: left}
+      - {header: "SIGMA − paired SFT, Comp. (pp) [95% CI]", value: gain_vs_paired_sft, low: gain_vs_paired_sft_ci_low, high: gain_vs_paired_sft_ci_high}
+      - {header: "SIGMA − transported KL, Comp. (pp) [95% CI]", value: gain_vs_transported_kl, low: gain_vs_transported_kl_ci_low, high: gain_vs_transported_kl_ci_high}
+      - {header: "SIGMA − transported KL, changed targets (pp)", col: gain_vs_kl_changed_pp}
+    findings:
+      - All six Comp. gains have 95% intervals above zero.
+      - Gains are much larger on examples that require a different answer
+        (8.80 / 6.15 / 9.65 pp over transported KL).

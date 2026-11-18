@@ -10,6 +10,10 @@ One optimiser step
    vector for an identity pair,
 4. averages Eq. (5) over the minibatch and updates the trainable (LoRA) parameters.
 
+The optimisation time is measured (development evaluation excluded) and reported as
+GPU-hours; ``optim.max_gpu_hours`` stops a run at a time cap after one last development
+evaluation (supplementary experiments E03, E04 and E06).
+
 Checkpoints are evaluated on a fixed development pool at five approximately equally spaced
 even-numbered steps including the last one; the best checkpoint (earliest on ties) is kept.
 """
@@ -18,6 +22,7 @@ from __future__ import annotations
 
 import logging
 import math
+import time
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass, field
 
@@ -27,7 +32,15 @@ import torch
 from sigma import losses
 from sigma.config import OptimConfig, ScoringConfig
 from sigma.data.fewshot import Example
-from sigma.guidance.edits import AppliedEdit, BindingSwap, IdentityEdit, apply_edit, scheduled_edit
+from sigma.guidance.edits import (
+    AppliedEdit,
+    BindingSwap,
+    GlobalRebinding,
+    IdentityEdit,
+    Reversal,
+    apply_edit,
+    scheduled_edit,
+)
 from sigma.guidance.schema import TaskRecord
 from sigma.methods import MethodSpec
 from sigma.models import load_trainable_state, trainable_parameters, trainable_state
@@ -100,7 +113,7 @@ class InterventionCounts:
     def update(self, plan: StepPlan) -> None:
         for edit, y, y_edit in zip(plan.edits, plan.target_base, plan.target_edit, strict=True):
             changed = int(y_edit != y)
-            binding = isinstance(edit.edit, BindingSwap | IdentityEdit)
+            binding = isinstance(edit.edit, BindingSwap | GlobalRebinding | IdentityEdit)
             self.attempted += 1
             self.changed += changed
             self.binding_attempted += int(binding)
@@ -120,6 +133,9 @@ class TrainResult:
     history: list[dict[str, float]]
     counts: InterventionCounts
     training_tokens: int
+    steps_run: int = 0  # smaller than total_steps when the time cap stopped the run
+    training_seconds: float = 0.0  # wall-clock time of optimisation, checkpoint evaluation excluded
+    gpu_hours: float = 0.0  # training_seconds / 3600 x optim.num_gpus
     best_state: dict[str, torch.Tensor] = field(repr=False, default_factory=dict)
 
 
@@ -203,7 +219,7 @@ class Trainer:
     def _prompt(self, index: int, edit: AppliedEdit | None) -> list[int]:
         """Token ids of ``Render(x_i, C, g)``; base and reversed views are cached."""
         guidance = self._base if edit is None else edit.guidance
-        cacheable = edit is None or not isinstance(edit.edit, BindingSwap)
+        cacheable = edit is None or isinstance(edit.edit, Reversal)
         key = (index, guidance.key())
         if cacheable and key in self._prompt_cache:
             return self._prompt_cache[key]
@@ -310,7 +326,10 @@ class Trainer:
         best_accuracy, best_step, best_state = -1.0, 0, {}
         tokens_before = self.scorer.stats.processed_tokens
         training_tokens = 0
+        seconds, steps_run = 0.0, 0
+        cap = self.optim.max_gpu_hours
         for step in range(1, self.total_steps + 1):
+            started = time.perf_counter()
             factor = learning_rate_factor(step - 1, self.total_steps, self.optim.warmup_ratio)
             for group in self.optimizer.param_groups:
                 group["lr"] = self.optim.lr * factor
@@ -331,6 +350,9 @@ class Trainer:
                 "lr": self.optim.lr * factor,
             }
             history.append(record)
+            seconds += time.perf_counter() - started
+            steps_run = step
+            capped = cap is not None and seconds * self.optim.num_gpus / 3600.0 >= cap
             if step % self.log_every == 0 or step == self.total_steps:
                 logger.info(
                     "step %d/%d loss %.4f ce %.4f/%.4f consistency %.5f",
@@ -341,7 +363,7 @@ class Trainer:
                     record["ce_edit"],
                     record["consistency"],
                 )
-            if self.dev_accuracy is not None and step in self._checkpoints:
+            if self.dev_accuracy is not None and (step in self._checkpoints or capped):
                 training_tokens += self.scorer.stats.processed_tokens - tokens_before
                 accuracy = float(self.dev_accuracy())
                 tokens_before = self.scorer.stats.processed_tokens
@@ -350,9 +372,12 @@ class Trainer:
                 if accuracy > best_accuracy:  # strict: ties keep the earlier checkpoint
                     best_accuracy, best_step = accuracy, step
                     best_state = trainable_state(self.model)
+            if capped:
+                logger.info("time cap of %g GPU-hours reached at step %d", cap, step)
+                break
         training_tokens += self.scorer.stats.processed_tokens - tokens_before
         if self.dev_accuracy is None:
-            best_step, best_accuracy = self.total_steps, float("nan")
+            best_step, best_accuracy = steps_run, float("nan")
             best_state = trainable_state(self.model)
         else:
             load_trainable_state(self.model, best_state)
@@ -364,5 +389,8 @@ class Trainer:
             history=history,
             counts=counts,
             training_tokens=training_tokens,
+            steps_run=steps_run,
+            training_seconds=seconds,
+            gpu_hours=seconds * self.optim.num_gpus / 3600.0,
             best_state=best_state,
         )

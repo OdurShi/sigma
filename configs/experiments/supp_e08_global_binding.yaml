@@ -1,0 +1,11 @@
+description: >
+  Supplementary experiment E08: Symbol-Tuning-style augmentation.  Outputs are opaque
+  identifiers and every training step rebinds all of them at random, independently of the gold
+  label; the two methods differ only in the SIGMA alignment term.
+defaults: [../base.yaml]
+data:
+  outputs: opaque
+grid:
+  dataset: [banking77, clinc150, hwu64]
+  method: [global_aug_paired, global_aug_sigma]
+  seed: [13, 21, 42, 87, 100]

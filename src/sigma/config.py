@@ -23,6 +23,7 @@ class DataConfig:
     max_test_instances: int | None = None  # None = full test split
     max_dev_instances: int | None = None  # None = full development split
     label_subset: list[str] | None = None  # restrict to these groups (reduced-scale runs)
+    description_file: str | None = None  # JSON {node: paraphrased description} (E01)
     synthetic_groups: int = 3
     synthetic_classes_per_group: int = 4
 
@@ -65,6 +66,8 @@ class OptimConfig:
     passes: float = 10.0  # T = 2 * ceil(passes * n / (2 B))
     max_steps: int | None = None  # override of T (rounded up to an even number)
     token_budget: int | None = None  # processed-token budget for token-matched SFT
+    max_gpu_hours: float | None = None  # stop training at this many GPU-hours (E04)
+    num_gpus: int = 1  # GPUs the run occupies; GPU-hours = wall-clock hours x num_gpus
 
 
 @dataclass
@@ -93,6 +96,7 @@ class EvalConfig:
     binding_draws: int = 10
     composition_depths: list[int] = field(default_factory=lambda: [2, 4, 8])
     composition_draws: int = 10
+    transfer: list[str] = field(default_factory=list)  # "order", "cross" (E01)
     save_scores: bool = False
 
 

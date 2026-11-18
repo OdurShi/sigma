@@ -264,6 +264,9 @@ def test_method_registry_covers_the_trainable_rows_of_table_1_and_2():
         "sigma_binding_only",
         "sigma_reversal_only",
         "sigma_f",
+        "pbm_adapted",
+        "global_aug_paired",
+        "global_aug_sigma",
     }
     sigma, paired = METHODS["sigma"], METHODS["paired_sft"]
     assert (

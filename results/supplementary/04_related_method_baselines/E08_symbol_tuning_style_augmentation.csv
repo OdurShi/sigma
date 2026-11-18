@@ -1,0 +1,4 @@
+dataset,aug_paired_ce,aug_sigma,gain_pp
+BANKING77,86.85,88.10,+1.25
+CLINC150,93.95,94.95,+1.00
+HWU64,86.50,88.20,+1.70

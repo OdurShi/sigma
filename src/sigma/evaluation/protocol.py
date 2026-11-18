@@ -7,6 +7,10 @@ Every test instance is evaluated under
 * for every depth ``k`` in ``composition_depths``, ``composition_draws`` sequences of ``k``
   sibling swaps, whose final guidance is evaluated both without and with the reversal.
 
+Optionally (``EvalPlan.transfer``, supplementary experiment E01) each composition is also
+followed by a random child order or by a cross-group binding swap, two edits that training
+never uses; these views are reported separately and never enter "Comp.".
+
 Transfer ("Comp.") evaluation keeps only final documents outside ``G_train`` (the base
 document, its reversal and all single-swap documents); returning or cancelling compositions
 are rejected and counted.  All draws depend on the seed and the instance index only, never on
@@ -19,23 +23,33 @@ from dataclasses import dataclass
 
 from sigma.guidance.edits import (
     Permutation,
+    RandomOrder,
     Reversal,
     apply_edit,
     apply_sequence,
     identity_permutation,
     sample_binding_edit,
     sample_composition,
+    sample_cross_group_swap,
     train_support_keys,
 )
 from sigma.guidance.schema import Guidance, TaskRecord
 from sigma.seeding import stream
 
 BASE, REVERSAL, BINDING = "base", "reversal", "binding"
+#: Evaluation-only edit families of supplementary experiment E01, appended to a composition.
+RANDOM_ORDER, CROSS_GROUP = "order", "cross"
+TRANSFER_FAMILIES = (RANDOM_ORDER, CROSS_GROUP)
 
 
 def composition_condition(depth: int, with_reversal: bool) -> str:
     """Name of a held-out composition condition, e.g. ``k4`` or ``k4+R``."""
     return f"k{depth}+R" if with_reversal else f"k{depth}"
+
+
+def transfer_condition(family: str, depth: int) -> str:
+    """Name of a broader-edit condition, e.g. ``order:k4`` or ``cross:k4``."""
+    return f"{family}:k{depth}"
 
 
 @dataclass(frozen=True)
@@ -45,6 +59,12 @@ class EvalPlan:
     binding_draws: int = 10
     composition_depths: tuple[int, ...] = (2, 4, 8)
     composition_draws: int = 10
+    transfer: tuple[str, ...] = ()  # subset of TRANSFER_FAMILIES (off in the paper's protocol)
+
+    def __post_init__(self) -> None:
+        unknown = set(self.transfer) - set(TRANSFER_FAMILIES)
+        if unknown:
+            raise ValueError(f"unknown transfer families {sorted(unknown)}")
 
     def columns(self) -> list[tuple[str, int]]:
         """``(condition, draw)`` for every view of an instance, in a fixed order."""
@@ -53,6 +73,10 @@ class EvalPlan:
         for depth in self.composition_depths:
             for with_reversal in (False, True):
                 name = composition_condition(depth, with_reversal)
+                columns += [(name, d) for d in range(self.composition_draws)]
+        for family in self.transfer:
+            for depth in self.composition_depths:
+                name = transfer_condition(family, depth)
                 columns += [(name, d) for d in range(self.composition_draws)]
         return columns
 
@@ -123,6 +147,28 @@ class ViewPlanner:
                     views.append(
                         PlannedView(
                             name,
+                            draw,
+                            composed.guidance,
+                            composed.permutation,
+                            accepted=not self.in_train_support(composed.guidance),
+                        )
+                    )
+        for family in plan.transfer:
+            for depth in plan.composition_depths:
+                for draw in range(plan.composition_draws):
+                    # The swaps are those of the standard composition with the same draw.
+                    swaps = sample_composition(
+                        task, depth, stream(self.seed, "eval-comp", instance_index, depth, draw)
+                    )
+                    rng = stream(self.seed, f"eval-{family}", instance_index, depth, draw)
+                    if family == RANDOM_ORDER:
+                        extra = RandomOrder(int(rng.integers(2**31)))
+                    else:
+                        extra = sample_cross_group_swap(task, rng)
+                    composed = apply_sequence(self._base, (*swaps, extra))
+                    views.append(
+                        PlannedView(
+                            transfer_condition(family, depth),
                             draw,
                             composed.guidance,
                             composed.permutation,

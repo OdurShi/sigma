@@ -1,0 +1,13 @@
+description: >
+  Supplementary experiment E01: 10-shot models evaluated, without further training, under
+  compositions followed by a random child order ("order") or a cross-group binding swap
+  ("cross").  For the paraphrase condition add
+  --set data.description_file=<paraphrases.json> (a JSON map from node identifier to an
+  equivalent paraphrase of its description).
+defaults: [../base.yaml]
+eval:
+  transfer: [order, cross]
+grid:
+  dataset: [banking77, clinc150, hwu64]
+  method: [paired_sft, transported_kl, sigma, sigma_f]
+  seed: [13, 21, 42, 87, 100]

@@ -1,0 +1,9 @@
+comparator,quantity,banking77_diff,banking77_ci_low,banking77_ci_high,clinc150_diff,clinc150_ci_low,clinc150_ci_high,hwu64_diff,hwu64_ci_low,hwu64_ci_high
+LoRA-SFT,"Comp., 10 vs. 10",+7.60,6.91,8.33,+4.76,4.18,5.37,+7.54,6.78,8.28
+SFT (token-matched),"Comp., 10 vs. 10",+8.13,7.36,8.91,+5.15,4.51,5.79,+8.20,7.39,9.03
+Paired SFT,"Comp., 10 vs. 10",+3.19,2.63,3.76,+1.95,1.48,2.43,+2.97,2.38,3.59
+Transported KL,"Comp., 10 vs. 10",+1.73,1.19,2.25,+1.20,0.79,1.64,+2.14,1.57,2.72
+LoRA-SFT,"Comp., 4 vs. 16",+3.11,2.22,4.03,+1.88,1.16,2.63,+2.14,1.20,3.11
+LoRA-SFT,Comp. AULC,+11.32,10.77,11.89,+5.68,5.17,6.20,+11.33,10.75,11.93
+Paired SFT,Comp. AULC,+4.32,3.83,4.83,+2.65,2.24,3.06,+4.15,3.63,4.68
+Transported KL,Comp. AULC,+2.94,2.49,3.41,+1.77,1.40,2.15,+3.03,2.56,3.52

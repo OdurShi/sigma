@@ -69,8 +69,9 @@ def margin_residual_study(
     task: TaskRecord,
     examples: Sequence[Example],
     depths: Sequence[int] = (2, 4, 8),
-    num_candidates: int = 12,
+    num_candidates: int | None = 12,
     seed: int = 0,
+    initially_correct_only: bool = True,
 ) -> list[dg.TrajectoryDiagnostic]:
     """Margin-residual diagnostics of swap trajectories on a restricted inventory.
 
@@ -78,8 +79,11 @@ def margin_residual_study(
     trajectory is drawn per in-subtask test instance, with its depth cycling through
     ``depths``; only trajectories whose initial target is uniquely top-ranked are kept, so all
     summaries are conditional on initial correctness (Appendix D.7).
+
+    ``num_candidates=None`` keeps the full inventory and ``initially_correct_only=False`` keeps
+    every sampled path, the setting of supplementary experiment E02.
     """
-    subtask = diagnostic_subtask(task, num_candidates, seed)
+    subtask = task if num_candidates is None else diagnostic_subtask(task, num_candidates, seed)
     predictor = predictor_for(subtask)
     base = subtask.base_guidance()
     selected = [e for e in examples if e.label in subtask.label_index]
@@ -96,7 +100,7 @@ def margin_residual_study(
         diagnostic = dg.trajectory_diagnostic(
             scores, permutations, base.target_index(example.label)
         )
-        if diagnostic.initial_margin > 0:
+        if diagnostic.initial_margin > 0 or not initially_correct_only:
             diagnostics.append(diagnostic)
     return diagnostics
 

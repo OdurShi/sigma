@@ -63,6 +63,22 @@ def transported_kl(scores_base: Tensor, scores_edit: Tensor, permutation: Tensor
     return forward + backward
 
 
+def pbm_consistency(scores_base: Tensor, scores_edit: Tensor, permutation: Tensor) -> Tensor:
+    """Permutation-consistency control in the style of PBM-LoRA, per instance (E07).
+
+    Two terms on the aligned full-inventory log-probabilities ``l_1 = P_e log q_g`` and
+    ``l_2 = log q_{g'}``: their dispersion across the two views, ``mean_c Var_v[l_v(c)]``, and
+    the entropy of the view-averaged distribution.  Unlike :func:`equivariance_penalty` the
+    log-probabilities are not centred, so a common score offset between the views is penalised.
+    """
+    log_p = transport(candidate_log_probs(scores_base), permutation)
+    log_q = candidate_log_probs(scores_edit)
+    dispersion = 0.25 * (log_p - log_q).pow(2).mean(dim=-1)  # variance of two values
+    mean = 0.5 * (log_p.exp() + log_q.exp())
+    entropy = -(mean * mean.clamp_min(1e-30).log()).sum(dim=-1)
+    return dispersion + entropy
+
+
 @dataclass(frozen=True)
 class PairedLossOutput:
     """Batch-averaged paired loss and its components (all scalars)."""
@@ -90,7 +106,8 @@ def paired_loss(
                   + lambda / (2 m) * || u_{g'_i} - P_e u_{g_i} ||_2^2
 
     ``transported_kl`` replaces the last term by
-    ``beta / 2 * {KL(P_e q_g || q_g') + KL(q_g' || P_e q_g)}`` (Appendix C.4), and ``none`` or
+    ``beta / 2 * {KL(P_e q_g || q_g') + KL(q_g' || P_e q_g)}`` (Appendix C.4), ``pbm`` by
+    :func:`pbm_consistency` (supplementary experiment E07), and ``none`` or
     ``coefficient == 0`` gives paired supervised fine-tuning on the same views.
 
     Parameters
@@ -104,7 +121,7 @@ def paired_loss(
     coefficient:
         ``lambda`` (or ``beta`` for the transported-KL control); must be non-negative.
     consistency:
-        ``"centered_l2"``, ``"transported_kl"`` or ``"none"``.
+        ``"centered_l2"``, ``"transported_kl"``, ``"pbm"`` or ``"none"``.
     """
     if coefficient < 0:
         raise ValueError("the loss coefficient must be non-negative")
@@ -114,6 +131,8 @@ def paired_loss(
         term = equivariance_penalty(scores_base, scores_edit, permutation)
     elif consistency == "transported_kl":
         term = transported_kl(scores_base, scores_edit, permutation)
+    elif consistency == "pbm":
+        term = pbm_consistency(scores_base, scores_edit, permutation)
     elif consistency == "none":
         term = torch.zeros_like(ce_base)
     else:

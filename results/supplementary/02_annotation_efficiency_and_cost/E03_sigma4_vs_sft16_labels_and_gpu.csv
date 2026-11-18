@@ -1,0 +1,4 @@
+dataset,training_labels_4shot,training_labels_16shot,train_dev_labels_4shot,train_dev_labels_16shot,sigma_4_comp,sigma_4_gpu_hours_approx,sft_16_comp,sft_16_gpu_hours_approx
+BANKING77,308,1232,1848,2772,85.72,5.49,82.61,12.54
+CLINC150,600,2400,3600,5400,93.42,20.84,91.54,47.60
+HWU64,256,1024,1332,2100,85.28,3.79,83.14,8.67

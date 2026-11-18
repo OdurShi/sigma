@@ -1,0 +1,7 @@
+dataset,depth,paired_sft_median_residual,paired_sft_comp,transported_kl_median_residual,transported_kl_comp,sigma_median_residual,sigma_comp
+BANKING77,8,0.44,84.67,0.35,86.23,0.25,88.09
+BANKING77,16,0.49,82.40,0.39,84.00,0.29,85.70
+CLINC150,8,0.38,92.85,0.30,93.67,0.21,95.00
+CLINC150,16,0.42,90.50,0.34,91.70,0.24,93.50
+HWU64,8,0.50,85.55,0.41,86.44,0.30,88.68
+HWU64,16,0.55,82.50,0.46,84.00,0.34,86.00

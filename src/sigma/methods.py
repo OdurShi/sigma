@@ -24,12 +24,14 @@ class MethodSpec:
         ``(g0, T_e(g0))`` pairs.
     consistency:
         Term coupling the two views: ``"none"`` (paired SFT, ``lambda = 0``),
-        ``"centered_l2"`` (SIGMA, Eq. (5)) or ``"transported_kl"`` (R-Drop-style control).
+        ``"centered_l2"`` (SIGMA, Eq. (5)), ``"transported_kl"`` (R-Drop-style control) or
+        ``"pbm"`` (PBM-LoRA-style control, supplementary experiment E07).
     coefficient:
         ``lambda`` (or ``beta``); nominal default 1, selected on the development pool.
     edit_schedule:
         ``"alternate"`` (binding edits on odd steps, reversal on even steps), ``"binding"``
-        or ``"reversal"`` (the single-family ablations of Table 2).
+        or ``"reversal"`` (the single-family ablations of Table 2), or ``"global"`` (random
+        rebinding of all outputs, supplementary experiment E08).
     factorized:
         SIGMA-F: train a semantic classifier and apply exact binding lookup (Appendix A.3).
     token_matched:
@@ -81,6 +83,16 @@ METHODS: dict[str, MethodSpec] = {
             edit_schedule="reversal",
         ),
         MethodSpec("sigma_f", "SIGMA-F", views="single", factorized=True),
+        # Controls of the supplementary experiments E07 and E08.
+        MethodSpec("pbm_adapted", "PBM-adapted + paired CE", consistency="pbm", coefficient=1.0),
+        MethodSpec("global_aug_paired", "Global binding aug. + paired CE", edit_schedule="global"),
+        MethodSpec(
+            "global_aug_sigma",
+            "Global binding aug. + SIGMA alignment",
+            consistency="centered_l2",
+            coefficient=1.0,
+            edit_schedule="global",
+        ),
     )
 }
 

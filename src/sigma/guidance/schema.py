@@ -291,6 +291,22 @@ def task_from_dict(payload: Mapping) -> TaskRecord:
     )
 
 
+def with_descriptions(task: TaskRecord, descriptions: Mapping[str, str]) -> TaskRecord:
+    """Copy of ``task`` whose node descriptions are replaced where ``descriptions`` has an entry.
+
+    Used to evaluate frozen models under paraphrased class descriptions (supplementary
+    experiment E01); the tree, the identifiers and the bindings are unchanged.
+    """
+    unknown = set(descriptions) - set(task.nodes)
+    if unknown:
+        raise TaskRecordError(f"descriptions for unknown nodes: {sorted(unknown)}")
+    nodes = {
+        key: Node(key, descriptions.get(key, node.description), node.children)
+        for key, node in task.nodes.items()
+    }
+    return TaskRecord(task.name, task.root, nodes, dict(task.binding), task.instruction)
+
+
 def with_binding(
     task: TaskRecord, binding: Mapping[str, str], name: str | None = None
 ) -> TaskRecord:

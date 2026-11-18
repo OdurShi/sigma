@@ -72,7 +72,11 @@ def test_overrides_and_unknown_keys(tmp_path):
     [
         ("table1_main", 3 * 6 * 5),
         ("table2_ablations", 3 * 7 * 5),
-        ("table5_label_efficiency", 3 * 4 * 5 * 5),
+        ("table5_label_efficiency", 3 * 5 * 5 * 5),
+        ("supp_e01_broader_edits", 3 * 4 * 5),
+        ("supp_e04_time_caps", 5 * 2 * 5),
+        ("supp_e07_pbm_adapted", 3 * 3 * 5),
+        ("supp_e08_global_binding", 3 * 2 * 5),
         ("figure4_backbones", 3 * 3 * 3 * 2 * 5),
         ("table10_opaque_outputs", 3 * 5 * 5),
         ("figure2_preliminary", 5 * 5),

@@ -1,0 +1,12 @@
+description: >
+  Supplementary experiment E04: equal training-time caps on BANKING77 at 10 shots.  Every run
+  stops when training finishes or the cap (GPU-hours on the four GPUs of Appendix C.5) is
+  reached.
+defaults: [../base.yaml]
+optim:
+  num_gpus: 4
+grid:
+  dataset: [banking77]
+  method: [sft, paired_sft, transported_kl, sigma, sigma_f]
+  optim.max_gpu_hours: [7.84, 13.73]
+  seed: [13, 21, 42, 87, 100]

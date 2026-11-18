@@ -1,0 +1,6 @@
+method,cap_7p84_comp,cap_13p73_actual_gpu_hours,cap_13p73_comp
+LoRA-SFT,80.96,13.51,80.43
+Paired SFT,82.10,13.18,85.37
+Transported KL,83.45,13.46,86.83
+SIGMA,85.90,13.73,88.56
+SIGMA-F,89.50,8.11,89.91

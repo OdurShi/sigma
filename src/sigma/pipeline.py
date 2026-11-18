@@ -28,7 +28,7 @@ from sigma.evaluation.evaluate import DevPool, build_dev_pool, evaluate
 from sigma.evaluation.protocol import EvalPlan
 from sigma.evaluation.records import EvalRecords
 from sigma.guidance.render import render_prompt
-from sigma.guidance.schema import TaskRecord
+from sigma.guidance.schema import TaskRecord, with_descriptions
 from sigma.methods import MethodSpec, resolve_method
 from sigma.models import (
     LoraSettings,
@@ -89,6 +89,9 @@ def load_task_and_splits(config: RunConfig) -> tuple[TaskRecord, dict[str, list[
         task = restrict_task(task, data.label_subset)
         keep = set(task.labels)
         splits = {k: [e for e in v if e.label in keep] for k, v in splits.items()}
+    if data.description_file:
+        paraphrases = json.loads(Path(data.description_file).read_text(encoding="utf-8"))
+        task = with_descriptions(task, paraphrases)
     if data.outputs == "opaque":
         task = with_opaque_outputs(task)
     elif data.outputs != "original":
@@ -254,6 +257,9 @@ def _trial_summary(trial: Trial) -> dict:
         "best_dev_accuracy": result.best_dev_accuracy,
         "dev_curve": result.dev_curve,
         "training_tokens": result.training_tokens,
+        "steps_run": result.steps_run,
+        "training_seconds": result.training_seconds,
+        "gpu_hours": result.gpu_hours,
         "intervention_counts": asdict(result.counts),
     }
 
@@ -308,6 +314,7 @@ def run(config: RunConfig) -> dict:
         config.eval.binding_draws,
         tuple(config.eval.composition_depths),
         config.eval.composition_draws,
+        tuple(config.eval.transfer),
     )
     experiment.scorer.stats.reset()
     records = evaluate(experiment.predictor(), task, experiment.test, plan, config.seed)

@@ -12,6 +12,8 @@ Aggregation rules (Appendix C.3, C.6)
   Conditions without any accepted view are excluded.
 * **Matched Base** (Table 11) re-evaluates base correctness on exactly the instances and
   weights of each composition condition; the paired drop is Matched Base minus Comp.
+* **Transfer** (supplementary experiment E01) applies the Comp. rule to the conditions of one
+  broader-edit family (``order:k*`` or ``cross:k*``) and pools its accepted changed-target views.
 * Pair-level diagnostics on compositions (PairAcc, EquivAcc, ``TV_eq``, the changed and
   unchanged strata) pool all accepted composition pairs with equal weight.
 """
@@ -23,7 +25,7 @@ from dataclasses import dataclass
 import numpy as np
 
 from sigma.evaluation import metrics
-from sigma.evaluation.protocol import BASE, BINDING, REVERSAL
+from sigma.evaluation.protocol import BASE, BINDING, REVERSAL, TRANSFER_FAMILIES
 from sigma.evaluation.records import EvalRecords
 
 
@@ -87,21 +89,28 @@ def _pooled(values: np.ndarray, mask: np.ndarray) -> float:
     return float(values[mask].mean()) if mask.any() else float("nan")
 
 
-def composition_conditions(records: EvalRecords) -> list[str]:
-    """Composition condition names present in the records, in column order."""
+def composition_conditions(records: EvalRecords, family: str | None = None) -> list[str]:
+    """Composition condition names present in the records, in column order.
+
+    ``family=None`` gives the held-out compositions of the paper (``k2``, ``k2+R``, ...);
+    ``family="order"`` or ``"cross"`` gives the broader-edit conditions of that family.
+    """
     seen: list[str] = []
     for name in records.conditions:
-        if name not in (BASE, REVERSAL, BINDING) and name not in seen:
+        if name in (BASE, REVERSAL, BINDING) or name in seen:
+            continue
+        prefix = name.split(":")[0] if ":" in name else None
+        if prefix == family:
             seen.append(name)
     return seen
 
 
 def per_instance_composition(
-    records: EvalRecords, values: np.ndarray
+    records: EvalRecords, values: np.ndarray, family: str | None = None
 ) -> tuple[np.ndarray, np.ndarray]:
     """``(C, N)`` per-condition instance means of ``values`` and the matching coverage mask."""
     means, masks = [], []
-    for condition in composition_conditions(records):
+    for condition in composition_conditions(records, family):
         columns = records.columns(condition)
         mean, has_view = _instance_means(
             values[:, columns].astype(np.float64), records.accepted[:, columns]
@@ -111,11 +120,14 @@ def per_instance_composition(
     return np.array(means), np.array(masks)
 
 
-def composition_average(records: EvalRecords, values: np.ndarray) -> tuple[float, dict[str, float]]:
+def composition_average(
+    records: EvalRecords, values: np.ndarray, family: str | None = None
+) -> tuple[float, dict[str, float]]:
     """Comp. aggregate of a per-view quantity and its per-condition values (Appendix C.6)."""
-    means, masks = per_instance_composition(records, values)
+    means, masks = per_instance_composition(records, values, family)
     by_condition: dict[str, float] = {}
-    for condition, mean, mask in zip(composition_conditions(records), means, masks, strict=True):
+    names = composition_conditions(records, family)
+    for condition, mean, mask in zip(names, means, masks, strict=True):
         if mask.any():
             by_condition[condition] = float(mean[mask].mean())
     overall = float(np.mean(list(by_condition.values()))) if by_condition else float("nan")
@@ -245,6 +257,18 @@ def summarize(records: EvalRecords) -> dict:
             "mrr": composition_average(records, metrics.reciprocal_rank(table.rank))[0],
         }
         summary["acceptance"] = acceptance_table(records, table)
+    for family in TRANSFER_FAMILIES:
+        names = composition_conditions(records, family)
+        if not names:
+            continue
+        columns = np.concatenate([records.columns(c) for c in names])
+        mask = np.zeros(records.accepted.shape, dtype=bool)
+        mask[:, columns] = records.accepted[:, columns]
+        summary.setdefault("transfer", {})[family] = {
+            "accuracy": _percent(composition_average(records, table.correct, family)[0]),
+            "changed_accuracy": _percent(_pooled(table.correct, mask & table.changed)),
+            "num_changed": int((mask & table.changed).sum()),
+        }
     return summary
 
 
